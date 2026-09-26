@@ -1,0 +1,101 @@
+/* Контакты: тёмный блок под белой панелью, заголовок и три карточки с зелёными метками (как в футерной части оригинала) */
+
+.contacts {
+  padding: var(--spacing-xl) 0;
+}
+
+.contacts__head {
+  text-align: center;
+}
+
+.contacts__title {
+  font-family: var(--font-headline-lg-family);
+  font-size: var(--font-headline-lg-size);
+  font-weight: var(--font-headline-lg-weight);
+  line-height: var(--font-headline-lg-line-height);
+  text-transform: uppercase;
+}
+
+.contacts__lead {
+  margin-top: var(--spacing-sm);
+  color: var(--color-on-surface-variant);
+}
+
+.contacts__grid {
+  display: grid;
+  grid-template-columns: 291fr 419fr 291fr;
+  gap: var(--spacing-card-gap);
+  margin-top: var(--spacing-xl);
+}
+
+.contact-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+  background: linear-gradient(200deg, var(--color-surface-container-high), var(--color-surface-container));
+}
+
+.contact-card:nth-child(2) {
+  background: linear-gradient(200deg, var(--color-tertiary-container), var(--color-surface-container));
+}
+
+.contact-card .tag {
+  position: absolute;
+  top: 0;
+  left: var(--spacing-sm);
+  transform: translateY(-50%) rotate(-1deg);
+}
+
+.contact-card__photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.contact-card__main {
+  font-family: var(--font-headline-md-family);
+  font-size: var(--font-headline-md-size);
+  font-weight: var(--font-headline-md-weight);
+  line-height: 1.3;
+}
+
+.contact-card__note {
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-label-md-size);
+}
+
+.contact-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+}
+
+@media (max-width: 840px) {
+  .contacts__title {
+    font-size: calc(var(--font-headline-lg-size) * 0.85);
+  }
+
+  .contacts__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 650px) {
+  .contacts {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .contacts__title {
+    font-size: calc(var(--font-headline-lg-size) * 0.6);
+  }
+
+  .contacts__grid {
+    margin-top: var(--spacing-lg);
+  }
+}

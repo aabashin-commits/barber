@@ -1,0 +1,121 @@
+/* Футер: три колонки на тёмном фоне. Подключается последним */
+
+.footer {
+  padding: var(--spacing-xl) 0 calc(var(--spacing-xl) + var(--spacing-sm));
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__col--brand {
+  flex: 0 1 33%;
+  gap: var(--spacing-md);
+}
+
+.footer .brand__logo {
+  height: calc(var(--spacing-xl) * 0.7);
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-label-sm-size);
+}
+
+.footer__socials a {
+  font-weight: var(--font-label-md-weight);
+  text-transform: uppercase;
+}
+
+.footer__legal-entity {
+  margin-top: auto;
+  padding-top: var(--spacing-xl);
+  color: color-mix(in srgb, var(--color-on-background) 50%, transparent);
+  font-size: calc(var(--font-label-sm-size) * 0.85);
+}
+
+.footer__col--promo {
+  flex: 0 1 26%;
+}
+
+.footer__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(var(--color-primary), var(--color-primary-container));
+  font-size: calc(var(--font-label-sm-size) * 0.92);
+}
+
+.footer__card-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.footer__card .btn--small {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-color: var(--color-on-primary);
+  font-size: calc(var(--font-label-sm-size) * 0.85);
+}
+
+.footer__col--links {
+  flex: 0 1 28%;
+}
+
+.footer__heading {
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-headline-md-family);
+  font-size: var(--font-body-md-size);
+  font-weight: var(--font-headline-md-weight);
+  text-transform: uppercase;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  color: color-mix(in srgb, var(--color-on-background) 50%, transparent);
+}
+
+.footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-lg);
+  padding-left: var(--spacing-md);
+  border-left: 1px solid var(--color-surface-container-high);
+  color: color-mix(in srgb, var(--color-on-background) 50%, transparent);
+  font-size: calc(var(--font-label-sm-size) * 0.92);
+}
+
+@media (max-width: 840px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer__col--brand,
+  .footer__col--promo,
+  .footer__col--links {
+    flex-basis: auto;
+  }
+
+  .footer__legal-entity {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: var(--spacing-lg);
+  }
+}

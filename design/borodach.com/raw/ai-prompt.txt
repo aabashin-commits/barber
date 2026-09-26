@@ -1,0 +1,28 @@
+# Rebuild prompt: borodach.com
+
+Canvas: #131313
+Layout density: spacious
+Container widths: 1020, 419, 340, 291px
+
+## Colors
+#5cae5d (Green), #ffffff (Canvas White), #131313 (Near Black), #161616 (Dark Gray), #f3f3f3 (Off White), #c4c4c4 (Light Gray)
+
+## Typography
+Primary: FactorA — 18px/normal weight 400
+Font families: FactorA
+
+## Spacing & shape
+Padding scale: 0px 10px, 142px 0px 95px, 0px 10px 6px, 12px 20px
+Border radius: 10px, 4px, 30px
+Shadows: rgba(92, 170, 83, 0.7) 0px 23px 16px -19px; rgba(0, 0, 0, 0.25) 0px 0px 10px 0px
+
+## Components
+Primary Button (button), Primary Button (button), Surface Card (card), Primary Button (button), Primary Button (button), Surface Card (card), Surface Card (card), Surface Card (card)
+
+## Surfaces
+Level 0 (Base Surface): #131313
+Level 1 (Surface 1): #ffffff
+Level 2 (Surface 2): #161616
+Level 3 (Surface 3): #5cae5d
+
+Captured: 2026-09-24T19:18:35.050Z

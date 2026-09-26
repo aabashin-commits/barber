@@ -1,0 +1,314 @@
+{
+  "$description": "Borodach design tokens from DESIGN.md (https://borodach.com/)",
+  "color": {
+    "primary": {
+      "$type": "color",
+      "$value": "#5cae5d"
+    },
+    "on-primary": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "primary-container": {
+      "$type": "color",
+      "$value": "#428843"
+    },
+    "on-primary-container": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "#7a7a7a"
+    },
+    "on-secondary": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "secondary-container": {
+      "$type": "color",
+      "$value": "#2d2a2a"
+    },
+    "on-secondary-container": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "tertiary": {
+      "$type": "color",
+      "$value": "#428843"
+    },
+    "on-tertiary": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "tertiary-container": {
+      "$type": "color",
+      "$value": "#1f3d20"
+    },
+    "on-tertiary-container": {
+      "$type": "color",
+      "$value": "#b7e2b8"
+    },
+    "error": {
+      "$type": "color",
+      "$value": "#ffb4ab"
+    },
+    "on-error": {
+      "$type": "color",
+      "$value": "#690005"
+    },
+    "error-container": {
+      "$type": "color",
+      "$value": "#93000a"
+    },
+    "on-error-container": {
+      "$type": "color",
+      "$value": "#ffdad6"
+    },
+    "background": {
+      "$type": "color",
+      "$value": "#131313"
+    },
+    "on-background": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "#131313"
+    },
+    "on-surface": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "surface-variant": {
+      "$type": "color",
+      "$value": "#2d2a2a"
+    },
+    "on-surface-variant": {
+      "$type": "color",
+      "$value": "#7a7a7a"
+    },
+    "surface-tint": {
+      "$type": "color",
+      "$value": "#5cae5d"
+    },
+    "surface-dim": {
+      "$type": "color",
+      "$value": "#131313"
+    },
+    "surface-bright": {
+      "$type": "color",
+      "$value": "#3e3e3e"
+    },
+    "surface-container-lowest": {
+      "$type": "color",
+      "$value": "#0e0e0e"
+    },
+    "surface-container-low": {
+      "$type": "color",
+      "$value": "#131313"
+    },
+    "surface-container": {
+      "$type": "color",
+      "$value": "#161616"
+    },
+    "surface-container-high": {
+      "$type": "color",
+      "$value": "#2d2a2a"
+    },
+    "surface-container-highest": {
+      "$type": "color",
+      "$value": "#3e3e3e"
+    },
+    "outline": {
+      "$type": "color",
+      "$value": "#7a7a7a"
+    },
+    "outline-variant": {
+      "$type": "color",
+      "$value": "#2d2a2a"
+    },
+    "inverse-surface": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "inverse-on-surface": {
+      "$type": "color",
+      "$value": "#000000"
+    },
+    "inverse-primary": {
+      "$type": "color",
+      "$value": "#5cae5d"
+    },
+    "primary-fixed": {
+      "$type": "color",
+      "$value": "#5cae5d"
+    },
+    "primary-fixed-dim": {
+      "$type": "color",
+      "$value": "#428843"
+    },
+    "on-primary-fixed": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "on-primary-fixed-variant": {
+      "$type": "color",
+      "$value": "#f3f3f3"
+    }
+  },
+  "typography": {
+    "headline-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Helvetica",
+        "fontSize": "45px",
+        "fontWeight": 700,
+        "lineHeight": 1.11,
+        "letterSpacing": "0em"
+      }
+    },
+    "headline-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Helvetica",
+        "fontSize": "35px",
+        "fontWeight": 700,
+        "lineHeight": 1.11,
+        "letterSpacing": "0em"
+      }
+    },
+    "headline-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "FactorA",
+        "fontSize": "18px",
+        "fontWeight": 700,
+        "lineHeight": "normal",
+        "letterSpacing": "0em"
+      }
+    },
+    "body-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "FactorA",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": "normal",
+        "letterSpacing": "0em"
+      }
+    },
+    "body-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "FactorA",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": "normal",
+        "letterSpacing": "0em"
+      }
+    },
+    "label-md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "FactorA",
+        "fontSize": "14px",
+        "fontWeight": 700,
+        "lineHeight": "normal",
+        "letterSpacing": "0em"
+      }
+    },
+    "label-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "FactorA",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": "normal",
+        "letterSpacing": "0em"
+      }
+    }
+  },
+  "spacing": {
+    "base": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "xs": {
+      "$type": "dimension",
+      "$value": "5px"
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "20px"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "40px"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "90px"
+    },
+    "layout-margin": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "card-gap": {
+      "$type": "dimension",
+      "$value": "1px"
+    }
+  },
+  "radius": {
+    "sm": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "DEFAULT": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "30px"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "30px"
+    },
+    "full": {
+      "$type": "dimension",
+      "$value": "9999px"
+    }
+  },
+  "duration": {
+    "fast": {
+      "$type": "duration",
+      "$value": "250ms"
+    },
+    "base": {
+      "$type": "duration",
+      "$value": "300ms"
+    }
+  },
+  "cubicBezier": {
+    "standard": {
+      "$type": "cubicBezier",
+      "$value": [
+        0.25,
+        0.1,
+        0.25,
+        1
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+/* Бургер и мобильное меню. Работает только на ≤650px и только с JS (класс .js на <html>) */
+
+.burger,
+.drawer,
+.drawer-backdrop {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .js .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(var(--spacing-md) * 1.5);
+    height: var(--spacing-md);
+  }
+
+  .burger__bar {
+    display: block;
+    height: calc(var(--spacing-xs) * 0.8);
+    background: var(--color-on-primary-fixed-variant);
+  }
+
+  .js .drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    width: 340px;
+    max-width: 100%;
+    padding: var(--spacing-md);
+    background: var(--color-inverse-surface);
+    color: var(--color-inverse-on-surface);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition:
+      transform var(--duration-base) var(--easing-standard),
+      visibility var(--duration-base);
+  }
+
+  .js .drawer--open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .drawer__close {
+    align-self: flex-end;
+    font-size: var(--font-headline-lg-size);
+    line-height: 1;
+  }
+
+  .drawer__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    font-size: var(--font-body-lg-size);
+  }
+
+  .drawer__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+  }
+
+  .js .drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: block;
+    background: color-mix(in srgb, var(--color-inverse-on-surface) 50%, transparent);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity var(--duration-base) var(--easing-standard),
+      visibility var(--duration-base);
+  }
+
+  .js .drawer-backdrop--open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .drawer,
+  .js .drawer-backdrop {
+    transition: none;
+  }
+}

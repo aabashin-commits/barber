@@ -1,0 +1,84 @@
+/* Мастера: две карточки-ссылки на страницы мастеров */
+
+.masters__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  max-width: calc(var(--spacing-xl) * 7);
+  margin-inline: auto;
+}
+
+/* Одна карточка (блок «второй мастер» на страницах мастеров) */
+.masters__list--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: calc(var(--spacing-xl) * 3.5);
+}
+
+.master-card {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-on-primary-fixed-variant);
+}
+
+.master-card__link {
+  display: block;
+  height: 100%;
+}
+
+.master-card__photo {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--color-surface-container);
+}
+
+.master-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-base) var(--easing-standard);
+}
+
+.master-card__body {
+  padding: var(--spacing-md);
+}
+
+.master-card__name {
+  font-family: var(--font-headline-md-family);
+  font-size: var(--font-headline-md-size);
+  font-weight: var(--font-headline-md-weight);
+}
+
+.master-card__role {
+  margin-top: var(--spacing-xs);
+  color: color-mix(in srgb, var(--color-inverse-on-surface) 60%, transparent);
+  font-size: var(--font-label-md-size);
+}
+
+.master-card__more {
+  display: inline-block;
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-label-md-size);
+  font-weight: var(--font-label-md-weight);
+  text-decoration: underline;
+  text-underline-offset: var(--spacing-xs);
+}
+
+@media (hover: hover) {
+  .master-card__link:hover .master-card__img {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 650px) {
+  .masters__list {
+    gap: var(--spacing-sm);
+  }
+
+  .master-card__body {
+    padding: var(--spacing-sm);
+  }
+
+  .master-card__name {
+    font-size: var(--font-body-md-size);
+  }
+}

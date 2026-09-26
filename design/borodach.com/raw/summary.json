@@ -1,0 +1,1199 @@
+{
+ "sources": {
+  "engine": true,
+  "ours": true,
+  "degraded": false
+ },
+ "source": {
+  "url": "https://borodach.com/",
+  "title": "Записаться в барбершоп рядом со мной на карте цена в федеральной сети барбершопов Бородач",
+  "description": "Записаться в барбершоп рядом со мной на карте цена в федеральной сети барбершопов Бородач по всей России, запишись в барбершоп в твоем городе онлайн.",
+  "themeColor": null,
+  "pages": [
+   {
+    "url": "https://borodach.com/",
+    "status": "success"
+   }
+  ],
+  "capturedAt": "2026-09-24T19:18:35.050Z",
+  "rootVarCount": 0
+ },
+ "blocked": {
+  "suspected": false,
+  "reasons": []
+ },
+ "theme": "dark",
+ "bodyBackground": "#131313",
+ "colors": [
+  {
+   "hex": "#ffffff",
+   "score": 2318,
+   "sources": [
+    "engine",
+    "ours"
+   ],
+   "usage": [
+    "text",
+    "border",
+    "background"
+   ],
+   "engineName": "Canvas White",
+   "confidence": "high"
+  },
+  {
+   "hex": "#5cae5d",
+   "score": 215,
+   "sources": [
+    "engine",
+    "ours"
+   ],
+   "usage": [
+    "background",
+    "border",
+    "text"
+   ],
+   "engineName": "Green",
+   "confidence": "high"
+  },
+  {
+   "hex": "#000000",
+   "score": 97,
+   "sources": [
+    "engine",
+    "ours"
+   ],
+   "usage": [
+    "text",
+    "border"
+   ],
+   "engineName": "Rich Black",
+   "confidence": "high"
+  },
+  {
+   "hex": "#161616",
+   "score": 84,
+   "sources": [
+    "engine",
+    "ours"
+   ],
+   "usage": [
+    "background"
+   ],
+   "engineName": "Dark Gray",
+   "confidence": "medium"
+  },
+  {
+   "hex": "#7a7a7a",
+   "score": 66,
+   "sources": [
+    "engine",
+    "ours"
+   ],
+   "usage": [
+    "text",
+    "border"
+   ],
+   "engineName": "Gray",
+   "confidence": "high"
+  },
+  {
+   "hex": "#2d2a2a",
+   "score": 44,
+   "sources": [
+    "engine"
+   ],
+   "usage": [
+    "text",
+    "border"
+   ],
+   "engineName": "Dark Gray",
+   "confidence": "high"
+  },
+  {
+   "hex": "#808080",
+   "score": 24,
+   "sources": [
+    "engine"
+   ],
+   "usage": [
+    "border"
+   ],
+   "engineName": "Gray",
+   "confidence": "high"
+  },
+  {
+   "hex": "#f3f3f3",
+   "score": 14,
+   "sources": [
+    "engine",
+    "ours"
+   ],
+   "usage": [
+    "background"
+   ],
+   "engineName": "Off White",
+   "confidence": "medium"
+  },
+  {
+   "hex": "#131313",
+   "score": 8,
+   "sources": [
+    "engine"
+   ],
+   "usage": [
+    "background"
+   ],
+   "engineName": "Near Black",
+   "confidence": "high"
+  },
+  {
+   "hex": "#767676",
+   "score": 6,
+   "sources": [
+    "engine",
+    "ours"
+   ],
+   "usage": [
+    "border"
+   ],
+   "engineName": "Gray",
+   "confidence": "medium"
+  },
+  {
+   "hex": "#3e3e3e",
+   "score": 6,
+   "sources": [
+    "engine",
+    "ours"
+   ],
+   "usage": [
+    "text"
+   ],
+   "engineName": "Dark Gray",
+   "confidence": "medium"
+  },
+  {
+   "hex": "#c4c4c4",
+   "score": 1,
+   "sources": [
+    "engine"
+   ],
+   "usage": [
+    "background"
+   ],
+   "engineName": "Light Gray",
+   "confidence": "low"
+  }
+ ],
+ "cssColorVars": [],
+ "surfaces": [
+  {
+   "level": 0,
+   "name": "Base Surface",
+   "hex": "#131313",
+   "value": "#131313",
+   "purpose": "Surface or background color"
+  },
+  {
+   "level": 1,
+   "name": "Surface 1",
+   "hex": "#ffffff",
+   "value": "#ffffff",
+   "purpose": "Surface or background color"
+  },
+  {
+   "level": 2,
+   "name": "Surface 2",
+   "hex": "#161616",
+   "value": "#161616",
+   "purpose": "Surface or background color"
+  },
+  {
+   "level": 3,
+   "name": "Surface 3",
+   "hex": "#5cae5d",
+   "value": "#5cae5d",
+   "purpose": "Surface or background color"
+  }
+ ],
+ "primaryCandidates": [
+  {
+   "bg": "#5cae5d",
+   "fg": "#ffffff",
+   "radius": "10px",
+   "padding": "0px",
+   "fontSize": "14px",
+   "text": "МАГАЗИН BORODACH.PRO",
+   "count": 3,
+   "sources": [
+    "engine"
+   ],
+   "selectors": [
+    "section.index-html > div.wrapper.bg-white > a > div.borodach-btn.position-absolute",
+    "div.headerbg > div.container.mt-78 > a.ms_booking > div.borodach-btn.bg-green"
+   ],
+   "score": 246
+  },
+  {
+   "bg": "#5cae5d",
+   "fg": "#ffffff",
+   "radius": "4px",
+   "padding": "0px 10px",
+   "fontSize": "14px",
+   "text": "Скачать",
+   "count": 2,
+   "sources": [
+    "engine"
+   ],
+   "selectors": [
+    "div.wrapper.header > div.plashka > div.plashka-buttons.f-14 > div.appstore-button.bg-green"
+   ],
+   "score": 164
+  },
+  {
+   "bg": "#f3f3f3",
+   "fg": "#3e3e3e",
+   "radius": "0px",
+   "padding": "12px 20px",
+   "fontSize": "13px",
+   "text": "SEARCH",
+   "count": 4,
+   "sources": [
+    "ours",
+    "engine"
+   ],
+   "selectors": [
+    "div.mobile-nav.slide-from-right > div.woodmart-search-form > form.searchform.woodmart-ajax-search > button.searchsubmit"
+   ],
+   "score": 0
+  },
+  {
+   "bg": "#131313",
+   "fg": "#ffffff",
+   "radius": "0px",
+   "padding": "0px",
+   "fontSize": "18px",
+   "text": "<div><img src=\"https://mc.yandex.ru/watc",
+   "count": 1,
+   "sources": [
+    "engine"
+   ],
+   "selectors": [
+    "html.browser-Chrome.platform-Mac > body.home.page-template"
+   ],
+   "score": 0
+  }
+ ],
+ "typography": {
+  "families": [
+   "FactorA",
+   "Helvetica"
+  ],
+  "headings": {
+   "h1": {
+    "fontFamily": "Helvetica, sans-serif",
+    "fontSize": "45px",
+    "fontWeight": "700",
+    "lineHeight": "49.95px",
+    "letterSpacing": "normal",
+    "text": "БАРБЕРШОП\nБОРОДАЧ"
+   },
+   "h3": {
+    "fontFamily": "Helvetica, sans-serif",
+    "fontSize": "45px",
+    "fontWeight": "700",
+    "lineHeight": "49.95px",
+    "letterSpacing": "normal",
+    "text": "#BORODACHLIVE"
+   }
+  },
+  "textRoles": {
+   "p": {
+    "fontFamily": "FactorA",
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "text": "нашими услугами пользуются\nболее 224 000"
+   },
+   "a": {
+    "fontFamily": "FactorA",
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "text": ""
+   },
+   "button": {
+    "fontFamily": "FactorA",
+    "fontSize": "13px",
+    "fontWeight": "600",
+    "lineHeight": "18px",
+    "letterSpacing": "0.3px",
+    "text": "SEARCH"
+   }
+  },
+  "engineStyles": [
+   {
+    "role": "text",
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "text",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "link",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "text",
+    "fontSize": "13px",
+    "fontWeight": "400",
+    "lineHeight": "14.3px",
+    "letterSpacing": "-0.2px"
+   },
+   {
+    "role": "body",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "link",
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "link",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "text",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "text",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "body",
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "text",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal"
+   },
+   {
+    "role": "heading",
+    "fontSize": "15px",
+    "fontWeight": "700",
+    "lineHeight": "16.65px",
+    "letterSpacing": "normal"
+   }
+  ],
+  "ourTypeSizes": [
+   {
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "count": 16
+   },
+   {
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "count": 15
+   },
+   {
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "count": 11
+   },
+   {
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "count": 6
+   },
+   {
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "count": 5
+   },
+   {
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "count": 5
+   },
+   {
+    "fontSize": "35px",
+    "fontWeight": "700",
+    "lineHeight": "38.85px",
+    "letterSpacing": "normal",
+    "count": 3
+   },
+   {
+    "fontSize": "15px",
+    "fontWeight": "700",
+    "lineHeight": "16.65px",
+    "letterSpacing": "normal",
+    "count": 3
+   },
+   {
+    "fontSize": "12px",
+    "fontWeight": "700",
+    "lineHeight": "13.32px",
+    "letterSpacing": "normal",
+    "count": 3
+   },
+   {
+    "fontSize": "10px",
+    "fontWeight": "700",
+    "lineHeight": "11.1px",
+    "letterSpacing": "normal",
+    "count": 2
+   },
+   {
+    "fontSize": "45px",
+    "fontWeight": "700",
+    "lineHeight": "49.95px",
+    "letterSpacing": "normal",
+    "count": 2
+   },
+   {
+    "fontSize": "13px",
+    "fontWeight": "600",
+    "lineHeight": "18px",
+    "letterSpacing": "0.3px",
+    "count": 2
+   },
+   {
+    "fontSize": "33px",
+    "fontWeight": "700",
+    "lineHeight": "33px",
+    "letterSpacing": "normal",
+    "count": 1
+   },
+   {
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "count": 1
+   },
+   {
+    "fontSize": "16px",
+    "fontWeight": "700",
+    "lineHeight": "17.76px",
+    "letterSpacing": "normal",
+    "count": 1
+   }
+  ],
+  "fontFaces": [
+   "FactorA bold normal",
+   "FactorA normal normal"
+  ]
+ },
+ "spacing": {
+  "engine": [
+   "0px 10px",
+   "142px 0px 95px",
+   "0px 10px 6px",
+   "12px 20px",
+   "1px 2px",
+   "0px 0px 0px 13px"
+  ],
+  "ours": [
+   {
+    "value": "19px",
+    "count": 12
+   },
+   {
+    "value": "1px",
+    "count": 10
+   },
+   {
+    "value": "4px",
+    "count": 9
+   },
+   {
+    "value": "5px",
+    "count": 8
+   },
+   {
+    "value": "2px",
+    "count": 5
+   },
+   {
+    "value": "10px",
+    "count": 4
+   },
+   {
+    "value": "20px",
+    "count": 3
+   },
+   {
+    "value": "19.95px",
+    "count": 3
+   },
+   {
+    "value": "12px",
+    "count": 3
+   },
+   {
+    "value": "57px",
+    "count": 1
+   },
+   {
+    "value": "38px",
+    "count": 1
+   },
+   {
+    "value": "14px",
+    "count": 1
+   },
+   {
+    "value": "142px",
+    "count": 1
+   },
+   {
+    "value": "13px",
+    "count": 1
+   }
+  ],
+  "gaps": [
+   {
+    "value": "0px",
+    "count": 1
+   }
+  ]
+ },
+ "radii": [
+  {
+   "value": "10px",
+   "count": 4,
+   "confidence": "medium",
+   "sources": [
+    "engine",
+    "ours"
+   ]
+  },
+  {
+   "value": "4px",
+   "count": 2,
+   "confidence": "low",
+   "sources": [
+    "engine",
+    "ours"
+   ]
+  },
+  {
+   "value": "30px",
+   "count": 1,
+   "confidence": "low",
+   "sources": [
+    "engine",
+    "ours"
+   ]
+  },
+  {
+   "value": "100%",
+   "count": 1,
+   "confidence": null,
+   "sources": [
+    "ours"
+   ]
+  },
+  {
+   "value": "5px",
+   "count": 1,
+   "confidence": null,
+   "sources": [
+    "ours"
+   ]
+  }
+ ],
+ "shadows": [
+  {
+   "value": "rgba(92, 170, 83, 0.7) 0px 23px 16px -19px",
+   "count": 2,
+   "confidence": "low",
+   "sources": [
+    "engine",
+    "ours"
+   ]
+  },
+  {
+   "value": "rgba(0, 0, 0, 0.25) 0px 0px 10px 0px",
+   "count": 2,
+   "confidence": "low",
+   "sources": [
+    "engine",
+    "ours"
+   ]
+  },
+  {
+   "value": "rgba(0, 0, 0, 0.2) 0px 20px 30px 0px",
+   "count": 1,
+   "confidence": null,
+   "sources": [
+    "ours"
+   ]
+  },
+  {
+   "value": "rgba(0, 0, 0, 0.1) 0px 3px 20px 0px",
+   "count": 1,
+   "confidence": null,
+   "sources": [
+    "ours"
+   ]
+  }
+ ],
+ "gradients": [
+  {
+   "name": "Gradient 1",
+   "value": "linear-gradient(#5cae5d 0%, #428843 100%)",
+   "confidence": "medium"
+  }
+ ],
+ "components": [
+  {
+   "kind": "button",
+   "name": "Text Button",
+   "bg": null,
+   "fg": "#ffffff",
+   "radius": "0px",
+   "padding": "0px",
+   "border": "0px none #ffffff",
+   "shadow": "none",
+   "fontSize": "14px",
+   "count": 4,
+   "viewports": [
+    "desktop",
+    "laptop",
+    "tablet",
+    "mobile"
+   ],
+   "texts": [
+    "Скачать Скачать"
+   ]
+  },
+  {
+   "kind": "button",
+   "name": "Primary Button",
+   "bg": "#5cae5d",
+   "fg": "#ffffff",
+   "radius": "10px",
+   "padding": "0px",
+   "border": "1px solid #5cae5d",
+   "shadow": "rgba(92, 170, 83, 0.7) 0px 23px 16px -19px",
+   "fontSize": "14px",
+   "count": 3,
+   "viewports": [
+    "desktop",
+    "laptop",
+    "tablet",
+    "mobile"
+   ],
+   "texts": [
+    "МАГАЗИН BORODACH.PRO",
+    "Записаться онлайн"
+   ]
+  },
+  {
+   "kind": "button",
+   "name": "Primary Button",
+   "bg": "#5cae5d",
+   "fg": "#ffffff",
+   "radius": "4px",
+   "padding": "0px 10px",
+   "border": "0px none #ffffff",
+   "shadow": "rgba(0, 0, 0, 0.25) 0px 0px 10px 0px",
+   "fontSize": "14px",
+   "count": 2,
+   "viewports": [
+    "desktop",
+    "laptop",
+    "tablet"
+   ],
+   "texts": [
+    "Скачать"
+   ]
+  },
+  {
+   "kind": "button",
+   "name": "Primary Button",
+   "bg": "#f3f3f3",
+   "fg": "#3e3e3e",
+   "radius": "0px",
+   "padding": "12px 20px",
+   "border": "0px solid rgba(0, 0, 0, 0)",
+   "shadow": "none",
+   "fontSize": "13px",
+   "count": 2,
+   "viewports": [
+    "desktop",
+    "laptop"
+   ],
+   "texts": [
+    "Search"
+   ]
+  },
+  {
+   "kind": "button",
+   "name": "Primary Button",
+   "bg": "#131313",
+   "fg": "#ffffff",
+   "radius": "0px",
+   "padding": "0px",
+   "border": "0px none #ffffff",
+   "shadow": "none",
+   "fontSize": "18px",
+   "count": 1,
+   "viewports": [
+    "desktop",
+    "laptop",
+    "tablet",
+    "mobile"
+   ],
+   "texts": [
+    "<div><img src=\"https://mc.yand"
+   ]
+  },
+  {
+   "kind": "card",
+   "name": "Surface Card",
+   "bg": "#ffffff",
+   "fg": "#ffffff",
+   "radius": "0px",
+   "padding": "0px",
+   "border": "0px none #ffffff",
+   "shadow": "none",
+   "fontSize": "18px",
+   "count": 2,
+   "viewports": [
+    "desktop",
+    "laptop",
+    "tablet",
+    "mobile"
+   ],
+   "texts": [
+    "Search Выберите город Франшиза"
+   ]
+  },
+  {
+   "kind": "card",
+   "name": "Surface Card",
+   "bg": "#ffffff",
+   "fg": "#000000",
+   "radius": "30px",
+   "padding": "142px 0px 95px",
+   "border": "0px none #000000",
+   "shadow": "none",
+   "fontSize": "18px",
+   "count": 1,
+   "viewports": [
+    "desktop",
+    "laptop",
+    "tablet",
+    "mobile"
+   ],
+   "texts": [
+    "#borodachlive BORODACH: место,"
+   ]
+  },
+  {
+   "kind": "card",
+   "name": "Surface Card",
+   "bg": "#5cae5d",
+   "fg": "#ffffff",
+   "radius": "0px",
+   "padding": "0px 10px 6px",
+   "border": "0px none #ffffff",
+   "shadow": "none",
+   "fontSize": "45px",
+   "count": 1,
+   "viewports": [
+    "desktop",
+    "laptop"
+   ],
+   "texts": [
+    "#borodachlive"
+   ]
+  },
+  {
+   "kind": "card",
+   "name": "Surface Card",
+   "bg": "#161616",
+   "fg": "#ffffff",
+   "radius": "0px",
+   "padding": "0px 10px",
+   "border": "0px none #ffffff",
+   "shadow": "none",
+   "fontSize": "13px",
+   "count": 1,
+   "viewports": [
+    "mobile"
+   ],
+   "texts": [
+    "федеральная сеть барбершопов"
+   ]
+  },
+  {
+   "kind": "card",
+   "name": "Surface Card",
+   "bg": "#5cae5d",
+   "fg": "#ffffff",
+   "radius": "10px",
+   "padding": "0px",
+   "border": "0px none #ffffff",
+   "shadow": "none",
+   "fontSize": "13px",
+   "count": 1,
+   "viewports": [
+    "mobile"
+   ],
+   "texts": [
+    "МобильноеприложениеBORODACH Ск"
+   ]
+  },
+  {
+   "kind": "input",
+   "name": "Input",
+   "bg": "#ffffff",
+   "fg": "#000000",
+   "radius": "0px",
+   "padding": "1px 2px",
+   "border": "2px inset #767676",
+   "shadow": "none",
+   "fontSize": "13px",
+   "count": 2,
+   "viewports": [
+    "desktop",
+    "laptop"
+   ],
+   "texts": []
+  }
+ ],
+ "ourComponents": {
+  "cards": []
+ },
+ "interactionStates": [
+  {
+   "state": "focus",
+   "selector": "button.lg-icon, button.lg-next.lg-icon:focus, button.lg-prev.lg-icon:focus",
+   "declarations": {
+    "background-color": "unset",
+    "background": "unset"
+   }
+  },
+  {
+   "state": "focus",
+   "selector": "a.ays_gallery_caption_link:focus, a.ays_gallery_caption_link:hover",
+   "declarations": {
+    "color": "#ffffff",
+    "text-decoration": "underline"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": "a.ays_gpg_category_filter:hover",
+   "declarations": {
+    "color": "#ffffff",
+    "background-color": "#6d6d6d"
+   }
+  },
+  {
+   "state": "focus",
+   "selector": "input.inp_search_img:focus",
+   "declarations": {
+    "border": "1px solid",
+    "border-color": "currentcolor"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".tablepress .row-hover tr:hover td",
+   "declarations": {
+    "background-color": "#f3f3f3"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".paginate_button:hover",
+   "declarations": {
+    "text-decoration": "none"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".paginate_button:hover::after, .paginate_button:hover::before",
+   "declarations": {
+    "color": "#049cdb"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".tablepress .sorting:hover, .tablepress .sorting_asc, .tablepress .sorting_desc",
+   "declarations": {
+    "background-color": "#049cdb"
+   }
+  },
+  {
+   "state": "active",
+   "selector": "a:active, a:hover",
+   "declarations": {
+    "outline": "0px"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": "a:hover",
+   "declarations": {
+    "text-decoration": "underline"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".mfp-preloader a:hover",
+   "declarations": {
+    "color": "#ffffff"
+   }
+  },
+  {
+   "state": "focus",
+   "selector": ".mfp-close:focus, .mfp-close:hover",
+   "declarations": {
+    "opacity": "1"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".popup-added_to_cart .mfp-close:hover, button.mfp-close:focus, button.mfp-close:hover",
+   "declarations": {
+    "color": "#ffffff",
+    "background-color": "rgba(0, 0, 0, 0.5)",
+    "box-shadow": "none",
+    "opacity": "1"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": "#wpadminbar:hover",
+   "declarations": {
+    "opacity": "1"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": "header .woodmart-social-icon a:not(:hover)",
+   "declarations": {
+    "color": "#c3c3c3",
+    "border-color": "#464646"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".btn:hover",
+   "declarations": {
+    "color": "#ffffff",
+    "background-color": "#477247",
+    "background": "#477247"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": "footer .woodmart-social-icons a:not(:hover)",
+   "declarations": {
+    "border-color": "#333333"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": "footer .woodmart-social-icons a:not(:hover) i",
+   "declarations": {
+    "color": "#999999"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".ch_city_btns .btner:hover",
+   "declarations": {
+    "color": "#ffffff",
+    "background-color": "#333333",
+    "background": "#333333"
+   }
+  },
+  {
+   "state": "hover",
+   "selector": ".full_lister:hover",
+   "declarations": {
+    "color": "#ffffff",
+    "background-color": "#477247"
+   }
+  }
+ ],
+ "motion": {
+  "durations": [
+   "0.4s",
+   "0.3s",
+   "0.25s"
+  ],
+  "easings": []
+ },
+ "layout": {
+  "density": "spacious",
+  "containerWidths": [
+   1020,
+   419,
+   340,
+   291
+  ],
+  "sectionGaps": [
+   "142px",
+   "41px",
+   "147px",
+   "51px"
+  ]
+ },
+ "imagery": {
+  "strategy": "photography-led",
+  "notes": [
+   "84 images (16 large/photographic), 57 icons/SVGs, 0 videos, 32 background images."
+  ],
+  "ogImage": "https://borodach.com/",
+  "favicon": "https://borodach.com/wp-content/uploads/2024/04/favicon.png",
+  "imageCount": 12,
+  "inlineLogo": false
+ },
+ "responsive": {
+  "viewports": [
+   "desktop",
+   "laptop",
+   "tablet",
+   "mobile"
+  ],
+  "notes": [
+   "desktop captured at 1920x1080.",
+   "laptop captured at 1440x900.",
+   "tablet captured at 768x1024.",
+   "mobile captured at 360x800."
+  ],
+  "mobileComponents": [
+   {
+    "kind": "card",
+    "text": "федеральная сеть барбершопов",
+    "bg": "#161616",
+    "fg": "#ffffff",
+    "radius": "0px",
+    "padding": "0px 10px",
+    "fontSize": "13px",
+    "width": 360,
+    "height": 68
+   },
+   {
+    "kind": "card",
+    "text": "МобильноеприложениеBORODACH Ск",
+    "bg": "#5cae5d",
+    "fg": "#ffffff",
+    "radius": "10px",
+    "padding": "0px",
+    "fontSize": "13px",
+    "width": 317,
+    "height": 125
+   },
+   {
+    "kind": "button",
+    "text": "",
+    "bg": null,
+    "fg": "#ffffff",
+    "radius": "0px",
+    "padding": "0px 0px 0px 13px",
+    "fontSize": "13px",
+    "width": 317,
+    "height": 26
+   },
+   {
+    "kind": "button",
+    "text": "",
+    "bg": null,
+    "fg": "#ffffff",
+    "radius": "0px",
+    "padding": "0px",
+    "fontSize": "13px",
+    "width": 30,
+    "height": 20
+   }
+  ]
+ },
+ "screenshots": [
+  {
+   "viewport": "desktop",
+   "url": "https://borodach.com/",
+   "path": "/Users/administrator/Barber/design/borodach.com/raw/clean/desktop.png",
+   "clean": true
+  },
+  {
+   "viewport": "laptop",
+   "url": "https://borodach.com/",
+   "path": "/Users/administrator/Barber/design/borodach.com/raw/screenshots/borodach.com-laptop.png",
+   "clean": false
+  },
+  {
+   "viewport": "tablet",
+   "url": "https://borodach.com/",
+   "path": "/Users/administrator/Barber/design/borodach.com/raw/screenshots/borodach.com-tablet.png",
+   "clean": false
+  },
+  {
+   "viewport": "mobile",
+   "url": "https://borodach.com/",
+   "path": "/Users/administrator/Barber/design/borodach.com/raw/clean/mobile.png",
+   "clean": true
+  }
+ ],
+ "warnings": [
+  {
+   "code": "limited-pages",
+   "message": "Only one page was inspected, so site-wide coverage is limited.",
+   "severity": "info"
+  }
+ ]
+}

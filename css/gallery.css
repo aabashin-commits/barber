@@ -1,0 +1,82 @@
+/* Метка #BOXcutLive и три фото-плитки встык (зазор 1px) */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery .tag {
+  position: relative;
+  z-index: 1;
+  margin-bottom: calc(var(--spacing-xs) * -1.5);
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: 291fr 419fr 291fr;
+  gap: var(--spacing-card-gap);
+  width: 100%;
+}
+
+.gallery__tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(var(--spacing-xl) * 4);
+  padding: var(--spacing-md);
+  overflow: hidden;
+  background: var(--color-surface-container);
+  color: var(--color-on-background);
+}
+
+.gallery__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.gallery__tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-background) 80%, transparent),
+    transparent 60%
+  );
+}
+
+.gallery__title {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-headline-md-family);
+  font-size: var(--font-headline-md-size);
+  font-weight: var(--font-headline-md-weight);
+  line-height: 1.2;
+}
+
+@media (max-width: 650px) {
+  .gallery__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery__tile {
+    min-height: calc(var(--spacing-xl) * 2);
+    padding: var(--spacing-md) var(--spacing-sm) var(--spacing-sm);
+  }
+
+  .gallery__tile:first-child {
+    grid-column: span 2;
+    min-height: calc(var(--spacing-xl) * 3);
+    padding-top: var(--spacing-lg);
+  }
+
+  .gallery__title {
+    font-size: var(--font-body-md-size);
+  }
+}

@@ -1,0 +1,83 @@
+/* Плавающая кнопка записи: круг 135px, пульсирующее кольцо. Скрыта на ≤768px */
+
+.fab {
+  position: fixed;
+  right: var(--spacing-lg);
+  bottom: var(--spacing-lg);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  height: 135px;
+  border-radius: var(--radius-full);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-primary) 0,
+    var(--color-primary) var(--spacing-md),
+    var(--color-primary-container) var(--spacing-md),
+    var(--color-primary-container) calc(var(--spacing-md) * 2)
+  );
+  box-shadow: 0 20px 30px color-mix(in srgb, var(--color-inverse-on-surface) 20%, transparent);
+  color: var(--color-on-primary);
+}
+
+.fab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  transform: scale(1.05);
+  animation: fab-pulse 2s cubic-bezier(0.37, 0, 0.8, 0.77) infinite;
+}
+
+.fab__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78%;
+  height: 78%;
+  border-radius: var(--radius-full);
+  background: var(--color-background);
+  font-family: var(--font-headline-xl-family);
+  font-size: var(--font-label-md-size);
+  font-weight: var(--font-headline-xl-weight);
+  line-height: var(--font-headline-xl-line-height);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@keyframes fab-pulse {
+  0% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) {
+  .fab:hover {
+    text-decoration: none;
+  }
+
+  .fab:hover .fab__label {
+    background: var(--color-primary-container);
+  }
+}
+
+@media (max-width: 768px) {
+  .fab {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab::before {
+    animation: none;
+  }
+}

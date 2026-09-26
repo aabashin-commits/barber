@@ -1,0 +1,8 @@
+Build UI in the visual style of Borodach (https://borodach.com/). Use only these tokens (full set: tokens.css / tailwind-theme.js / DESIGN.md).
+Colors: primary #5cae5d, on-primary #ffffff, secondary #7a7a7a, tertiary #428843, error #ffb4ab.
+Surfaces: background #131313, on-background #ffffff, surface #131313, on-surface #ffffff, on-surface-variant #7a7a7a, outline #7a7a7a, outline-variant #2d2a2a.
+Fonts: Helvetica (web substitute: Arimo), FactorA (web substitute: Montserrat). Type scale: headline-xl 45px/700/lh 1.11; headline-lg 35px/700/lh 1.11; headline-md 18px/700/lh normal; body-lg 18px/400/lh normal; body-md 16px/400/lh normal; label-md 14px/700/lh normal; label-sm 12px/400/lh normal.
+Spacing grid 10px: base 10px, xs 5px, sm 10px, md 20px, lg 40px, xl 90px, layout-margin 10px, card-gap 1px.
+Radii: sm 4px, DEFAULT 10px, md 10px, lg 30px, xl 30px, full 9999px. Buttons use rounded.DEFAULT (10px).
+Motion: fast 0.25s, base 0.3s, standard ease.
+Rules: primary is reserved for the main call to action; body text uses on-surface, secondary text on-surface-variant; do not invent colors, fonts or radii outside this list; read the prose sections of DESIGN.md for component patterns.

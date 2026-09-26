@@ -1,0 +1,116 @@
+/* Главный экран: строка бренда, h1, подзаголовок, CTA; справа фото интерьера */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(var(--spacing-xl) * 6.5);
+  padding-bottom: calc(var(--spacing-md) * 2.5);
+}
+
+.hero__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 43%;
+  background: var(--color-background);
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% 50%;
+}
+
+.hero__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, var(--color-background), transparent 45%),
+    linear-gradient(to top, var(--color-background), transparent 30%);
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--spacing-md);
+}
+
+.hero__body {
+  max-width: 50%;
+  padding: calc(var(--spacing-xl) * 1.2) var(--spacing-xs) 0;
+}
+
+.hero__title {
+  font-family: var(--font-headline-xl-family);
+  font-size: var(--font-headline-xl-size);
+  font-weight: var(--font-headline-xl-weight);
+  line-height: var(--font-headline-xl-line-height);
+  letter-spacing: var(--font-headline-xl-letter-spacing);
+  text-transform: uppercase;
+}
+
+.hero__subtitle {
+  max-width: calc(var(--spacing-xl) * 3);
+  margin-top: var(--spacing-md);
+  font-family: var(--font-body-lg-family);
+  font-size: var(--font-body-lg-size);
+  line-height: 1.2;
+}
+
+.hero .btn {
+  margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 840px) {
+  .hero__title {
+    font-size: calc(var(--font-headline-xl-size) * 0.55);
+  }
+
+  .hero__body {
+    max-width: 70%;
+    padding-top: calc(var(--spacing-xl) * 0.8);
+  }
+
+  .hero__photo {
+    left: 30%;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: calc(var(--spacing-xl) * 4.8);
+  }
+
+  .hero__photo {
+    left: 0;
+  }
+
+  .hero__photo::after {
+    background:
+      linear-gradient(to top, var(--color-background), transparent 55%),
+      linear-gradient(to right, var(--color-background), transparent 90%);
+  }
+
+  .hero__body {
+    max-width: 100%;
+    padding: calc(var(--spacing-xl) * 0.6) 0 0;
+  }
+
+  .hero__subtitle {
+    max-width: 70%;
+    font-size: var(--font-label-md-size);
+  }
+
+  .hero .btn {
+    margin-top: var(--spacing-md);
+  }
+}

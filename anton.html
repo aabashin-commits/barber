@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Антон — владелец и барбер BOX cut</title>
+  <meta name="description" content="Антон, владелец BOX cut: модельные и удлинённые стрижки, fade, борода, тонировка. Прайс, работы, запись онлайн.">
+  <meta name="theme-color" content="#131313">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="design/borodach.com/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/topbar.css">
+  <link rel="stylesheet" href="css/master-page.css">
+  <link rel="stylesheet" href="css/panel.css">
+  <link rel="stylesheet" href="css/photos.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/masters.css">
+  <link rel="stylesheet" href="css/contacts.css">
+  <link rel="stylesheet" href="css/fab.css">
+  <link rel="stylesheet" href="css/drawer.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <script src="js/main.js" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/links.js" defer></script>
+  <script src="js/drawer.js" defer></script>
+</head>
+<body>
+
+  <!-- Верхняя полоса -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <nav class="topbar__links" aria-label="Разделы сайта">
+        <a href="index.html#services">Услуги и цены</a>
+        <a href="index.html#masters">Мастера</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="topbar__socials">
+        <a href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">TG</a>
+        <a href="https://vk.com/" target="_blank" rel="noopener">VK</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Шапка мастера -->
+  <header class="page-head" id="top">
+    <div class="container page-head__bar">
+      <a class="brand" href="index.html" aria-label="BOX cut — на главную">
+        <img class="brand__logo" src="assets/brand/logo-white.png" width="512" height="512" alt="BOX cut — мужские стрижки">
+      </a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer" data-drawer-open>
+        <span class="burger__bar"></span>
+        <span class="burger__bar"></span>
+        <span class="burger__bar"></span>
+      </button>
+    </div>
+    <div class="container mhero">
+      <div class="mhero__text">
+        <p class="mhero__role">Владелец, барбер</p>
+        <h1 class="mhero__name">Антон</h1>
+        <p class="mhero__lead">Владелец BOX cut, стрижёт сам: модельные и удлинённые стрижки, fade, борода, тонировка.</p>
+        <div class="mhero__cta" id="booking">
+          <a class="btn" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Записаться к Антону</a>
+          <a class="mhero__phone" href="tel:+79101625895" data-link="phone">8 910 162-58-95</a>
+        </div>
+      </div>
+      <div class="mhero__photo"><img class="mhero__img" src="assets/anton/portrait.jpg" width="1032" height="1280" alt="Антон, владелец и барбер BOX cut"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="panel panel--flat">
+      <section class="panel__section services container" id="prices" aria-labelledby="prices-title">
+        <h2 class="panel__title" id="prices-title">Прайс: Антон</h2>
+        <ul class="services__list"><li class="service"><h3 class="service__name">Модельная мужская стрижка</h3><span class="service__price">1 500 ₽</span></li><li class="service"><h3 class="service__name">Удлинённая мужская стрижка</h3><span class="service__price">1 700 ₽</span></li><li class="service"><h3 class="service__name">Детская стрижка (6–12 лет)</h3><span class="service__price">1 200 ₽</span></li><li class="service"><h3 class="service__name">Стрижка машинкой (fade)</h3><span class="service__price">1 200 ₽</span></li><li class="service"><h3 class="service__name">Стрижка машинкой (2 насадки)</h3><span class="service__price">600 ₽</span></li><li class="service"><h3 class="service__name">Моделирование бороды</h3><span class="service__price">1 000 ₽</span></li><li class="service"><h3 class="service__name">Коррекция бороды (щетины)</h3><span class="service__price">600 ₽</span></li><li class="service"><h3 class="service__name">Окантовка триммером</h3><span class="service__price">300 ₽</span></li><li class="service"><h3 class="service__name">Укладка</h3><span class="service__price">400 ₽</span></li><li class="service"><h3 class="service__name">Удаление волос воском</h3><span class="service__price">200 ₽</span></li><li class="service"><h3 class="service__name">Тонировка бороды (щетины)</h3><span class="service__price">1 000 ₽</span></li><li class="service"><h3 class="service__name">Тонировка волос</h3><span class="service__price">1 000 ₽</span></li><li class="service"><h3 class="service__name">Модельная стрижка + моделирование бороды</h3><span class="service__price">2 400 ₽</span></li><li class="service"><h3 class="service__name">Удлинённая стрижка + моделирование бороды</h3><span class="service__price">2 600 ₽</span></li><li class="service"><h3 class="service__name">Стрижка машинкой (fade) + моделирование бороды</h3><span class="service__price">2 200 ₽</span></li></ul>
+      </section>
+
+      <section class="panel__section container" id="works" aria-labelledby="works-title"><h2 class="panel__title" id="works-title">Работы</h2><ul class="photo-grid"><li class="photo-grid__item"><img class="photo-grid__img" src="assets/anton/work-1.jpg" width="1097" height="1280" alt="Короткие виски, волосы зачёсаны назад, ухоженная борода" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/anton/work-2.jpg" width="960" height="1280" alt="Короткая чёлка и высокий фейд на висках" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/anton/work-3.jpg" width="960" height="1280" alt="Классическая стрижка с зачёсом назад" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/anton/work-4.jpg" width="960" height="1280" alt="Стрижка с длиннее сверху и коротким низом, борода" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/anton/work-5.jpg" width="687" height="1280" alt="Кудрявые волосы средней длины, аккуратные виски" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/anton/work-6.jpg" width="591" height="1052" alt="Молодёжная стрижка с чёлкой" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/anton/client-1.jpg" width="591" height="1052" alt="Антон снимает результат стрижки вместе с клиентом" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/anton/client-2.jpg" width="960" height="1280" alt="Антон и клиент показывают бицепсы в зеркале" loading="lazy"></li></ul></section>
+      <section class="panel__section container" id="interior" aria-labelledby="interior-title">
+        <h2 class="panel__title" id="interior-title">Где мы работаем</h2>
+        <ul class="photo-grid"><li class="photo-grid__item"><img class="photo-grid__img" src="assets/interior/facade.jpg" width="960" height="1280" alt="Вход в BOX cut: вывеска «Мужские стрижки» над стеклянной дверью" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/interior/hall-lights.jpg" width="960" height="1280" alt="Зал барбершопа: светильники-соты, синее кресло и диван" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/interior/chair-sink.jpg" width="960" height="1280" alt="Кресло у стойки с мойкой и полкой с косметикой" loading="lazy"></li><li class="photo-grid__item"><img class="photo-grid__img" src="assets/interior/hall-window.jpg" width="960" height="1280" alt="Кресло и стойка у панорамного окна" loading="lazy"></li></ul>
+      </section>
+
+      <section class="panel__section masters container" aria-labelledby="other-title">
+        <h2 class="panel__title" id="other-title">Второй мастер</h2>
+        <ul class="masters__list masters__list--single"><li class="master-card"><a class="master-card__link" href="nikita.html"><div class="master-card__photo"><img class="master-card__img" src="assets/nikita/portrait.jpg" width="960" height="1280" alt="Никита, барбер и партнёр BOX cut" loading="lazy"></div><div class="master-card__body"><h3 class="master-card__name">Никита</h3><p class="master-card__role">Барбер, партнёр</p><span class="master-card__more">Подробнее</span></div></a></li></ul>
+      </section>
+    </div>
+
+    <!-- Контакты -->
+    <section class="contacts container" id="contacts" aria-labelledby="contacts-title">
+      <div class="contacts__head">
+        <h2 class="contacts__title" id="contacts-title">Как к нам попасть</h2>
+        <p class="contacts__lead">адрес, часы работы и запись</p>
+      </div>
+      <div class="contacts__grid">
+        <article class="contact-card">
+          <span class="tag tag--small">Адрес</span>
+          <img class="contact-card__photo" src="assets/interior/facade.jpg" width="960" height="1280" alt="Вход в BOX cut: вывеска «Мужские стрижки» над стеклянной дверью" loading="lazy">
+          <p class="contact-card__main">ул. Примерная, 1</p>
+          <div class="contact-card__actions">
+            <a class="btn btn--small btn--outline" href="#contacts">Построить маршрут</a>
+          </div>
+        </article>
+        <article class="contact-card">
+          <span class="tag tag--small">Часы работы</span>
+          <p class="contact-card__main">Вт–Вс<br>с 11:00 до 20:00</p>
+          <p class="contact-card__note">Понедельник — выходной. Записаться можно онлайн или по телефону.</p>
+        </article>
+        <article class="contact-card">
+          <span class="tag tag--small">Запись</span>
+          <p class="contact-card__main"><a href="tel:+79101625895" data-link="phone">8 910 162-58-95</a></p>
+          <div class="contact-card__actions">
+            <a class="btn btn--small" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn btn--small" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a class="brand" href="index.html" aria-label="BOX cut — на главную">
+          <img class="brand__logo" src="assets/brand/logo-white.png" width="512" height="512" alt="BOX cut — мужские стрижки">
+        </a>
+        <div class="footer__socials">
+          <span>соцсети:</span>
+          <a href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">TG</a>
+          <a href="https://vk.com/" target="_blank" rel="noopener">VK</a>
+        </div>
+        <p class="footer__legal-entity">Юридическое лицо, ИНН, ОГРН и адрес — будут добавлены.</p>
+      </div>
+
+      <div class="footer__col footer__col--promo">
+        <div class="footer__card">
+          <span>Запишитесь онлайн:</span>
+          <div class="footer__card-actions">
+            <a class="btn btn--small btn--outline" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn btn--small btn--outline" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__col footer__col--links">
+        <h2 class="footer__heading">Быстрые ссылки</h2>
+        <ul class="footer__links">
+          <li><a href="index.html#services">Услуги и цены</a></li>
+          <li><a href="index.html#masters">Мастера</a></li>
+          <li><a href="index.html#contacts">Контакты</a></li>
+          <li><a href="#booking">Записаться онлайн</a></li>
+        </ul>
+        <ul class="footer__legal">
+          <li><a href="#">политика конфиденциальности</a></li>
+          <li><a href="#">политика обработки персональных данных</a></li>
+          <li><a href="#">публичная оферта</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка записи (шире 768px) -->
+  <a class="fab" href="#booking" aria-label="Записаться онлайн">
+    <span class="fab__label">Записаться</span>
+  </a>
+
+  <!-- Мобильное меню (до 650px, только с JS) -->
+  <div class="drawer-backdrop" data-drawer-backdrop></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Меню" data-drawer>
+    <button class="drawer__close" type="button" aria-label="Закрыть меню" data-drawer-close>&times;</button>
+    <nav class="drawer__links" aria-label="Разделы сайта">
+      <a href="index.html#services">Услуги и цены</a>
+      <a href="index.html#masters">Мастера</a>
+      <a href="index.html#contacts">Контакты</a>
+    </nav>
+    <div class="drawer__actions">
+      <a class="btn btn--small" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn btn--small" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </aside>
+
+</body>
+</html>

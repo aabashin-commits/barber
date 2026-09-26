@@ -1,0 +1,67 @@
+/* Услуги и цены: строки «название — описание — цена» в две колонки */
+
+.services__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--spacing-lg);
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-on-primary-fixed-variant);
+}
+
+.service__name {
+  font-family: var(--font-headline-md-family);
+  font-size: var(--font-headline-md-size);
+  font-weight: var(--font-headline-md-weight);
+  line-height: 1.2;
+}
+
+.service__desc {
+  margin-top: var(--spacing-xs);
+  color: color-mix(in srgb, var(--color-inverse-on-surface) 60%, transparent);
+  font-size: var(--font-label-md-size);
+}
+
+.service__price {
+  flex: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: var(--color-on-primary-fixed-variant);
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  font-weight: var(--font-label-md-weight);
+  white-space: nowrap;
+}
+
+.services__note {
+  margin-top: var(--spacing-md);
+  color: color-mix(in srgb, var(--color-inverse-on-surface) 60%, transparent);
+  font-size: var(--font-label-md-size);
+  text-align: center;
+}
+
+@media (max-width: 840px) {
+  .services__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .service {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .service__name {
+    font-size: var(--font-body-md-size);
+  }
+
+  .service__desc {
+    font-size: var(--font-label-sm-size);
+  }
+}

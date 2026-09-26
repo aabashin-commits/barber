@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design MD Preview</title>
+    <style>
+:root {
+  --color-green: #5cae5d;
+  --color-canvas-white: #ffffff;
+  --color-near-black: #131313;
+  --color-dark-gray: #161616;
+  --color-off-white: #f3f3f3;
+  --color-light-gray: #c4c4c4;
+  --color-rich-black: #000000;
+  --color-gray: #7a7a7a;
+  --color-dark-gray-1: #2d2a2a;
+  --color-gray-1: #808080;
+  --color-gray-2: #767676;
+  --color-dark-gray-2: #3e3e3e;
+  --surface-base-surface: #131313;
+  --surface-1: #ffffff;
+  --surface-2: #161616;
+  --surface-3: #5cae5d;
+  --font-text: FactorA;
+  --font-size-text: 18px;
+  --font-weight-text: 400;
+  --line-height-text: normal;
+  --letter-spacing-text: normal;
+  --font-text-1: FactorA;
+  --font-size-text-1: 16px;
+  --font-weight-text-1: 400;
+  --line-height-text-1: normal;
+  --letter-spacing-text-1: normal;
+  --font-link: FactorA;
+  --font-size-link: 16px;
+  --font-weight-link: 400;
+  --line-height-link: normal;
+  --letter-spacing-link: normal;
+  --font-text-2: FactorA;
+  --font-size-text-2: 13px;
+  --font-weight-text-2: 400;
+  --line-height-text-2: 14.3px;
+  --letter-spacing-text-2: -0.2px;
+  --font-body: FactorA;
+  --font-size-body: 16px;
+  --font-weight-body: 400;
+  --line-height-body: normal;
+  --letter-spacing-body: normal;
+  --font-link-1: FactorA;
+  --font-size-link-1: 18px;
+  --font-weight-link-1: 400;
+  --line-height-link-1: normal;
+  --letter-spacing-link-1: normal;
+  --font-link-2: FactorA;
+  --font-size-link-2: 12px;
+  --font-weight-link-2: 400;
+  --line-height-link-2: normal;
+  --letter-spacing-link-2: normal;
+  --font-text-3: FactorA;
+  --font-size-text-3: 14px;
+  --font-weight-text-3: 700;
+  --line-height-text-3: normal;
+  --letter-spacing-text-3: normal;
+  --font-text-4: FactorA;
+  --font-size-text-4: 12px;
+  --font-weight-text-4: 400;
+  --line-height-text-4: normal;
+  --letter-spacing-text-4: normal;
+  --font-body-1: FactorA;
+  --font-size-body-1: 18px;
+  --font-weight-body-1: 400;
+  --line-height-body-1: normal;
+  --letter-spacing-body-1: normal;
+  --font-text-5: FactorA;
+  --font-size-text-5: 11px;
+  --font-weight-text-5: 400;
+  --line-height-text-5: normal;
+  --letter-spacing-text-5: normal;
+  --font-heading: FactorA;
+  --font-size-heading: 15px;
+  --font-weight-heading: 700;
+  --line-height-heading: 16.65px;
+  --letter-spacing-heading: normal;
+  --space-padding-1: 0px 10px;
+  --space-padding-2: 142px 0px 95px;
+  --space-padding-3: 0px 10px 6px;
+  --space-padding-4: 12px 20px;
+  --space-padding-5: 1px 2px;
+  --space-padding-6: 0px 0px 0px 13px;
+  --radius-1: 10px;
+  --radius-2: 4px;
+  --radius-3: 30px;
+  --shadow-1: rgba(92, 170, 83, 0.7) 0px 23px 16px -19px;
+  --shadow-2: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px;
+  --gradient-1: linear-gradient(#5cae5d 0%, #428843 100%);
+}
+      :root { --preview-canvas: var(--surface-base-surface); --preview-surface: var(--surface-1); --preview-text: var(--color-green); --preview-accent: var(--color-rich-black); --preview-space: var(--space-padding-1); --preview-radius: var(--radius-1); --preview-shadow: var(--shadow-1); }
+      * { box-sizing: border-box; }
+      body { font-family: var(--font-text, system-ui, sans-serif); margin: 0; padding: calc(var(--preview-space) * 4); color: var(--color-green); background: var(--preview-canvas, #ffffff); }
+      main { max-width: 1120px; margin: 0 auto; display: grid; gap: calc(var(--preview-space) * 4); }
+      .report-header { display: flex; align-items: end; justify-content: space-between; gap: calc(var(--preview-space) * 3); border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); padding-bottom: calc(var(--preview-space) * 3); }
+      .eyebrow, .section-heading span, .token-card span, .ui-card span { display: block; font-size: .75rem; font-weight: 700; letter-spacing: 0; text-transform: uppercase; opacity: .66; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { margin-bottom: 0; font-size: 4rem; line-height: 1; letter-spacing: 0; }
+      h2 { margin-bottom: 0; font-size: 1.35rem; line-height: 1.15; letter-spacing: 0; }
+      h3 { margin-bottom: calc(var(--preview-space) * 1.25); font-size: 1.15rem; line-height: 1.2; letter-spacing: 0; }
+      p { line-height: 1.5; }
+      .downloads { display: flex; flex-wrap: wrap; gap: 8px; }
+      .downloads a { border: 1px solid currentColor; border-radius: var(--preview-radius); color: inherit; padding: 8px 10px; text-decoration: none; }
+      .report-section { display: grid; gap: calc(var(--preview-space) * 2); }
+      .section-heading { display: grid; gap: calc(var(--preview-space) * .5); }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: calc(var(--preview-space) * 2); }
+      .swatch, .type-sample, .component-card, .surface-card, .token-card { border: 1px solid color-mix(in srgb, currentColor 18%, transparent); border-radius: var(--radius-1); padding: calc(var(--preview-space) * 1.75); background: color-mix(in srgb, var(--preview-surface, #ffffff) 92%, white); box-shadow: var(--shadow-1); }
+      .swatch-chip { height: 80px; border-radius: calc(var(--preview-radius, 8px) * .75); border: 1px solid rgba(0,0,0,.14); }
+      .surface-sample { height: 80px; border-radius: calc(var(--preview-radius, 8px) * .75); border: 1px solid color-mix(in srgb, currentColor 16%, transparent); }
+      .type-sample span, .component-card p, .surface-card p { display: block; margin: 0 0 8px; opacity: .7; }
+      .type-sample p { margin: 0; }
+      .component-sample { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; max-width: 100%; border: 1px solid color-mix(in srgb, currentColor 25%, transparent); }
+      .component-sample-card { display: flex; min-height: 92px; align-items: start; justify-content: start; }
+      .token-card { min-height: 136px; display: grid; align-content: start; gap: var(--preview-space); overflow: hidden; }
+      .token-visual { min-height: 40px; background: color-mix(in srgb, var(--preview-accent, currentColor) 20%, transparent); border: 1px solid var(--preview-accent, currentColor); }
+      .token-card-spacing .token-visual { height: var(--token-value); min-height: var(--token-value); }
+      .token-card-radius .token-visual { border-radius: var(--token-value); }
+      .token-card-shadow .token-visual { box-shadow: var(--token-value); }
+      .showcase-stage { display: grid; grid-template-columns: minmax(220px, .8fr) minmax(260px, 1.2fr); gap: calc(var(--preview-space) * 3); align-items: stretch; border: 1px solid color-mix(in srgb, currentColor 16%, transparent); border-radius: var(--preview-radius); padding: calc(var(--preview-space) * 3); background: color-mix(in srgb, var(--preview-canvas, #ffffff) 88%, white); }
+      .button-row { display: flex; flex-wrap: wrap; align-content: start; align-items: center; gap: var(--preview-space); }
+      .ui-button { border: 1px solid currentColor; border-radius: var(--preview-radius); font: inherit; min-height: 40px; cursor: default; }
+      .ui-button-secondary { background: transparent; color: inherit; padding: var(--preview-space) calc(var(--preview-space) * 2); }
+      .ui-card { border: 1px solid; min-height: 180px; }
+      .ui-card p { margin-bottom: 0; max-width: 46ch; }
+      code { display: block; margin-top: 6px; color: inherit; opacity: .72; }
+      pre { border: 1px solid color-mix(in srgb, currentColor 18%, transparent); border-radius: var(--preview-radius); overflow: auto; padding: calc(var(--preview-space) * 2); background: color-mix(in srgb, var(--preview-canvas, #ffffff) 82%, black 4%); }
+      @media (max-width: 760px) {
+        body { padding: calc(var(--preview-space) * 2); }
+        .report-header, .showcase-stage { display: grid; align-items: start; grid-template-columns: 1fr; }
+        h1 { font-size: 2.75rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="report-header">
+        <div>
+          <span class="eyebrow">Static export</span>
+          <h1>Design MD Preview</h1>
+        </div>
+        <nav class="downloads" aria-label="Artifact downloads">
+          <a href="DESIGN.md" download>DESIGN.md</a>
+          <a href="tokens.css" download>tokens.css</a>
+          <a href="evidence.json" download>evidence.json</a>
+        </nav>
+      </header>
+      <section class="report-section ui-showcase" aria-labelledby="ui-showcase-title">
+        <div class="section-heading">
+          <span>Applied Tokens</span>
+          <h2 id="ui-showcase-title">Sample UI</h2>
+        </div>
+        <div class="showcase-stage">
+          <div class="button-row">
+            <button class="ui-button ui-button-primary" style="background:var(--color-rich-black);color:var(--color-green);border-color:var(--color-green);border-radius:var(--preview-radius);box-shadow:var(--preview-shadow);padding:var(--preview-space) calc(var(--preview-space) * 2);" type="button">Primary action</button>
+            <button class="ui-button ui-button-secondary" type="button">Secondary</button>
+          </div>
+          <article class="ui-card" style="background:var(--surface-1);border-color:var(--color-rich-black);border-radius:var(--preview-radius);box-shadow:var(--preview-shadow);padding:calc(var(--preview-space) * 3);">
+            <span>Card surface</span>
+            <h3>Extracted interface sample</h3>
+            <p>Buttons, borders, surfaces, radius, spacing, and shadow use the same CSS variables exported below.</p>
+          </article>
+        </div>
+      </section>
+      <section class="report-section">
+        <div class="section-heading">
+          <span>Visual Tokens</span>
+          <h2>Typography</h2>
+        </div>
+        <div class="grid"><section class="type-sample"><span>text</span><p class="type-line" style="font-family:var(--font-text);font-size:var(--font-size-text);font-weight:var(--font-weight-text);line-height:var(--line-height-text);letter-spacing:var(--letter-spacing-text);">Extracted text typography</p><code>FactorA / 18px</code></section>
+<section class="type-sample"><span>text</span><p class="type-line" style="font-family:var(--font-text);font-size:var(--font-size-text);font-weight:var(--font-weight-text);line-height:var(--line-height-text);letter-spacing:var(--letter-spacing-text);">Extracted text typography</p><code>FactorA / 16px</code></section>
+<section class="type-sample"><span>link</span><p class="type-line" style="font-family:var(--font-link);font-size:var(--font-size-link);font-weight:var(--font-weight-link);line-height:var(--line-height-link);letter-spacing:var(--letter-spacing-link);">Extracted link typography</p><code>FactorA / 16px</code></section>
+<section class="type-sample"><span>text</span><p class="type-line" style="font-family:var(--font-text);font-size:var(--font-size-text);font-weight:var(--font-weight-text);line-height:var(--line-height-text);letter-spacing:var(--letter-spacing-text);">Extracted text typography</p><code>FactorA / 13px</code></section>
+<section class="type-sample"><span>body</span><p class="type-line" style="font-family:var(--font-body);font-size:var(--font-size-body);font-weight:var(--font-weight-body);line-height:var(--line-height-body);letter-spacing:var(--letter-spacing-body);">Extracted body typography</p><code>FactorA / 16px</code></section>
+<section class="type-sample"><span>link</span><p class="type-line" style="font-family:var(--font-link);font-size:var(--font-size-link);font-weight:var(--font-weight-link);line-height:var(--line-height-link);letter-spacing:var(--letter-spacing-link);">Extracted link typography</p><code>FactorA / 18px</code></section>
+<section class="type-sample"><span>link</span><p class="type-line" style="font-family:var(--font-link);font-size:var(--font-size-link);font-weight:var(--font-weight-link);line-height:var(--line-height-link);letter-spacing:var(--letter-spacing-link);">Extracted link typography</p><code>FactorA / 12px</code></section>
+<section class="type-sample"><span>text</span><p class="type-line" style="font-family:var(--font-text);font-size:var(--font-size-text);font-weight:var(--font-weight-text);line-height:var(--line-height-text);letter-spacing:var(--letter-spacing-text);">Extracted text typography</p><code>FactorA / 14px</code></section>
+<section class="type-sample"><span>text</span><p class="type-line" style="font-family:var(--font-text);font-size:var(--font-size-text);font-weight:var(--font-weight-text);line-height:var(--line-height-text);letter-spacing:var(--letter-spacing-text);">Extracted text typography</p><code>FactorA / 12px</code></section>
+<section class="type-sample"><span>body</span><p class="type-line" style="font-family:var(--font-body);font-size:var(--font-size-body);font-weight:var(--font-weight-body);line-height:var(--line-height-body);letter-spacing:var(--letter-spacing-body);">Extracted body typography</p><code>FactorA / 18px</code></section>
+<section class="type-sample"><span>text</span><p class="type-line" style="font-family:var(--font-text);font-size:var(--font-size-text);font-weight:var(--font-weight-text);line-height:var(--line-height-text);letter-spacing:var(--letter-spacing-text);">Extracted text typography</p><code>FactorA / 11px</code></section>
+<section class="type-sample"><span>heading</span><p class="type-line" style="font-family:var(--font-heading);font-size:var(--font-size-heading);font-weight:var(--font-weight-heading);line-height:var(--line-height-heading);letter-spacing:var(--letter-spacing-heading);">Extracted heading typography</p><code>FactorA / 15px</code></section></div>
+      </section>
+      <section class="report-section">
+        <div class="section-heading">
+          <span>Palette</span>
+          <h2>Colors</h2>
+        </div>
+        <div class="grid"><section class="swatch"><div class="swatch-chip" style="background:var(--color-green)"></div><strong>Green</strong><code>--color-green: #5cae5d</code><p>Surface or background color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-canvas-white)"></div><strong>Canvas White</strong><code>--color-canvas-white: #ffffff</code><p>Surface or background color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-near-black)"></div><strong>Near Black</strong><code>--color-near-black: #131313</code><p>Surface or background color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-dark-gray)"></div><strong>Dark Gray</strong><code>--color-dark-gray: #161616</code><p>Surface or background color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-off-white)"></div><strong>Off White</strong><code>--color-off-white: #f3f3f3</code><p>Surface or background color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-light-gray)"></div><strong>Light Gray</strong><code>--color-light-gray: #c4c4c4</code><p>Surface or background color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-rich-black)"></div><strong>Rich Black</strong><code>--color-rich-black: #000000</code><p>Text, border, or accent color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-gray)"></div><strong>Gray</strong><code>--color-gray: #7a7a7a</code><p>Text, border, or accent color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-dark-gray)"></div><strong>Dark Gray</strong><code>--color-dark-gray: #2d2a2a</code><p>Text, border, or accent color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-gray)"></div><strong>Gray</strong><code>--color-gray: #808080</code><p>Text, border, or accent color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-gray)"></div><strong>Gray</strong><code>--color-gray: #767676</code><p>Text, border, or accent color</p></section>
+<section class="swatch"><div class="swatch-chip" style="background:var(--color-dark-gray)"></div><strong>Dark Gray</strong><code>--color-dark-gray: #3e3e3e</code><p>Text, border, or accent color</p></section></div>
+      </section>
+      <section class="report-section">
+        <div class="section-heading">
+          <span>Surface Hierarchy</span>
+          <h2>Surfaces</h2>
+        </div>
+        <div class="grid"><section class="surface-card"><div class="surface-sample" style="background:var(--surface-base-surface);"></div><strong>Base Surface</strong><code>--surface-base-surface: #131313</code><p>Surface or background color</p></section>
+<section class="surface-card"><div class="surface-sample" style="background:var(--surface-1);"></div><strong>Surface 1</strong><code>--surface-1: #ffffff</code><p>Surface or background color</p></section>
+<section class="surface-card"><div class="surface-sample" style="background:var(--surface-2);"></div><strong>Surface 2</strong><code>--surface-2: #161616</code><p>Surface or background color</p></section>
+<section class="surface-card"><div class="surface-sample" style="background:var(--surface-3);"></div><strong>Surface 3</strong><code>--surface-3: #5cae5d</code><p>Surface or background color</p></section></div>
+      </section>
+      <section class="report-section">
+        <div class="section-heading">
+          <span>Shape And Rhythm</span>
+          <h2>Spacing, Radius, Shadow</h2>
+        </div>
+        <div class="grid"><section class="token-card token-card-spacing" style="--token-value:var(--space-padding-1);"><span>Spacing</span><strong>Padding 1</strong><code>--space-padding-1: 0px 10px</code><div class="token-visual" aria-hidden="true"></div></section>
+<section class="token-card token-card-spacing" style="--token-value:var(--space-padding-2);"><span>Spacing</span><strong>Padding 2</strong><code>--space-padding-2: 142px 0px 95px</code><div class="token-visual" aria-hidden="true"></div></section>
+<section class="token-card token-card-spacing" style="--token-value:var(--space-padding-3);"><span>Spacing</span><strong>Padding 3</strong><code>--space-padding-3: 0px 10px 6px</code><div class="token-visual" aria-hidden="true"></div></section>
+<section class="token-card token-card-spacing" style="--token-value:var(--space-padding-4);"><span>Spacing</span><strong>Padding 4</strong><code>--space-padding-4: 12px 20px</code><div class="token-visual" aria-hidden="true"></div></section>
+<section class="token-card token-card-radius" style="--token-value:var(--radius-1);"><span>Radius</span><strong>Radius 1</strong><code>--radius-1: 10px</code><div class="token-visual" aria-hidden="true"></div></section>
+<section class="token-card token-card-radius" style="--token-value:var(--radius-2);"><span>Radius</span><strong>Radius 2</strong><code>--radius-2: 4px</code><div class="token-visual" aria-hidden="true"></div></section>
+<section class="token-card token-card-radius" style="--token-value:var(--radius-3);"><span>Radius</span><strong>Radius 3</strong><code>--radius-3: 30px</code><div class="token-visual" aria-hidden="true"></div></section>
+<section class="token-card token-card-shadow" style="--token-value:var(--shadow-1);"><span>Shadow</span><strong>Shadow 1</strong><code>--shadow-1: rgba(92, 170, 83, 0.7) 0px 23px 16px -19px</code><div class="token-visual" aria-hidden="true"></div></section>
+<section class="token-card token-card-shadow" style="--token-value:var(--shadow-2);"><span>Shadow</span><strong>Shadow 2</strong><code>--shadow-2: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px</code><div class="token-visual" aria-hidden="true"></div></section></div>
+      </section>
+      <section class="report-section">
+        <div class="section-heading">
+          <span>Observed Patterns</span>
+          <h2>Components</h2>
+        </div>
+        <div class="grid"><section class="component-card"><strong>Primary Button</strong><p>Primary Button component</p><div class="component-sample component-sample-button" style="background:var(--surface-3);color:var(--surface-1);border-radius:10px;box-shadow:rgba(92, 170, 83, 0.7) 0px 23px 16px -19px;padding:0px;">МАГАЗИН BORODACH.PRO</div></section>
+<section class="component-card"><strong>Primary Button</strong><p>Primary Button component</p><div class="component-sample component-sample-button" style="background:var(--surface-3);color:var(--surface-1);border-radius:4px;box-shadow:rgba(0, 0, 0, 0.25) 0px 0px 10px 0px;padding:0px 10px;">Скачать</div></section>
+<section class="component-card"><strong>Surface Card</strong><p>Surface Card component</p><div class="component-sample component-sample-card" style="background:var(--surface-1);color:var(--surface-1);border-radius:0px;box-shadow:none;padding:0px;">Search Выберите город Франшиза Вакансии в команду Академия Барберов Магазин косм</div></section>
+<section class="component-card"><strong>Primary Button</strong><p>Primary Button component</p><div class="component-sample component-sample-button" style="background:var(--surface-base-surface);color:var(--surface-1);border-radius:0px;box-shadow:none;padding:0px;">&lt;div&gt;&lt;img src=&quot;https://mc.yandex.ru/watch/50238430&quot; style=&quot;position:absolute; le</div></section>
+<section class="component-card"><strong>Primary Button</strong><p>Primary Button component</p><div class="component-sample component-sample-button" style="background:var(--surface-3);color:var(--surface-1);border-radius:10px;box-shadow:none;padding:0px;">Записаться онлайн</div></section>
+<section class="component-card"><strong>Surface Card</strong><p>Surface Card component</p><div class="component-sample component-sample-card" style="background:var(--surface-1);color:var(--color-rich-black);border-radius:30px;box-shadow:none;padding:142px 0px 95px;">#borodachlive BORODACH: место, где уход — это удовольствие 02 июня 2025 Идеальна</div></section></div>
+      </section>
+      <section class="report-section">
+        <div class="section-heading">
+          <span>Export</span>
+          <h2>CSS Tokens</h2>
+        </div>
+        <pre><code>:root {
+  --color-green: #5cae5d;
+  --color-canvas-white: #ffffff;
+  --color-near-black: #131313;
+  --color-dark-gray: #161616;
+  --color-off-white: #f3f3f3;
+  --color-light-gray: #c4c4c4;
+  --color-rich-black: #000000;
+  --color-gray: #7a7a7a;
+  --color-dark-gray-1: #2d2a2a;
+  --color-gray-1: #808080;
+  --color-gray-2: #767676;
+  --color-dark-gray-2: #3e3e3e;
+  --surface-base-surface: #131313;
+  --surface-1: #ffffff;
+  --surface-2: #161616;
+  --surface-3: #5cae5d;
+  --font-text: FactorA;
+  --font-size-text: 18px;
+  --font-weight-text: 400;
+  --line-height-text: normal;
+  --letter-spacing-text: normal;
+  --font-text-1: FactorA;
+  --font-size-text-1: 16px;
+  --font-weight-text-1: 400;
+  --line-height-text-1: normal;
+  --letter-spacing-text-1: normal;
+  --font-link: FactorA;
+  --font-size-link: 16px;
+  --font-weight-link: 400;
+  --line-height-link: normal;
+  --letter-spacing-link: normal;
+  --font-text-2: FactorA;
+  --font-size-text-2: 13px;
+  --font-weight-text-2: 400;
+  --line-height-text-2: 14.3px;
+  --letter-spacing-text-2: -0.2px;
+  --font-body: FactorA;
+  --font-size-body: 16px;
+  --font-weight-body: 400;
+  --line-height-body: normal;
+  --letter-spacing-body: normal;
+  --font-link-1: FactorA;
+  --font-size-link-1: 18px;
+  --font-weight-link-1: 400;
+  --line-height-link-1: normal;
+  --letter-spacing-link-1: normal;
+  --font-link-2: FactorA;
+  --font-size-link-2: 12px;
+  --font-weight-link-2: 400;
+  --line-height-link-2: normal;
+  --letter-spacing-link-2: normal;
+  --font-text-3: FactorA;
+  --font-size-text-3: 14px;
+  --font-weight-text-3: 700;
+  --line-height-text-3: normal;
+  --letter-spacing-text-3: normal;
+  --font-text-4: FactorA;
+  --font-size-text-4: 12px;
+  --font-weight-text-4: 400;
+  --line-height-text-4: normal;
+  --letter-spacing-text-4: normal;
+  --font-body-1: FactorA;
+  --font-size-body-1: 18px;
+  --font-weight-body-1: 400;
+  --line-height-body-1: normal;
+  --letter-spacing-body-1: normal;
+  --font-text-5: FactorA;
+  --font-size-text-5: 11px;
+  --font-weight-text-5: 400;
+  --line-height-text-5: normal;
+  --letter-spacing-text-5: normal;
+  --font-heading: FactorA;
+  --font-size-heading: 15px;
+  --font-weight-heading: 700;
+  --line-height-heading: 16.65px;
+  --letter-spacing-heading: normal;
+  --space-padding-1: 0px 10px;
+  --space-padding-2: 142px 0px 95px;
+  --space-padding-3: 0px 10px 6px;
+  --space-padding-4: 12px 20px;
+  --space-padding-5: 1px 2px;
+  --space-padding-6: 0px 0px 0px 13px;
+  --radius-1: 10px;
+  --radius-2: 4px;
+  --radius-3: 30px;
+  --shadow-1: rgba(92, 170, 83, 0.7) 0px 23px 16px -19px;
+  --shadow-2: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px;
+  --gradient-1: linear-gradient(#5cae5d 0%, #428843 100%);
+}</code></pre>
+      </section>
+    </main>
+  </body>
+</html>

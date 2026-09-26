@@ -1,0 +1,465 @@
+{
+  "url": "https://borodach.com/",
+  "title": "Записаться в барбершоп рядом со мной на карте цена в федеральной сети барбершопов Бородач",
+  "description": "Записаться в барбершоп рядом со мной на карте цена в федеральной сети барбершопов Бородач по всей России, запишись в барбершоп в твоем городе онлайн.",
+  "themeColor": null,
+  "colorScheme": "normal",
+  "colorVars": {},
+  "rootVars": {},
+  "rootVarCount": 0,
+  "blockedSheets": [
+    "https://w15788.yclients.ru/css/ywidget/newweb.css?2",
+    "https://web.webpushs.com/dist/css/push/sendpulse-prompt.min.css?v=241792789200000"
+  ],
+  "frequency": {
+    "textColors": [
+      {
+        "value": "#ffffff",
+        "count": 62
+      },
+      {
+        "value": "#7a7a7a",
+        "count": 10
+      },
+      {
+        "value": "#3e3e3e",
+        "count": 2
+      },
+      {
+        "value": "#000000",
+        "count": 1
+      },
+      {
+        "value": "#5cae5d",
+        "count": 1
+      }
+    ],
+    "backgrounds": [
+      {
+        "value": "#ffffff",
+        "count": 611.3209999999999
+      },
+      {
+        "value": "#5cae5d",
+        "count": 148.2676846570671
+      },
+      {
+        "value": "#161616",
+        "count": 79.72
+      },
+      {
+        "value": "#f3f3f3",
+        "count": 10.2989375
+      }
+    ],
+    "borderColors": [
+      {
+        "value": "#5cae5d",
+        "count": 3
+      },
+      {
+        "value": "#767676",
+        "count": 2
+      }
+    ],
+    "fontFamilies": [
+      {
+        "value": "FactorA",
+        "count": 71
+      },
+      {
+        "value": "Helvetica, sans-serif",
+        "count": 5
+      }
+    ],
+    "typeSizes": [
+      {
+        "value": "16px|400|normal|normal",
+        "count": 16
+      },
+      {
+        "value": "18px|400|normal|normal",
+        "count": 15
+      },
+      {
+        "value": "12px|400|normal|normal",
+        "count": 11
+      },
+      {
+        "value": "18px|700|normal|normal",
+        "count": 6
+      },
+      {
+        "value": "14px|700|normal|normal",
+        "count": 5
+      },
+      {
+        "value": "11px|400|normal|normal",
+        "count": 5
+      },
+      {
+        "value": "35px|700|38.85px|normal",
+        "count": 3
+      },
+      {
+        "value": "15px|700|16.65px|normal",
+        "count": 3
+      },
+      {
+        "value": "12px|700|13.32px|normal",
+        "count": 3
+      },
+      {
+        "value": "10px|700|11.1px|normal",
+        "count": 2
+      },
+      {
+        "value": "45px|700|49.95px|normal",
+        "count": 2
+      },
+      {
+        "value": "13px|600|18px|0.3px",
+        "count": 2
+      },
+      {
+        "value": "33px|700|33px|normal",
+        "count": 1
+      },
+      {
+        "value": "10px|400|normal|normal",
+        "count": 1
+      },
+      {
+        "value": "16px|700|17.76px|normal",
+        "count": 1
+      }
+    ],
+    "radii": [
+      {
+        "value": "10px",
+        "count": 4
+      },
+      {
+        "value": "4px",
+        "count": 2
+      },
+      {
+        "value": "100%",
+        "count": 1
+      },
+      {
+        "value": "30px",
+        "count": 1
+      },
+      {
+        "value": "5px",
+        "count": 1
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.25) 0px 0px 10px 0px",
+        "count": 2
+      },
+      {
+        "value": "rgba(92, 170, 83, 0.7) 0px 23px 16px -19px",
+        "count": 2
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 20px 30px 0px",
+        "count": 1
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 3px 20px 0px",
+        "count": 1
+      }
+    ],
+    "gaps": [
+      {
+        "value": "0px",
+        "count": 1
+      }
+    ],
+    "spacing": [
+      {
+        "value": "19px",
+        "count": 12
+      },
+      {
+        "value": "1px",
+        "count": 10
+      },
+      {
+        "value": "4px",
+        "count": 9
+      },
+      {
+        "value": "5px",
+        "count": 8
+      },
+      {
+        "value": "2px",
+        "count": 5
+      },
+      {
+        "value": "10px",
+        "count": 4
+      },
+      {
+        "value": "20px",
+        "count": 3
+      },
+      {
+        "value": "19.95px",
+        "count": 3
+      },
+      {
+        "value": "12px",
+        "count": 3
+      },
+      {
+        "value": "57px",
+        "count": 1
+      },
+      {
+        "value": "38px",
+        "count": 1
+      },
+      {
+        "value": "14px",
+        "count": 1
+      },
+      {
+        "value": "142px",
+        "count": 1
+      },
+      {
+        "value": "13px",
+        "count": 1
+      }
+    ]
+  },
+  "components": {
+    "body": {
+      "tag": "body",
+      "text": "Выберите город\nФраншиза\nВакансии в команду\nАкадемия Барберов",
+      "fontFamily": "FactorA",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "#ffffff",
+      "backgroundColor": "#131313",
+      "borderRadius": "0px",
+      "border": "0px none rgb(255, 255, 255)",
+      "padding": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "tag": "h1",
+      "text": "БАРБЕРШОП\nБОРОДАЧ",
+      "fontFamily": "Helvetica, sans-serif",
+      "fontSize": "45px",
+      "fontWeight": "700",
+      "lineHeight": "49.95px",
+      "letterSpacing": "normal",
+      "color": "#ffffff",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "border": "0px none rgb(255, 255, 255)",
+      "padding": "0px 0px 20px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "h2": null,
+    "h3": {
+      "tag": "h3",
+      "text": "#BORODACHLIVE",
+      "fontFamily": "Helvetica, sans-serif",
+      "fontSize": "45px",
+      "fontWeight": "700",
+      "lineHeight": "49.95px",
+      "letterSpacing": "normal",
+      "color": "#ffffff",
+      "backgroundColor": "#5cae5d",
+      "borderRadius": "0px",
+      "border": "0px none rgb(255, 255, 255)",
+      "padding": "0px 10px 6px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "h4": null,
+    "p": {
+      "tag": "p",
+      "text": "нашими услугами пользуются\nболее 224 000 мужчин",
+      "fontFamily": "FactorA",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "#ffffff",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "border": "0px none rgb(255, 255, 255)",
+      "padding": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "a": {
+      "tag": "a",
+      "text": "",
+      "fontFamily": "FactorA",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "#ffffff",
+      "backgroundColor": "#5cae5d",
+      "borderRadius": "100%",
+      "border": "0px none rgb(255, 255, 255)",
+      "padding": "0px",
+      "boxShadow": "rgba(0, 0, 0, 0.2) 0px 20px 30px 0px",
+      "textTransform": "none"
+    },
+    "small": null,
+    "buttons": [
+      {
+        "tag": "button",
+        "text": "SEARCH",
+        "fontFamily": "FactorA",
+        "fontSize": "13px",
+        "fontWeight": "600",
+        "lineHeight": "18px",
+        "letterSpacing": "0.3px",
+        "color": "#3e3e3e",
+        "backgroundColor": "#f3f3f3",
+        "borderRadius": "0px",
+        "border": "0px solid rgba(0, 0, 0, 0)",
+        "padding": "12px 20px",
+        "boxShadow": "none",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "button",
+        "text": "SEARCH",
+        "fontFamily": "FactorA",
+        "fontSize": "13px",
+        "fontWeight": "600",
+        "lineHeight": "18px",
+        "letterSpacing": "0.3px",
+        "color": "#3e3e3e",
+        "backgroundColor": "#f3f3f3",
+        "borderRadius": "0px",
+        "border": "0px solid rgba(0, 0, 0, 0)",
+        "padding": "12px 20px",
+        "boxShadow": "none",
+        "textTransform": "uppercase"
+      }
+    ],
+    "input": null,
+    "nav": null,
+    "cards": [],
+    "badge": null,
+    "footer": null
+  },
+  "assets": {
+    "favicon": "https://borodach.com/wp-content/uploads/2024/04/favicon.png",
+    "ogImage": "https://borodach.com/",
+    "images": [
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/borodach.svg",
+        "w": 86,
+        "h": 50,
+        "alt": "borodach logo",
+        "isLogo": true
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/borodach.svg",
+        "w": 86,
+        "h": 50,
+        "alt": "borodach logo",
+        "isLogo": true
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/cluborg.svg",
+        "w": 662,
+        "h": 413,
+        "alt": "CLUBORG GROUP",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/iphonemini.png",
+        "w": 194,
+        "h": 174,
+        "alt": "",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/plashka-mobs.png",
+        "w": 192,
+        "h": 125,
+        "alt": "",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/googleplay.svg",
+        "w": 133,
+        "h": 44,
+        "alt": "",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/applestore.svg",
+        "w": 130,
+        "h": 44,
+        "alt": "",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/gplay-m.svg",
+        "w": 107,
+        "h": 35,
+        "alt": "",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/appstore-m.svg",
+        "w": 105,
+        "h": 35,
+        "alt": "",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/boroblack.svg",
+        "w": 69,
+        "h": 25,
+        "alt": "",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/apps1.svg",
+        "w": 61,
+        "h": 20,
+        "alt": "",
+        "isLogo": false
+      },
+      {
+        "src": "https://borodach.com/wp-content/themes/woodmart-child/images/gsto1.svg",
+        "w": 67,
+        "h": 18,
+        "alt": "",
+        "isLogo": false
+      }
+    ],
+    "inlineLogoSvg": null,
+    "fontFaces": [
+      "FactorA bold normal",
+      "FactorA normal normal"
+    ]
+  },
+  "viewport": {
+    "w": 1920,
+    "h": 1080
+  }
+}

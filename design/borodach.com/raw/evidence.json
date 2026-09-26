@@ -1,0 +1,1250 @@
+{
+  "version": "0.1.0",
+  "source": {
+    "primaryUrl": "https://borodach.com/",
+    "pages": [
+      {
+        "url": "https://borodach.com/",
+        "status": "success"
+      }
+    ],
+    "capturedAt": "2026-09-24T19:18:35.050Z"
+  },
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "laptop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "mobile",
+      "width": 360,
+      "height": 800
+    }
+  ],
+  "screenshots": [
+    {
+      "viewport": "desktop",
+      "url": "https://borodach.com/",
+      "path": "screenshots/borodach.com-desktop.png"
+    },
+    {
+      "viewport": "laptop",
+      "url": "https://borodach.com/",
+      "path": "screenshots/borodach.com-laptop.png"
+    },
+    {
+      "viewport": "tablet",
+      "url": "https://borodach.com/",
+      "path": "screenshots/borodach.com-tablet.png"
+    },
+    {
+      "viewport": "mobile",
+      "url": "https://borodach.com/",
+      "path": "screenshots/borodach.com-mobile.png"
+    }
+  ],
+  "tokens": {
+    "colors": [
+      {
+        "name": "Green",
+        "value": "#5cae5d",
+        "cssVariable": "--color-green",
+        "role": "Surface or background color",
+        "properties": [
+          "backgroundColor",
+          "borderColor",
+          "color"
+        ],
+        "frequency": 63,
+        "sampleSelectors": [
+          "html.browser-Chrome.platform-Mac > body.home.page-template > a.ms_booking.boro_butt",
+          "div.headerbg > div.container.mt-78 > a.ms_booking > div.borodach-btn.bg-green",
+          "div.wrapper.header > div.plashka > div.plashka-buttons.f-14 > div.appstore-button.bg-green",
+          "div.wrapper.header > div.plashka > div.plashka-buttons.f-14 > div.appstore-button.ml-15",
+          "div.container > div.news-inner.position-relative > div.text-center > h3.text-center.f-45"
+        ],
+        "confidence": "high"
+      },
+      {
+        "name": "Canvas White",
+        "value": "#ffffff",
+        "cssVariable": "--color-canvas-white",
+        "role": "Surface or background color",
+        "properties": [
+          "color",
+          "borderColor",
+          "backgroundColor"
+        ],
+        "frequency": 1645,
+        "sampleSelectors": [
+          "html.browser-Chrome.platform-Mac > body.home.page-template",
+          "html.browser-Chrome.platform-Mac > body.home.page-template > a.ms_booking.boro_butt",
+          "html.browser-Chrome.platform-Mac > body.home.page-template > div.main-container.index-index",
+          "#header",
+          "body.home.page-template > div.main-container.index-index > section > div.wrapper.header"
+        ],
+        "confidence": "high"
+      },
+      {
+        "name": "Near Black",
+        "value": "#131313",
+        "cssVariable": "--color-near-black",
+        "role": "Surface or background color",
+        "properties": [
+          "backgroundColor"
+        ],
+        "frequency": 8,
+        "sampleSelectors": [
+          "html",
+          "html.browser-Chrome.platform-Mac > body.home.page-template"
+        ],
+        "confidence": "high"
+      },
+      {
+        "name": "Dark Gray",
+        "value": "#161616",
+        "cssVariable": "--color-dark-gray",
+        "role": "Surface or background color",
+        "properties": [
+          "backgroundColor"
+        ],
+        "frequency": 4,
+        "sampleSelectors": [
+          "div.main-container.index-index > section > div.wrapper.header > div.menu-up.bg-dark",
+          "section > div.wrapper.header > div.headerbg > div.container-2"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "name": "Off White",
+        "value": "#f3f3f3",
+        "cssVariable": "--color-off-white",
+        "role": "Surface or background color",
+        "properties": [
+          "backgroundColor"
+        ],
+        "frequency": 4,
+        "sampleSelectors": [
+          "div.mobile-nav.slide-from-right > div.woodmart-search-form > form.searchform.woodmart-ajax-search > button.searchsubmit"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "name": "Light Gray",
+        "value": "#c4c4c4",
+        "cssVariable": "--color-light-gray",
+        "role": "Surface or background color",
+        "properties": [
+          "backgroundColor"
+        ],
+        "frequency": 1,
+        "sampleSelectors": [
+          "div.undermenu.pt-20 > div.burger-menu > label.menu-btn > span"
+        ],
+        "confidence": "low"
+      },
+      {
+        "name": "Rich Black",
+        "value": "#000000",
+        "cssVariable": "--color-rich-black",
+        "role": "Text, border, or accent color",
+        "properties": [
+          "color",
+          "borderColor"
+        ],
+        "frequency": 96,
+        "sampleSelectors": [
+          "body.home.page-template > div.main-container.index-index > section.index-html > div.wrapper.bg-white",
+          "div.main-container.index-index > section.index-html > div.wrapper.bg-white > div.container",
+          "section.index-html > div.wrapper.bg-white > div.container > div.news-inner.position-relative",
+          "div.wrapper.bg-white > div.container > div.news-inner.position-relative > div.text-center",
+          "div.wrapper.bg-white > div.container > div.news-inner.position-relative > div.news-container"
+        ],
+        "confidence": "high"
+      },
+      {
+        "name": "Gray",
+        "value": "#7a7a7a",
+        "cssVariable": "--color-gray",
+        "role": "Text, border, or accent color",
+        "properties": [
+          "color",
+          "borderColor"
+        ],
+        "frequency": 56,
+        "sampleSelectors": [
+          "div.container-2.flexer > div.menu-left.f-12 > div.menu-top.flexer > a.chooseplz",
+          "div.container-2.flexer > div.menu-left.f-12 > div.menu-top.flexer > a",
+          "div.container-2.flexer > div.menu-right > div.socials-menu.flexer > a.pr-10"
+        ],
+        "confidence": "high"
+      },
+      {
+        "name": "Dark Gray",
+        "value": "#2d2a2a",
+        "cssVariable": "--color-dark-gray",
+        "role": "Text, border, or accent color",
+        "properties": [
+          "color",
+          "borderColor"
+        ],
+        "frequency": 44,
+        "sampleSelectors": [
+          "div.menu-verhnee-menyu-container > ul.site-mobile-menu > li.menu-item.menu-item-type-custom > a.woodmart-nav-link",
+          "ul.site-mobile-menu > li.menu-item.menu-item-type-custom > a.woodmart-nav-link > span",
+          "div.menu-verhnee-menyu-container > ul.site-mobile-menu > li.menu-item.menu-item-type-post_type > a.woodmart-nav-link",
+          "ul.site-mobile-menu > li.menu-item.menu-item-type-post_type > a.woodmart-nav-link > span",
+          "div.menu-verhnee-menyu-container > ul.f-16 > li > a.chooseplz"
+        ],
+        "confidence": "high"
+      },
+      {
+        "name": "Gray",
+        "value": "#808080",
+        "cssVariable": "--color-gray",
+        "role": "Text, border, or accent color",
+        "properties": [
+          "borderColor"
+        ],
+        "frequency": 24,
+        "sampleSelectors": [
+          "section > div.container > div.abouter.position-relative > table.abouter-table",
+          "div.container > div.abouter.position-relative > table.abouter-table > tbody",
+          "div.abouter.position-relative > table.abouter-table > tbody > tr"
+        ],
+        "confidence": "high"
+      },
+      {
+        "name": "Gray",
+        "value": "#767676",
+        "cssVariable": "--color-gray",
+        "role": "Text, border, or accent color",
+        "properties": [
+          "borderColor"
+        ],
+        "frequency": 4,
+        "sampleSelectors": [
+          "div.mobile-nav.slide-from-right > div.woodmart-search-form > form.searchform.woodmart-ajax-search > input.s"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "name": "Dark Gray",
+        "value": "#3e3e3e",
+        "cssVariable": "--color-dark-gray",
+        "role": "Text, border, or accent color",
+        "properties": [
+          "color"
+        ],
+        "frequency": 4,
+        "sampleSelectors": [
+          "div.mobile-nav.slide-from-right > div.woodmart-search-form > form.searchform.woodmart-ajax-search > button.searchsubmit"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "typography": [
+      {
+        "role": "text",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "html.browser-Chrome.platform-Mac > body.home.page-template",
+          "html.browser-Chrome.platform-Mac > body.home.page-template > div.main-container.index-index",
+          "#header"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "text",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "section > div.container.mt-90 > div.footer-wrapper.flexer > div.footer-center.f-16",
+          "div.container.mt-90 > div.footer-wrapper.flexer > div.footer-right.flexer > ul.f-16",
+          "div.mobile-nav.slide-from-right > div.mobile-menu-tab.mobile-pages-menu > div.menu-verhnee-menyu-container > ul.f-16"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "link",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "div.footer-right.flexer > ul.f-16 > li > a.chooseplz",
+          "div.footer-right.flexer > ul.f-16 > li > a",
+          "div.menu-verhnee-menyu-container > ul.f-16 > li > a.chooseplz"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "text",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "14.3px",
+        "letterSpacing": "-0.2px",
+        "sampleSelectors": [
+          "html.browser-Chrome.platform-Mac > body.home.page-template",
+          "html.browser-Chrome.platform-Mac > body.home.page-template > div.main-container.index-index",
+          "#header"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "body",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "div.footer-wrapper.flexer > div.footer-right.flexer > ul.f-16 > li",
+          "div.mobile-menu-tab.mobile-pages-menu > div.menu-verhnee-menyu-container > ul.f-16 > li",
+          "div.wrapper.header > div.headerbg > div.container.mt-78 > p"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "link",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "html.browser-Chrome.platform-Mac > body.home.page-template > a.ms_booking.boro_butt",
+          "div.wrapper.header > div.headerbg > div.container.mt-78 > a.ms_booking",
+          "div.news-inner.position-relative > div.news-container > div.news-wrapper.position-relative > a.news-fullblock-href"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "link",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "div.container-2.flexer > div.menu-left.f-12 > div.menu-top.flexer > a.chooseplz",
+          "div.container-2.flexer > div.menu-left.f-12 > div.menu-top.flexer > a",
+          "div.undermenu.pt-20 > div.undermenu-left.flexer > div.borodach-logo.pr-20 > a"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "text",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "div.headerbg > div.container.mt-78 > a.ms_booking > div.borodach-btn.bg-green",
+          "section > div.wrapper.header > div.plashka > div.plashka-buttons.f-14",
+          "div.wrapper.header > div.plashka > div.plashka-buttons.f-14 > div.appstore-button.bg-green"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "text",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "div.wrapper.header > div.menu-up.bg-dark > div.container-2.flexer > div.menu-left.f-12",
+          "div.menu-up.bg-dark > div.container-2.flexer > div.menu-left.f-12 > div.menu-top.flexer",
+          "div.headerbg > div.container-2 > div.undermenu.pt-20 > div.undermenu-left.flexer"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "body",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "div.wrapper.header > div.headerbg > div.container.mt-78 > p",
+          "div.container > div.news-inner.position-relative > div.news-container > p.text-center.text-dotter",
+          "div.main-container.index-index > section > div.container.mt-95 > p.underh3-last.text-center"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "text",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "lineHeight": "normal",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "div.container.mt-90 > div.footer-wrapper.flexer > div.footer-center.f-16 > div.position-relative.iphone-mini",
+          "div.footer-wrapper.flexer > div.footer-center.f-16 > div.position-relative.iphone-mini > div.iphone-mini-container",
+          "div.footer-center.f-16 > div.position-relative.iphone-mini > div.iphone-mini-container > img.iphone-mini-img.position-absolute"
+        ],
+        "confidence": "high"
+      },
+      {
+        "role": "heading",
+        "fontFamily": "FactorA",
+        "fallback": "system-ui",
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "lineHeight": "16.65px",
+        "letterSpacing": "normal",
+        "sampleSelectors": [
+          "div.lastblock-maincont.mt-40 > div.lastblock-cont.position-relative > a > h4.position-absolute.f-15",
+          "div.lastblock-cont.bigger > div.position-absolute.bigger-lastblock > a > h4.f-15.bg-green",
+          "div.lastblock-cont.position-relative > div.position-absolute.last-lastblock > a > h4.f-15.bg-green"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "spacing": [
+      {
+        "name": "Padding 1",
+        "value": "0px 10px",
+        "confidence": "medium"
+      },
+      {
+        "name": "Padding 2",
+        "value": "142px 0px 95px",
+        "confidence": "low"
+      },
+      {
+        "name": "Padding 3",
+        "value": "0px 10px 6px",
+        "confidence": "low"
+      },
+      {
+        "name": "Padding 4",
+        "value": "12px 20px",
+        "confidence": "low"
+      },
+      {
+        "name": "Padding 5",
+        "value": "1px 2px",
+        "confidence": "low"
+      },
+      {
+        "name": "Padding 6",
+        "value": "0px 0px 0px 13px",
+        "confidence": "low"
+      }
+    ],
+    "radii": [
+      {
+        "name": "Radius 1",
+        "value": "10px",
+        "confidence": "medium"
+      },
+      {
+        "name": "Radius 2",
+        "value": "4px",
+        "confidence": "low"
+      },
+      {
+        "name": "Radius 3",
+        "value": "30px",
+        "confidence": "low"
+      }
+    ],
+    "shadows": [
+      {
+        "name": "Shadow 1",
+        "value": "rgba(92, 170, 83, 0.7) 0px 23px 16px -19px",
+        "confidence": "low"
+      },
+      {
+        "name": "Shadow 2",
+        "value": "rgba(0, 0, 0, 0.25) 0px 0px 10px 0px",
+        "confidence": "low"
+      }
+    ],
+    "gradients": [
+      {
+        "name": "Gradient 1",
+        "value": "linear-gradient(#5cae5d 0%, #428843 100%)",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "surfaces": [
+    {
+      "level": 0,
+      "name": "Base Surface",
+      "value": "#131313",
+      "purpose": "Surface or background color",
+      "sampleSelectors": [
+        "html",
+        "html.browser-Chrome.platform-Mac > body.home.page-template"
+      ],
+      "confidence": "high"
+    },
+    {
+      "level": 1,
+      "name": "Surface 1",
+      "value": "#ffffff",
+      "purpose": "Surface or background color",
+      "sampleSelectors": [
+        "html.browser-Chrome.platform-Mac > body.home.page-template",
+        "html.browser-Chrome.platform-Mac > body.home.page-template > a.ms_booking.boro_butt",
+        "html.browser-Chrome.platform-Mac > body.home.page-template > div.main-container.index-index",
+        "#header",
+        "body.home.page-template > div.main-container.index-index > section > div.wrapper.header"
+      ],
+      "confidence": "high"
+    },
+    {
+      "level": 2,
+      "name": "Surface 2",
+      "value": "#161616",
+      "purpose": "Surface or background color",
+      "sampleSelectors": [
+        "div.main-container.index-index > section > div.wrapper.header > div.menu-up.bg-dark",
+        "section > div.wrapper.header > div.headerbg > div.container-2"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "level": 3,
+      "name": "Surface 3",
+      "value": "#5cae5d",
+      "purpose": "Surface or background color",
+      "sampleSelectors": [
+        "html.browser-Chrome.platform-Mac > body.home.page-template > a.ms_booking.boro_butt",
+        "div.headerbg > div.container.mt-78 > a.ms_booking > div.borodach-btn.bg-green",
+        "div.wrapper.header > div.plashka > div.plashka-buttons.f-14 > div.appstore-button.bg-green",
+        "div.wrapper.header > div.plashka > div.plashka-buttons.f-14 > div.appstore-button.ml-15",
+        "div.container > div.news-inner.position-relative > div.text-center > h3.text-center.f-45"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "role": "Primary Button component",
+      "textSample": "МАГАЗИН BORODACH.PRO",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop",
+        "tablet",
+        "mobile"
+      ],
+      "selector": "section.index-html > div.wrapper.bg-white > a > div.borodach-btn.position-absolute",
+      "count": 2,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "#5cae5d",
+        "border": "1px solid #5cae5d",
+        "borderRadius": "10px",
+        "padding": "0px",
+        "boxShadow": "rgba(92, 170, 83, 0.7) 0px 23px 16px -19px",
+        "font": "700 14px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 302,
+        "height": 72
+      },
+      "confidence": "medium"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "role": "Primary Button component",
+      "textSample": "Скачать",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop",
+        "tablet"
+      ],
+      "selector": "div.wrapper.header > div.plashka > div.plashka-buttons.f-14 > div.appstore-button.bg-green",
+      "count": 2,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "#5cae5d",
+        "border": "0px none #ffffff",
+        "borderRadius": "4px",
+        "padding": "0px 10px",
+        "boxShadow": "rgba(0, 0, 0, 0.25) 0px 0px 10px 0px",
+        "font": "700 14px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 156.265625,
+        "height": 35
+      },
+      "confidence": "medium"
+    },
+    {
+      "name": "Surface Card",
+      "kind": "card",
+      "role": "Surface Card component",
+      "textSample": "Search Выберите город Франшиза Вакансии в команду Академия Барберов Магазин косм",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop",
+        "tablet",
+        "mobile"
+      ],
+      "selector": "html.browser-Chrome.platform-Mac > body.home.page-template > div.mobile-nav.slide-from-right",
+      "count": 2,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "#ffffff",
+        "border": "0px none #ffffff",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "boxShadow": "none",
+        "font": "18px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 340,
+        "height": 1080
+      },
+      "confidence": "medium"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "role": "Primary Button component",
+      "textSample": "<div><img src=\"https://mc.yandex.ru/watch/50238430\" style=\"position:absolute; le",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop",
+        "tablet",
+        "mobile"
+      ],
+      "selector": "html.browser-Chrome.platform-Mac > body.home.page-template",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "#131313",
+        "border": "0px none #ffffff",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "boxShadow": "none",
+        "font": "18px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 1920,
+        "height": 3942.625
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "role": "Primary Button component",
+      "textSample": "Записаться онлайн",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop",
+        "tablet",
+        "mobile"
+      ],
+      "selector": "div.headerbg > div.container.mt-78 > a.ms_booking > div.borodach-btn.bg-green",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "#5cae5d",
+        "border": "1px solid #5cae5d",
+        "borderRadius": "10px",
+        "padding": "0px",
+        "boxShadow": "none",
+        "font": "700 14px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 302,
+        "height": 72
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Surface Card",
+      "kind": "card",
+      "role": "Surface Card component",
+      "textSample": "#borodachlive BORODACH: место, где уход — это удовольствие 02 июня 2025 Идеальна",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop",
+        "tablet",
+        "mobile"
+      ],
+      "selector": "body.home.page-template > div.main-container.index-index > section.index-html > div.wrapper.bg-white",
+      "count": 1,
+      "styles": {
+        "color": "#000000",
+        "backgroundColor": "#ffffff",
+        "border": "0px none #000000",
+        "borderRadius": "30px",
+        "padding": "142px 0px 95px",
+        "boxShadow": "none",
+        "font": "18px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 1892,
+        "height": 916.953125
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Surface Card",
+      "kind": "card",
+      "role": "Surface Card component",
+      "textSample": "#borodachlive",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop"
+      ],
+      "selector": "div.container > div.news-inner.position-relative > div.text-center > h3.text-center.f-45",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "#5cae5d",
+        "border": "0px none #ffffff",
+        "borderRadius": "0px",
+        "padding": "0px 10px 6px",
+        "boxShadow": "none",
+        "font": "700 45px / 50px Helvetica, sans-serif",
+        "fontFamily": "Helvetica, sans-serif",
+        "fontSize": "45px",
+        "fontWeight": "700",
+        "lineHeight": "50px"
+      },
+      "bounds": {
+        "width": 410.9609375,
+        "height": 63.1009521484375
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Surface Card",
+      "kind": "card",
+      "role": "Surface Card component",
+      "textSample": "федеральная сеть барбершопов",
+      "viewport": "mobile",
+      "viewports": [
+        "mobile"
+      ],
+      "selector": "section > div.wrapper.header > div.headerbg > div.container-2",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "#161616",
+        "border": "0px none #ffffff",
+        "borderRadius": "0px",
+        "padding": "0px 10px",
+        "boxShadow": "none",
+        "font": "13px / 14px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "14px"
+      },
+      "bounds": {
+        "width": 360,
+        "height": 68
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Surface Card",
+      "kind": "card",
+      "role": "Surface Card component",
+      "textSample": "МобильноеприложениеBORODACH Скачать Скачать",
+      "viewport": "mobile",
+      "viewports": [
+        "mobile"
+      ],
+      "selector": "div.main-container.index-index > section > div.wrapper.header > div.plashka",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "#5cae5d",
+        "border": "0px none #ffffff",
+        "borderRadius": "10px",
+        "padding": "0px",
+        "boxShadow": "none",
+        "font": "13px / 14px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "14px"
+      },
+      "bounds": {
+        "width": 316.796875,
+        "height": 125
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "role": "Primary Button component",
+      "textSample": "Search",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop"
+      ],
+      "selector": "div.mobile-nav.slide-from-right > div.woodmart-search-form > form.searchform.woodmart-ajax-search > button.searchsubmit",
+      "count": 2,
+      "styles": {
+        "color": "#3e3e3e",
+        "backgroundColor": "#f3f3f3",
+        "border": "0px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "padding": "12px 20px",
+        "boxShadow": "none",
+        "font": "600 13px / 18px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "13px",
+        "fontWeight": "600",
+        "lineHeight": "18px"
+      },
+      "bounds": {
+        "width": 98.796875,
+        "height": 42
+      },
+      "confidence": "medium"
+    },
+    {
+      "name": "Input",
+      "kind": "input",
+      "role": "Input component",
+      "textSample": "",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop"
+      ],
+      "selector": "div.mobile-nav.slide-from-right > div.woodmart-search-form > form.searchform.woodmart-ajax-search > input.s",
+      "count": 2,
+      "styles": {
+        "color": "#000000",
+        "backgroundColor": "#ffffff",
+        "border": "2px inset #767676",
+        "borderRadius": "0px",
+        "padding": "1px 2px",
+        "boxShadow": "none",
+        "font": "13px Arial",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 153,
+        "height": 21
+      },
+      "confidence": "medium"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "role": "Text Button component",
+      "textSample": "Скачать Скачать",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop",
+        "tablet"
+      ],
+      "selector": "section > div.wrapper.header > div.plashka > div.plashka-buttons.f-14",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "transparent",
+        "border": "0px none #ffffff",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "boxShadow": "none",
+        "font": "700 14px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 339.265625,
+        "height": 35
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "role": "Text Button component",
+      "textSample": "",
+      "viewport": "desktop",
+      "viewports": [
+        "desktop",
+        "laptop",
+        "tablet",
+        "mobile"
+      ],
+      "selector": "div.footer-center.f-16 > div.position-relative.iphone-mini > div.iphone-mini-container > div.iphone-mini-buttons.flexer",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "transparent",
+        "border": "0px none #ffffff",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "boxShadow": "none",
+        "font": "11px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "lineHeight": "normal"
+      },
+      "bounds": {
+        "width": 248,
+        "height": 26
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "role": "Text Button component",
+      "textSample": "",
+      "viewport": "mobile",
+      "viewports": [
+        "mobile"
+      ],
+      "selector": "section > div.wrapper.header > div.plashka > div.plashka-buttons-mob.flexer",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "transparent",
+        "border": "0px none #ffffff",
+        "borderRadius": "0px",
+        "padding": "0px 0px 0px 13px",
+        "boxShadow": "none",
+        "font": "13px / 14px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "14px"
+      },
+      "bounds": {
+        "width": 316.796875,
+        "height": 26
+      },
+      "confidence": "low"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "role": "Icon Button component",
+      "textSample": "",
+      "viewport": "mobile",
+      "viewports": [
+        "mobile"
+      ],
+      "selector": "div.container-2 > div.undermenu.pt-20 > div.burger-menu > label.menu-btn",
+      "count": 1,
+      "styles": {
+        "color": "#ffffff",
+        "backgroundColor": "transparent",
+        "border": "0px none #ffffff",
+        "borderRadius": "0px",
+        "padding": "0px",
+        "boxShadow": "none",
+        "font": "13px / 14px FactorA",
+        "fontFamily": "FactorA",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "14px"
+      },
+      "bounds": {
+        "width": 30,
+        "height": 20
+      },
+      "confidence": "low"
+    }
+  ],
+  "fontFaces": [
+    {
+      "family": "FactorA",
+      "weight": "bold",
+      "style": "normal",
+      "src": "https://borodach.com/wp-content/themes/woodmart-child/fonts/FactorA-Bold.woff2"
+    },
+    {
+      "family": "FactorA",
+      "weight": "normal",
+      "style": "normal",
+      "src": "https://borodach.com/wp-content/themes/woodmart-child/fonts/FactorA-Regular.woff2"
+    }
+  ],
+  "interactionStates": [
+    {
+      "state": "focus",
+      "selector": "button.lg-icon, button.lg-next.lg-icon:focus, button.lg-prev.lg-icon:focus",
+      "declarations": {
+        "background-color": "unset",
+        "background": "unset"
+      }
+    },
+    {
+      "state": "focus",
+      "selector": "a.ays_gallery_caption_link:focus, a.ays_gallery_caption_link:hover",
+      "declarations": {
+        "color": "#ffffff",
+        "text-decoration": "underline"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": "a.ays_gpg_category_filter:hover",
+      "declarations": {
+        "color": "#ffffff",
+        "background-color": "#6d6d6d"
+      }
+    },
+    {
+      "state": "focus",
+      "selector": "input.inp_search_img:focus",
+      "declarations": {
+        "border": "1px solid",
+        "border-color": "currentcolor"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".tablepress .row-hover tr:hover td",
+      "declarations": {
+        "background-color": "#f3f3f3"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".paginate_button:hover",
+      "declarations": {
+        "text-decoration": "none"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".paginate_button:hover::after, .paginate_button:hover::before",
+      "declarations": {
+        "color": "#049cdb"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".tablepress .sorting:hover, .tablepress .sorting_asc, .tablepress .sorting_desc",
+      "declarations": {
+        "background-color": "#049cdb"
+      }
+    },
+    {
+      "state": "active",
+      "selector": "a:active, a:hover",
+      "declarations": {
+        "outline": "0px"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": "a:hover",
+      "declarations": {
+        "text-decoration": "underline"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".mfp-preloader a:hover",
+      "declarations": {
+        "color": "#ffffff"
+      }
+    },
+    {
+      "state": "focus",
+      "selector": ".mfp-close:focus, .mfp-close:hover",
+      "declarations": {
+        "opacity": "1"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".popup-added_to_cart .mfp-close:hover, button.mfp-close:focus, button.mfp-close:hover",
+      "declarations": {
+        "color": "#ffffff",
+        "background-color": "rgba(0, 0, 0, 0.5)",
+        "box-shadow": "none",
+        "opacity": "1"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": "#wpadminbar:hover",
+      "declarations": {
+        "opacity": "1"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": "header .woodmart-social-icon a:not(:hover)",
+      "declarations": {
+        "color": "#c3c3c3",
+        "border-color": "#464646"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".btn:hover",
+      "declarations": {
+        "color": "#ffffff",
+        "background-color": "#477247",
+        "background": "#477247"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": "footer .woodmart-social-icons a:not(:hover)",
+      "declarations": {
+        "border-color": "#333333"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": "footer .woodmart-social-icons a:not(:hover) i",
+      "declarations": {
+        "color": "#999999"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".ch_city_btns .btner:hover",
+      "declarations": {
+        "color": "#ffffff",
+        "background-color": "#333333",
+        "background": "#333333"
+      }
+    },
+    {
+      "state": "hover",
+      "selector": ".full_lister:hover",
+      "declarations": {
+        "color": "#ffffff",
+        "background-color": "#477247"
+      }
+    }
+  ],
+  "motion": {
+    "durations": [
+      "0.4s",
+      "0.3s",
+      "0.25s"
+    ],
+    "easings": []
+  },
+  "layout": {
+    "density": "spacious",
+    "containerWidths": [
+      1020,
+      419,
+      340,
+      291
+    ],
+    "sectionGaps": [
+      "142px",
+      "41px",
+      "147px",
+      "51px"
+    ]
+  },
+  "imagery": {
+    "strategy": "photography-led",
+    "notes": [
+      "84 images (16 large/photographic), 57 icons/SVGs, 0 videos, 32 background images."
+    ]
+  },
+  "responsive": {
+    "notes": [
+      "desktop captured at 1920x1080.",
+      "laptop captured at 1440x900.",
+      "tablet captured at 768x1024.",
+      "mobile captured at 360x800."
+    ]
+  },
+  "warnings": [
+    {
+      "code": "limited-pages",
+      "message": "Only one page was inspected, so site-wide coverage is limited.",
+      "severity": "info"
+    }
+  ]
+}

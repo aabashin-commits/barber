@@ -1,0 +1,56 @@
+/* Верхняя полоса: якорные ссылки слева, соцсети справа. Скрыта на ≤650px, если работает JS (меню в drawer) */
+
+.topbar {
+  background: var(--color-surface-container);
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-label-sm-size);
+  line-height: var(--font-label-sm-line-height);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1156px, 100% - 2 * var(--spacing-md));
+  height: 41px;
+  margin-inline: auto;
+}
+
+.topbar__links,
+.topbar__socials {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-md) - var(--spacing-xs) / 2);
+}
+
+.topbar__socials {
+  gap: var(--spacing-sm);
+  font-size: calc(var(--font-label-sm-size) * 0.85);
+  font-weight: var(--font-label-md-weight);
+  text-transform: uppercase;
+}
+
+.topbar a {
+  transition: color var(--duration-base) var(--easing-standard);
+}
+
+@media (hover: hover) {
+  .topbar a:hover {
+    color: var(--color-on-background);
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 650px) {
+  .js .topbar {
+    display: none;
+  }
+
+  .topbar__inner {
+    height: auto;
+    min-height: 41px;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs) var(--spacing-md);
+    padding-block: var(--spacing-xs);
+  }
+}
