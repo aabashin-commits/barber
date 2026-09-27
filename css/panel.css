@@ -10,6 +10,11 @@
   color: var(--color-inverse-on-surface);
 }
 
+/* Без наезжающей промо-карточки сверху: верхний отступ меньше */
+.panel--flat {
+  padding-top: var(--spacing-xl);
+}
+
 .panel__section + .panel__section {
   margin-top: var(--spacing-xl);
 }
@@ -36,6 +41,10 @@
     padding-top: calc(var(--spacing-xl) + var(--spacing-lg));
     padding-bottom: var(--spacing-lg);
     border-radius: var(--radius-md);
+  }
+
+  .panel--flat {
+    padding-top: var(--spacing-lg);
   }
 
   .panel__section + .panel__section {

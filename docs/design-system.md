@@ -8,12 +8,12 @@
 | Роль | Токен | Значение | Где |
 |---|---|---|---|
 | Фон страницы | `--color-background` | #131313 | body, hero, футер |
-| Верхняя полоса, карточки | `--color-surface-container` | #161616 | topbar, промо-карточка |
+| Карточки | `--color-surface-container` | #161616 | промо-карточка |
 | Границы, тёмные чипы | `--color-surface-container-high` | #2d2a2a | линии, плитки-заглушки |
 | Акцент | `--color-primary` | #5cae5d | CTA, метка, мессенджеры, FAB |
 | Акцент, конец градиента | `--color-primary-container` | #428843 | градиент, hover |
 | Текст на тёмном | `--color-on-background` | #ffffff | заголовки, основной текст |
-| Приглушённый текст | `--color-on-surface-variant` | #7a7a7a | ссылки topbar |
+| Приглушённый текст | `--color-on-surface-variant` | #7a7a7a | вторичные подписи |
 | Белая панель | `--color-inverse-surface` | #ffffff | панель, drawer |
 | Текст на белом | `--color-inverse-on-surface` | #000000 | тексты в панели |
 | Светлые контролы на белом | `--color-on-primary-fixed-variant` | #f3f3f3 | плитки цен, карточки мастеров |
@@ -27,7 +27,7 @@
 | Заголовок MD | `--font-headline-md-*` | 18px/700 | названия услуг, мастеров |
 | Основной | `--font-body-lg-*`, `--font-body-md-*` | 18 / 16px | подзаголовок, абзацы |
 | Кнопки | `--font-label-md-*` | 14px/700 | CTA, uppercase |
-| Мелкий | `--font-label-sm-*` | 12px/400 | topbar, подписи |
+| Мелкий | `--font-label-sm-*` | 12px/400 | подписи |
 
 Заголовки и кнопки — UPPERCASE через `text-transform`. На ≤840px h1 уменьшается: 45→25px,
 `h2` 35→30 (≤930) → 16 (≤650) — через `clamp()`, а не набором медиазапросов.

@@ -34,15 +34,7 @@
   border-radius: var(--radius-sm);
 }
 
-/* ---- Верхняя полоса ---- */
-.topbar {
-  background: var(--color-surface-container-lowest);
-  border-bottom: 1px solid var(--color-outline-variant);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-/* ---- Hero: фото в рамке со смещённым контуром вместо растворения в фон ---- */
+/* ---- Hero: колода фото-карточек в рамке со смещённым контуром вместо растворения в фон ---- */
 @media (min-width: 651px) {
   .hero__photo {
     top: calc(var(--spacing-xl) * 1.1);
@@ -50,9 +42,6 @@
     right: max(var(--spacing-md), calc(50% - 510px));
     left: auto;
     width: calc(var(--spacing-xl) * 4);
-    border: 1px solid var(--color-primary);
-    border-radius: var(--radius-md);
-    box-shadow: calc(var(--spacing-md) * -1) var(--spacing-md) 0 var(--color-surface-container-high);
   }
 
   .hero__photo::after {
@@ -60,7 +49,51 @@
   }
 
   .hero__img {
+    border: 1px solid var(--color-primary);
     border-radius: var(--radius-md);
+  }
+
+  .hero__img[data-state="active"] {
+    box-shadow: calc(var(--spacing-md) * -1) var(--spacing-md) 0 var(--color-surface-container-high);
+  }
+
+  .hero__img[data-state="prev"] {
+    z-index: 1;
+    opacity: 1;
+    transform: rotate(-7deg) translateX(-16%) scale(0.9);
+  }
+
+  .hero__img[data-state="next"] {
+    z-index: 1;
+    opacity: 1;
+    transform: rotate(7deg) translateX(16%) scale(0.9);
+  }
+
+  .hero__img[data-state="far-prev"] {
+    transform: rotate(-11deg) translateX(-30%) scale(0.82);
+  }
+
+  .hero__img[data-state="far-next"] {
+    transform: rotate(11deg) translateX(30%) scale(0.82);
+  }
+
+  .hero__arrow--prev {
+    top: 50%;
+    left: calc(var(--spacing-lg) * -0.8);
+    transform: translateY(-50%);
+  }
+
+  .hero__arrow--next {
+    top: 50%;
+    right: calc(var(--spacing-lg) * -0.8);
+    transform: translateY(-50%);
+  }
+
+  @media (hover: hover) {
+    .hero__arrow--prev:hover,
+    .hero__arrow--next:hover {
+      transform: translateY(-50%) translate(calc(var(--spacing-xs) / 2), calc(var(--spacing-xs) / 2));
+    }
   }
 }
 
@@ -80,7 +113,6 @@
   margin-inline: 0;
   border-radius: 0;
   border-top: var(--spacing-xs) solid var(--color-primary);
-  counter-reset: section;
 }
 
 .panel__title {
@@ -90,36 +122,10 @@
   padding-bottom: var(--spacing-md);
   border-bottom: 1px solid var(--color-inverse-on-surface);
   text-align: left;
-  counter-increment: section;
 }
 
-.panel__title::before {
-  content: counter(section, decimal-leading-zero) " / раздел";
-  color: color-mix(in srgb, var(--color-inverse-on-surface) 55%, transparent);
-  font-family: var(--font-label-md-family);
-  font-size: var(--font-label-md-size);
-  font-weight: var(--font-label-md-weight);
-  letter-spacing: 0.12em;
-  line-height: 1;
-}
-
-/* ---- Услуги: прайс с точечным «лидером» до цены ---- */
-.service {
-  border-bottom: 0;
-}
-
-.service::after {
-  content: "";
-  order: 1;
-  flex: 1;
-  min-width: var(--spacing-md);
-  align-self: flex-end;
-  margin-bottom: var(--spacing-xs);
-  border-bottom: 2px dotted color-mix(in srgb, var(--color-inverse-on-surface) 35%, transparent);
-}
-
+/* ---- Услуги: цена крупным акцентным шрифтом без плашки ---- */
 .service__price {
-  order: 2;
   padding: 0;
   border-radius: 0;
   background: none;
@@ -179,10 +185,6 @@
 
   .master-card {
     box-shadow: var(--spacing-xs) var(--spacing-xs) 0 var(--color-inverse-on-surface);
-  }
-
-  .service::after {
-    min-width: var(--spacing-sm);
   }
 
   .service__price {

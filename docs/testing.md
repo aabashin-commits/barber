@@ -26,16 +26,15 @@ cd /Users/administrator/Barber && python3 -m http.server 8080
   imgNoAlt: [...document.images].filter(i => !i.hasAttribute('alt')).length, // 0
   fonts: [...new Set([...document.querySelectorAll('body *')].map(e => getComputedStyle(e).fontFamily.split(',')[0]))],
   fab: getComputedStyle(document.querySelector('.fab')).display,  // none на ≤768
-  topbar: getComputedStyle(document.querySelector('.topbar')).display, // none на ≤650
 })
 ```
 
 Интерактив:
 - [ ] Бургер (≤650): drawer выезжает, Esc / крестик / клик по пункту закрывают, фокус возвращается.
 - [ ] Якорные ссылки прокручивают к секциям.
-- [ ] Плавающая кнопка: видна >768, скрыта ≤768, ведёт на `#booking`, кольцо пульсирует.
+- [ ] Плавающая кнопка: видна >768, скрыта ≤768, ведёт на `#contacts`, кольцо пульсирует.
 - [ ] Кнопки Telegram / WhatsApp ведут на ссылки из `config.js`.
-- [ ] Hover: CTA темнеет, ссылки topbar подчёркиваются.
+- [ ] Hover: CTA темнеет.
 - [ ] Tab показывает контур фокуса.
 - [ ] `prefers-reduced-motion` (`browser_emulate_media`) — пульса и slide нет.
 - [ ] JS отключён: страница читается, кнопки записи — рабочие ссылки.

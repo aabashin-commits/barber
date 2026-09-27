@@ -4,7 +4,6 @@
   position: relative;
   overflow: hidden;
   min-height: calc(var(--spacing-xl) * 6.5);
-  padding-bottom: calc(var(--spacing-md) * 2.5);
 }
 
 .hero__photo {
@@ -16,11 +15,65 @@
   background: var(--color-background);
 }
 
+.hero__slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .hero__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 75% 50%;
+  opacity: 0;
+  transition:
+    opacity var(--duration-base) var(--easing-standard),
+    transform var(--duration-base) var(--easing-standard);
+}
+
+.hero__img[data-state="active"] {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Стрелки листания: видны только с JS (см. .js на <html>, main.js) */
+.hero__arrow {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--spacing-lg) * 0.9);
+  height: calc(var(--spacing-lg) * 0.9);
+  padding: 0;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: var(--spacing-xs) var(--spacing-xs) 0 color-mix(in srgb, var(--color-primary) 35%, transparent);
+  cursor: pointer;
+  transition:
+    transform var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.hero__arrow svg {
+  width: 45%;
+  height: 45%;
+}
+
+.js .hero__arrow {
+  display: flex;
+}
+
+@media (hover: hover) {
+  .hero__arrow:hover {
+    transform: translate(calc(var(--spacing-xs) / 2), calc(var(--spacing-xs) / 2));
+    box-shadow: calc(var(--spacing-xs) / 2) calc(var(--spacing-xs) / 2) 0 color-mix(in srgb, var(--color-primary) 35%, transparent);
+  }
 }
 
 .hero__photo::after {
@@ -112,5 +165,15 @@
 
   .hero .btn {
     margin-top: var(--spacing-md);
+  }
+
+  .hero__arrow--prev {
+    right: calc(var(--spacing-lg) * 1.1);
+    bottom: var(--spacing-sm);
+  }
+
+  .hero__arrow--next {
+    right: var(--spacing-sm);
+    bottom: var(--spacing-sm);
   }
 }

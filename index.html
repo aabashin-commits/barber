@@ -14,9 +14,7 @@
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/topbar.css">
   <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/promo.css">
   <link rel="stylesheet" href="css/panel.css">
   <link rel="stylesheet" href="css/gallery.css">
   <link rel="stylesheet" href="css/services.css">
@@ -29,30 +27,32 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/config.js" defer></script>
+  <script src="js/hero-slider.js" defer></script>
   <script src="js/links.js" defer></script>
   <script src="js/drawer.js" defer></script>
+  <script src="js/gallery.js" defer></script>
 </head>
 <body>
 
-  <!-- Верхняя полоса -->
-  <div class="topbar">
-    <div class="topbar__inner">
-      <nav class="topbar__links" aria-label="Разделы сайта">
-        <a href="#services">Услуги и цены</a>
-        <a href="#masters">Мастера</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-      <div class="topbar__socials">
-        <a href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">TG</a>
-        <a href="https://vk.com/" target="_blank" rel="noopener">VK</a>
-      </div>
-    </div>
-  </div>
-
   <!-- Главный экран -->
   <header class="hero" id="top">
-    <div class="hero__photo">
-      <img class="hero__img" src="assets/interior/chair-front.jpg" width="960" height="1280" alt="Синее барберское кресло под светильниками в форме сот" fetchpriority="high">
+    <div class="hero__photo" data-hero-slider>
+      <div class="hero__slides">
+        <img class="hero__img" data-hero-slide data-state="active" src="assets/interior/chair-front.jpg" width="960" height="1280" alt="Синее барберское кресло под светильниками в форме сот" fetchpriority="high">
+        <img class="hero__img" data-hero-slide src="assets/interior/chair-mirror.jpg" width="960" height="1280" alt="Два барберских кресла у зеркал под сотовыми светильниками" loading="lazy">
+        <img class="hero__img" data-hero-slide src="assets/interior/chair-sink.jpg" width="960" height="1280" alt="Барберское кресло рядом с мойкой для мытья головы" loading="lazy">
+        <img class="hero__img" data-hero-slide src="assets/interior/facade.jpg" width="960" height="1280" alt="Вход в барбершоп BOX cut с подсвеченной вывеской" loading="lazy">
+        <img class="hero__img" data-hero-slide src="assets/interior/hall-cape.jpg" width="960" height="1280" alt="Зал барбершопа с креслом под накидкой и зеркалами" loading="lazy">
+        <img class="hero__img" data-hero-slide src="assets/interior/hall-lights.jpg" width="960" height="1280" alt="Зал барбершопа с сотовыми светильниками под потолком" loading="lazy">
+        <img class="hero__img" data-hero-slide src="assets/interior/hall-window.jpg" width="960" height="1280" alt="Зал барбершопа с креслом у панорамной двери" loading="lazy">
+        <img class="hero__img" data-hero-slide src="assets/interior/tools.jpg" width="960" height="1280" alt="Машинки для стрижки и ножницы на рабочем столе мастера" loading="lazy">
+      </div>
+      <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Предыдущее фото" data-hero-prev>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>
+      </button>
+      <button class="hero__arrow hero__arrow--next" type="button" aria-label="Следующее фото" data-hero-next>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>
+      </button>
     </div>
     <div class="container hero__inner">
       <div class="hero__head">
@@ -68,41 +68,85 @@
       <div class="hero__body">
         <h1 class="hero__title">BOX cut<br>мужские стрижки</h1>
         <p class="hero__subtitle">Стрижки, борода и тонировка по записи. Работаем со вторника по воскресенье, с 11:00 до 20:00.</p>
-        <a class="btn" href="#booking">Записаться онлайн</a>
+        <a class="btn" href="#contacts">Записаться онлайн</a>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Промо-карточка записи -->
-    <section class="container promo" id="booking" aria-labelledby="booking-title">
-      <div class="promo__card">
-        <h2 class="promo__title" id="booking-title">Запишись онлайн</h2>
-        <p class="promo__text">Напишите в Telegram или WhatsApp — подберём мастера и удобное время.</p>
-        <div class="promo__actions">
-          <a class="btn btn--small" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
-          <a class="btn btn--small" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Белая панель -->
-    <div class="panel">
-      <section class="panel__section gallery container" id="gallery" aria-label="Наши работы">
+    <div class="panel panel--flat">
+      <section class="panel__section gallery" id="gallery" aria-label="Наши работы">
         <span class="tag">#BOXcutLive</span>
-        <div class="gallery__grid">
-          <article class="gallery__tile">
-            <img class="gallery__img" src="assets/interior/chair-mirror.jpg" width="960" height="1280" alt="Рабочее место мастера: синее барберское кресло и зеркало" loading="lazy">
-            <h3 class="gallery__title">Рабочее место мастера</h3>
-          </article>
-          <article class="gallery__tile">
-            <img class="gallery__img" src="assets/interior/hall-lights.jpg" width="960" height="1280" alt="Зал барбершопа: светильники-соты, синее кресло и диван" loading="lazy">
-            <h3 class="gallery__title">Светлый зал без теней</h3>
-          </article>
-          <article class="gallery__tile">
-            <img class="gallery__img" src="assets/interior/tools.jpg" width="960" height="1280" alt="Машинки, ножницы и расчёски на столе мастера" loading="lazy">
-            <h3 class="gallery__title">Инструмент под рукой</h3>
-          </article>
+        <div class="gallery__marquee">
+          <div class="gallery__row" data-gallery-row>
+            <ul class="gallery__track">
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="0"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-1.jpg" width="1097" height="1280" alt="Стрижка с чётким контуром, работа мастера Антона" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="1"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-3.jpg" width="960" height="1280" alt="Мужская стрижка фейд, работа мастера Антона" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="2"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-5.jpg" width="687" height="1280" alt="Стрижка и укладка, работа мастера Антона" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="3"><span class="gallery__frame"><img class="gallery__img" src="assets/nikita/at-work.jpg" width="591" height="1052" alt="Никита за стрижкой клиента" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="8"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-1.jpg" width="1600" height="1499" alt="Стрижка с оформлением бороды на улице" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="9"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-2.jpg" width="1200" height="1600" alt="Классическая стрижка с пробором и фейдом" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="10"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-3.jpg" width="1480" height="1600" alt="Стрижка с бородой, портрет на улице" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="11"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-4.jpg" width="1200" height="1600" alt="Фейд с гладким зачёсом набок" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="12"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-5.jpg" width="1200" height="1600" alt="Кроп с чёлкой и фейдом" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="13"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-6.jpg" width="1200" height="1600" alt="Чёткая линия среза на затылке" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="14"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-7.jpg" width="1200" height="1600" alt="Фейд с гладким зачёсом набок" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="15"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-8.jpg" width="1200" height="1600" alt="Классическая стрижка с пробором" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="16"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-9.jpg" width="1200" height="1600" alt="Аккуратная стрижка с оформлением бороды" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="17"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-10.jpg" width="1200" height="1600" alt="Фейд с гладким зачёсом набок" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="18"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-11.jpg" width="1200" height="1600" alt="Кроп с чёлкой и фейдом" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="0"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-1.jpg" width="1097" height="1280" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="1"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-3.jpg" width="960" height="1280" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="2"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-5.jpg" width="687" height="1280" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="3"><span class="gallery__frame"><img class="gallery__img" src="assets/nikita/at-work.jpg" width="591" height="1052" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="8"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-1.jpg" width="1600" height="1499" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="9"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-2.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="10"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-3.jpg" width="1480" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="11"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-4.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="12"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-5.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="13"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-6.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="14"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-7.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="15"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-8.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="16"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-9.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="17"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-10.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="18"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row1-11.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+            </ul>
+          </div>
+          <div class="gallery__row gallery__row--reverse" data-gallery-row>
+            <ul class="gallery__track">
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="4"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-2.jpg" width="960" height="1280" alt="Мужская стрижка с фейдом, работа мастера Антона" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="5"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-4.jpg" width="960" height="1280" alt="Стрижка и оформление бороды, работа мастера Антона" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="6"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-6.jpg" width="591" height="1052" alt="Короткая мужская стрижка, работа мастера Антона" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="7"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/client-1.jpg" width="591" height="1052" alt="Антон стрижёт клиента" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="19"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-1.jpg" width="1200" height="1600" alt="Фейд с гладким зачёсом набок" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="20"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-2.jpg" width="1200" height="1600" alt="Кроп с чёлкой и фейдом" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="21"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-3.jpg" width="1200" height="1600" alt="Классическая стрижка, портрет в профиль" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="22"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-4.jpg" width="1200" height="1600" alt="Классическая стрижка с пробором" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="23"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-5.jpg" width="1262" height="1600" alt="Стрижка с оформлением бороды на улице" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="24"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-6.jpg" width="1200" height="1600" alt="Кроп с чёлкой и современной укладкой" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="25"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-7.jpg" width="1199" height="1600" alt="Портрет со стрижкой и бородой" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="26"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-8.jpg" width="1200" height="1600" alt="Кроп с чёлкой и фейдом" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="27"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-9.jpg" width="1199" height="1600" alt="Стрижка с оформлением бороды на улице" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="28"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-10.jpg" width="1200" height="1600" alt="Классическая стрижка с пробором" loading="lazy"></span></button></li>
+              <li class="gallery__item"><button class="gallery__link" type="button" data-gallery-open data-index="29"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-11.jpg" width="1200" height="1600" alt="Стрижка с оформлением бороды" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="4"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-2.jpg" width="960" height="1280" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="5"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-4.jpg" width="960" height="1280" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="6"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/work-6.jpg" width="591" height="1052" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="7"><span class="gallery__frame"><img class="gallery__img" src="assets/anton/client-1.jpg" width="591" height="1052" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="19"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-1.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="20"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-2.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="21"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-3.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="22"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-4.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="23"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-5.jpg" width="1262" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="24"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-6.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="25"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-7.jpg" width="1199" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="26"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-8.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="27"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-9.jpg" width="1199" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="28"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-10.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+              <li class="gallery__item" aria-hidden="true"><button class="gallery__link" type="button" tabindex="-1" data-gallery-open data-index="29"><span class="gallery__frame"><img class="gallery__img" src="assets/gallery/row2-11.jpg" width="1200" height="1600" alt="" loading="lazy"></span></button></li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -159,32 +203,36 @@
     <section class="contacts container" id="contacts" aria-labelledby="contacts-title">
       <div class="contacts__head">
         <h2 class="contacts__title" id="contacts-title">Как к нам попасть</h2>
-        <p class="contacts__lead">адрес, часы работы и запись</p>
+        <p class="contacts__lead">адрес и часы работы</p>
       </div>
       <div class="contacts__grid">
-        <article class="contact-card">
-          <span class="tag tag--small">Адрес</span>
-          <img class="contact-card__photo" src="assets/interior/facade.jpg" width="960" height="1280" alt="Вход в BOX cut: вывеска «Мужские стрижки» над стеклянной дверью" loading="lazy">
-          <p class="contact-card__main">ул. Примерная, 1</p>
-          <div class="contact-card__actions">
-            <a class="btn btn--small btn--outline" href="#contacts">Построить маршрут</a>
-          </div>
-        </article>
-        <article class="contact-card">
-          <span class="tag tag--small">Часы работы</span>
-          <p class="contact-card__main">Вт–Вс<br>с 11:00 до 20:00</p>
-          <p class="contact-card__note">Понедельник — выходной. Записаться можно онлайн или по телефону.</p>
-        </article>
-        <article class="contact-card">
-          <span class="tag tag--small">Запись</span>
-          <p class="contact-card__main"><a href="tel:+79101625895" data-link="phone">8 910 162-58-95</a></p>
-          <div class="contact-card__actions">
-            <a class="btn btn--small" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
-            <a class="btn btn--small" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </article>
+        <div class="contacts__col">
+          <article class="contact-card">
+            <span class="tag tag--small">Адрес</span>
+            <img class="contact-card__photo" src="assets/interior/facade.jpg" width="960" height="1280" alt="Вход в BOX cut: вывеска «Мужские стрижки» над стеклянной дверью" loading="lazy">
+            <p class="contact-card__main">Тула, ул. Павшинский Мост, 1, корп. 12Б</p>
+            <div class="contact-card__actions">
+              <a class="btn btn--small btn--outline" href="https://yandex.ru/maps/?rtext=~54.206432,37.576888&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+            </div>
+          </article>
+          <article class="contact-card contact-card--hours">
+            <span class="tag tag--small">Часы работы</span>
+            <p class="contact-card__main">Вт–Вс<br>с 11:00 до 20:00</p>
+            <p class="contact-card__note">Понедельник — выходной. Записаться можно онлайн или по телефону.</p>
+          </article>
+        </div>
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=37.576888%2C54.206432&z=16&oid=198162268651&ol=biz" title="Карта проезда к BOX cut" loading="lazy"></iframe>
+        </div>
       </div>
     </section>
+
+    <dialog class="lightbox" data-gallery-lightbox aria-label="Просмотр фото">
+      <button class="lightbox__close" type="button" aria-label="Закрыть" data-gallery-close>&times;</button>
+      <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Предыдущее фото" data-gallery-prev>&lsaquo;</button>
+      <img class="lightbox__img" data-gallery-image src="" alt="">
+      <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Следующее фото" data-gallery-next>&rsaquo;</button>
+    </dialog>
   </main>
 
   <footer class="footer">
@@ -193,22 +241,7 @@
         <a class="brand" href="#top" aria-label="BOX cut — на главную">
           <img class="brand__logo" src="assets/brand/logo-white.png" width="512" height="512" alt="BOX cut — мужские стрижки">
         </a>
-        <div class="footer__socials">
-          <span>соцсети:</span>
-          <a href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">TG</a>
-          <a href="https://vk.com/" target="_blank" rel="noopener">VK</a>
-        </div>
         <p class="footer__legal-entity">Юридическое лицо, ИНН, ОГРН и адрес — будут добавлены.</p>
-      </div>
-
-      <div class="footer__col footer__col--promo">
-        <div class="footer__card">
-          <span>Запишитесь онлайн:</span>
-          <div class="footer__card-actions">
-            <a class="btn btn--small btn--outline" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
-            <a class="btn btn--small btn--outline" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
       </div>
 
       <div class="footer__col footer__col--links">
@@ -217,7 +250,7 @@
           <li><a href="#services">Услуги и цены</a></li>
           <li><a href="#masters">Мастера</a></li>
           <li><a href="#contacts">Контакты</a></li>
-          <li><a href="#booking">Записаться онлайн</a></li>
+          <li><a href="#contacts">Записаться онлайн</a></li>
         </ul>
         <ul class="footer__legal">
           <li><a href="#">политика конфиденциальности</a></li>
@@ -229,7 +262,7 @@
   </footer>
 
   <!-- Плавающая кнопка записи (шире 768px) -->
-  <a class="fab" href="#booking" aria-label="Записаться онлайн">
+  <a class="fab" href="#contacts" aria-label="Записаться онлайн">
     <span class="fab__label">Записаться</span>
   </a>
 

@@ -1,4 +1,4 @@
-/* Футер: три колонки на тёмном фоне. Подключается последним */
+/* Футер: две колонки на тёмном фоне. Подключается последним */
 
 .footer {
   padding: var(--spacing-xl) 0 calc(var(--spacing-xl) + var(--spacing-sm));
@@ -24,47 +24,10 @@
   height: calc(var(--spacing-xl) * 0.7);
 }
 
-.footer__socials {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  font-size: var(--font-label-sm-size);
-}
-
-.footer__socials a {
-  font-weight: var(--font-label-md-weight);
-  text-transform: uppercase;
-}
-
 .footer__legal-entity {
   margin-top: auto;
   padding-top: var(--spacing-xl);
   color: color-mix(in srgb, var(--color-on-background) 50%, transparent);
-  font-size: calc(var(--font-label-sm-size) * 0.85);
-}
-
-.footer__col--promo {
-  flex: 0 1 26%;
-}
-
-.footer__card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-md);
-  border-radius: var(--radius-sm);
-  background: linear-gradient(var(--color-primary), var(--color-primary-container));
-  font-size: calc(var(--font-label-sm-size) * 0.92);
-}
-
-.footer__card-actions {
-  display: flex;
-  gap: var(--spacing-xs);
-}
-
-.footer__card .btn--small {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-color: var(--color-on-primary);
   font-size: calc(var(--font-label-sm-size) * 0.85);
 }
 
@@ -104,7 +67,6 @@
   }
 
   .footer__col--brand,
-  .footer__col--promo,
   .footer__col--links {
     flex-basis: auto;
   }

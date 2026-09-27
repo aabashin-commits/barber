@@ -22,10 +22,8 @@ Barber/
 ├── css/                      один блок = один файл
 │   ├── base.css              сброс, body, типографика, .visually-hidden, фокус
 │   ├── layout.css            контейнеры, кнопка .btn, метка .tag, логотип .brand
-│   ├── topbar.css            верхняя полоса и шапка hero-строки
 │   ├── hero.css              главный экран
-│   ├── promo.css             тёмная карточка записи
-│   ├── panel.css             белая панель-обёртка
+│   ├── panel.css             белая панель-обёртка (и .panel--flat без промо-наезда)
 │   ├── gallery.css           метка #BOXcutLive и фото-плитки
 │   ├── services.css          услуги и цены
 │   ├── masters.css           карточки-ссылки на страницы мастеров
@@ -39,7 +37,9 @@ Barber/
 │   ├── main.js               window.barber: хелперы
 │   ├── config.js             контакты, часы, ссылки (единое место замены)
 │   ├── drawer.js             открытие и закрытие меню
-│   └── links.js              подстановка ссылок записи из config.js по data-link
+│   ├── links.js              подстановка ссылок записи из config.js по data-link
+│   ├── gallery.js            пауза ленты по наведению, лайтбокс на <dialog>
+│   └── hero-slider.js        колода фото hero: переключение data-state стрелками ‹ ›
 ├── assets/                   свои фото, ≈3 МБ
 │   ├── brand/                logo.jpg (оригинал), logo-white.png (белый на прозрачном, 512×512)
 │   ├── interior/             8 фото зала: facade, hall-lights, chair-*, hall-*, tools
@@ -53,7 +53,7 @@ Barber/
 
 Порядок подключения CSS на странице: Google Fonts → `tokens.css` → `base` → `layout` → блоки
 сверху вниз → `footer` последним. Страницы мастеров подключают подмножество: `base`, `layout`,
-`topbar`, `master-page`, `panel`, `photos`, `services`, `masters`, `contacts`, `fab`, `drawer`, `footer`.
+`master-page`, `panel`, `photos`, `services`, `masters`, `contacts`, `fab`, `drawer`, `footer`.
 
 - `css/theme.css` — тема BOX: переопределение токенов (цвета, шрифты, радиусы), идёт сразу после `tokens.css`.
 - `css/skin.css` — форма блоков поверх CSS страниц (рамки, тени, нумерация, прайс), идёт перед `footer.css`.

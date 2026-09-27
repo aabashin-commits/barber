@@ -68,11 +68,6 @@
   object-fit: cover;
 }
 
-/* Белая панель без наезжающей промо-карточки: верхний отступ меньше */
-.panel--flat {
-  padding-top: var(--spacing-xl);
-}
-
 @media (hover: hover) {
   .mhero__phone:hover {
     text-decoration: underline;
@@ -110,9 +105,5 @@
 
   .mhero__cta {
     margin-top: var(--spacing-md);
-  }
-
-  .panel--flat {
-    padding-top: var(--spacing-lg);
   }
 }

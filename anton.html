@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/topbar.css">
   <link rel="stylesheet" href="css/master-page.css">
   <link rel="stylesheet" href="css/panel.css">
   <link rel="stylesheet" href="css/photos.css">
@@ -33,20 +32,6 @@
 </head>
 <body>
 
-  <!-- Верхняя полоса -->
-  <div class="topbar">
-    <div class="topbar__inner">
-      <nav class="topbar__links" aria-label="Разделы сайта">
-        <a href="index.html#services">Услуги и цены</a>
-        <a href="index.html#masters">Мастера</a>
-        <a href="index.html#contacts">Контакты</a>
-      </nav>
-      <div class="topbar__socials">
-        <a href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">TG</a>
-        <a href="https://vk.com/" target="_blank" rel="noopener">VK</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Шапка мастера -->
   <header class="page-head" id="top">
@@ -97,30 +82,27 @@
     <section class="contacts container" id="contacts" aria-labelledby="contacts-title">
       <div class="contacts__head">
         <h2 class="contacts__title" id="contacts-title">Как к нам попасть</h2>
-        <p class="contacts__lead">адрес, часы работы и запись</p>
+        <p class="contacts__lead">адрес и часы работы</p>
       </div>
       <div class="contacts__grid">
-        <article class="contact-card">
-          <span class="tag tag--small">Адрес</span>
-          <img class="contact-card__photo" src="assets/interior/facade.jpg" width="960" height="1280" alt="Вход в BOX cut: вывеска «Мужские стрижки» над стеклянной дверью" loading="lazy">
-          <p class="contact-card__main">ул. Примерная, 1</p>
-          <div class="contact-card__actions">
-            <a class="btn btn--small btn--outline" href="#contacts">Построить маршрут</a>
-          </div>
-        </article>
-        <article class="contact-card">
-          <span class="tag tag--small">Часы работы</span>
-          <p class="contact-card__main">Вт–Вс<br>с 11:00 до 20:00</p>
-          <p class="contact-card__note">Понедельник — выходной. Записаться можно онлайн или по телефону.</p>
-        </article>
-        <article class="contact-card">
-          <span class="tag tag--small">Запись</span>
-          <p class="contact-card__main"><a href="tel:+79101625895" data-link="phone">8 910 162-58-95</a></p>
-          <div class="contact-card__actions">
-            <a class="btn btn--small" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
-            <a class="btn btn--small" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </article>
+        <div class="contacts__col">
+          <article class="contact-card">
+            <span class="tag tag--small">Адрес</span>
+            <img class="contact-card__photo" src="assets/interior/facade.jpg" width="960" height="1280" alt="Вход в BOX cut: вывеска «Мужские стрижки» над стеклянной дверью" loading="lazy">
+            <p class="contact-card__main">Тула, ул. Павшинский Мост, 1, корп. 12Б</p>
+            <div class="contact-card__actions">
+              <a class="btn btn--small btn--outline" href="https://yandex.ru/maps/?rtext=~54.206432,37.576888&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+            </div>
+          </article>
+          <article class="contact-card contact-card--hours">
+            <span class="tag tag--small">Часы работы</span>
+            <p class="contact-card__main">Вт–Вс<br>с 11:00 до 20:00</p>
+            <p class="contact-card__note">Понедельник — выходной. Записаться можно онлайн или по телефону.</p>
+          </article>
+        </div>
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=37.576888%2C54.206432&z=16&oid=198162268651&ol=biz" title="Карта проезда к BOX cut" loading="lazy"></iframe>
+        </div>
       </div>
     </section>
   </main>
@@ -131,22 +113,7 @@
         <a class="brand" href="index.html" aria-label="BOX cut — на главную">
           <img class="brand__logo" src="assets/brand/logo-white.png" width="512" height="512" alt="BOX cut — мужские стрижки">
         </a>
-        <div class="footer__socials">
-          <span>соцсети:</span>
-          <a href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">TG</a>
-          <a href="https://vk.com/" target="_blank" rel="noopener">VK</a>
-        </div>
         <p class="footer__legal-entity">Юридическое лицо, ИНН, ОГРН и адрес — будут добавлены.</p>
-      </div>
-
-      <div class="footer__col footer__col--promo">
-        <div class="footer__card">
-          <span>Запишитесь онлайн:</span>
-          <div class="footer__card-actions">
-            <a class="btn btn--small btn--outline" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
-            <a class="btn btn--small btn--outline" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
       </div>
 
       <div class="footer__col footer__col--links">
