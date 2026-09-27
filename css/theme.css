@@ -1,0 +1,69 @@
+/* Тема BOX cut: переопределяет токены из design/borodach.com/tokens.css (сам файл не правится).
+   Подключается сразу после tokens.css. Тёплый графит, латунный акцент, «бумажная» панель,
+   почти прямые углы. Имена токенов те же, поэтому остальной CSS работает как раньше. */
+
+:root {
+  /* Акцент: латунь. Текст на нём тёмный (контраст выше, чем у белого на зелёном) */
+  --color-primary: #e0a23b;
+  --color-on-primary: #16130f;
+  --color-primary-container: #f0bd63;
+  --color-on-primary-container: #16130f;
+  --color-tertiary: #c4871f;
+  --color-on-tertiary: #16130f;
+  --color-tertiary-container: #3a2b10;
+  --color-on-tertiary-container: #f0d7a4;
+  --color-surface-tint: #e0a23b;
+  --color-inverse-primary: #e0a23b;
+  --color-primary-fixed: #e0a23b;
+  --color-primary-fixed-dim: #c4871f;
+  --color-on-primary-fixed: #16130f;
+
+  /* Тёплый графит вместо нейтрального чёрного */
+  --color-background: #16130f;
+  --color-surface: #16130f;
+  --color-surface-dim: #16130f;
+  --color-surface-container-lowest: #100e0b;
+  --color-surface-container-low: #16130f;
+  --color-surface-container: #1d1913;
+  --color-surface-container-high: #2b251c;
+  --color-surface-container-highest: #3a3226;
+  --color-surface-bright: #3a3226;
+  --color-surface-variant: #2b251c;
+  --color-secondary: #8f8676;
+  --color-secondary-container: #2b251c;
+  --color-outline: #8f8676;
+  --color-outline-variant: #2b251c;
+  --color-on-surface-variant: #a39a89;
+
+  /* Светлая панель: бумага и «чернила» */
+  --color-inverse-surface: #efe8da;
+  --color-inverse-on-surface: #1c1712;
+  --color-on-primary-fixed-variant: #ddd3bf;
+
+  /* Шрифты: Oswald для заголовков, Onest для текста */
+  --font-headline-xl-family: 'Oswald', 'Arimo', system-ui, sans-serif;
+  --font-headline-xl-size: 56px;
+  --font-headline-xl-line-height: 1.05;
+  --font-headline-xl-letter-spacing: 0.01em;
+  --font-headline-lg-family: 'Oswald', 'Arimo', system-ui, sans-serif;
+  --font-headline-lg-size: 40px;
+  --font-headline-lg-line-height: 1.05;
+  --font-headline-lg-letter-spacing: 0.01em;
+  --font-headline-md-family: 'Oswald', 'Arimo', system-ui, sans-serif;
+  --font-headline-md-size: 20px;
+  --font-headline-md-line-height: 1.2;
+  --font-headline-md-letter-spacing: 0.02em;
+  --font-body-lg-family: 'Onest', 'Montserrat', system-ui, sans-serif;
+  --font-body-md-family: 'Onest', 'Montserrat', system-ui, sans-serif;
+  --font-body-md-line-height: 1.4;
+  --font-label-md-family: 'Onest', 'Montserrat', system-ui, sans-serif;
+  --font-label-md-letter-spacing: 0.06em;
+  --font-label-sm-family: 'Onest', 'Montserrat', system-ui, sans-serif;
+
+  /* Почти прямые углы: «коробка» */
+  --radius-sm: 2px;
+  --radius-DEFAULT: 3px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+}

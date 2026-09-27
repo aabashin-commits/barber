@@ -54,3 +54,6 @@ Barber/
 Порядок подключения CSS на странице: Google Fonts → `tokens.css` → `base` → `layout` → блоки
 сверху вниз → `footer` последним. Страницы мастеров подключают подмножество: `base`, `layout`,
 `topbar`, `master-page`, `panel`, `photos`, `services`, `masters`, `contacts`, `fab`, `drawer`, `footer`.
+
+- `css/theme.css` — тема BOX: переопределение токенов (цвета, шрифты, радиусы), идёт сразу после `tokens.css`.
+- `css/skin.css` — форма блоков поверх CSS страниц (рамки, тени, нумерация, прайс), идёт перед `footer.css`.

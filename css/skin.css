@@ -1,0 +1,191 @@
+/* Форма BOX cut поверх блоков: рамки, жёсткие смещённые тени, нумерация разделов, строки прайса.
+   Подключается после CSS блоков, перед footer.css. Цвета и размеры — только токены. */
+
+/* ---- Кнопки: прямоугольник с жёсткой смещённой тенью ---- */
+.btn {
+  border: 1px solid var(--color-primary);
+  box-shadow: var(--spacing-xs) var(--spacing-xs) 0 color-mix(in srgb, var(--color-primary) 35%, transparent);
+  transition:
+    background var(--duration-fast) var(--easing-standard),
+    transform var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.btn--small {
+  box-shadow: var(--spacing-xs) var(--spacing-xs) 0 color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
+
+.btn--outline {
+  color: var(--color-on-background);
+  border-color: var(--color-on-background);
+  box-shadow: var(--spacing-xs) var(--spacing-xs) 0 color-mix(in srgb, var(--color-on-background) 25%, transparent);
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    transform: translate(calc(var(--spacing-xs) / 2), calc(var(--spacing-xs) / 2));
+    box-shadow: calc(var(--spacing-xs) / 2) calc(var(--spacing-xs) / 2) 0 color-mix(in srgb, var(--color-primary) 35%, transparent);
+  }
+}
+
+/* ---- Метка #BOXcutLive: без наклона, с чёткой рамкой ---- */
+.tag {
+  transform: none;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Верхняя полоса ---- */
+.topbar {
+  background: var(--color-surface-container-lowest);
+  border-bottom: 1px solid var(--color-outline-variant);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---- Hero: фото в рамке со смещённым контуром вместо растворения в фон ---- */
+@media (min-width: 651px) {
+  .hero__photo {
+    top: calc(var(--spacing-xl) * 1.1);
+    bottom: calc(var(--spacing-xl) * 0.9);
+    right: max(var(--spacing-md), calc(50% - 510px));
+    left: auto;
+    width: calc(var(--spacing-xl) * 4);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    box-shadow: calc(var(--spacing-md) * -1) var(--spacing-md) 0 var(--color-surface-container-high);
+  }
+
+  .hero__photo::after {
+    display: none;
+  }
+
+  .hero__img {
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (min-width: 651px) and (max-width: 840px) {
+  .hero__photo {
+    width: 34%;
+    right: var(--spacing-md);
+  }
+
+  .hero__body {
+    max-width: 58%;
+  }
+}
+
+/* ---- Светлая панель: прямоугольник с латунной кромкой, разделы пронумерованы ---- */
+.panel {
+  margin-inline: 0;
+  border-radius: 0;
+  border-top: var(--spacing-xs) solid var(--color-primary);
+  counter-reset: section;
+}
+
+.panel__title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-inverse-on-surface);
+  text-align: left;
+  counter-increment: section;
+}
+
+.panel__title::before {
+  content: counter(section, decimal-leading-zero) " / раздел";
+  color: color-mix(in srgb, var(--color-inverse-on-surface) 55%, transparent);
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  font-weight: var(--font-label-md-weight);
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+/* ---- Услуги: прайс с точечным «лидером» до цены ---- */
+.service {
+  border-bottom: 0;
+}
+
+.service::after {
+  content: "";
+  order: 1;
+  flex: 1;
+  min-width: var(--spacing-md);
+  align-self: flex-end;
+  margin-bottom: var(--spacing-xs);
+  border-bottom: 2px dotted color-mix(in srgb, var(--color-inverse-on-surface) 35%, transparent);
+}
+
+.service__price {
+  order: 2;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  font-family: var(--font-headline-md-family);
+  font-size: var(--font-headline-md-size);
+  letter-spacing: var(--font-headline-md-letter-spacing);
+}
+
+/* ---- Мастера: карточка в рамке с жёсткой тенью ---- */
+.master-card {
+  border: 1px solid var(--color-inverse-on-surface);
+  border-radius: var(--radius-md);
+  background: var(--color-inverse-surface);
+  box-shadow: var(--spacing-sm) var(--spacing-sm) 0 var(--color-inverse-on-surface);
+  transition:
+    transform var(--duration-base) var(--easing-standard),
+    box-shadow var(--duration-base) var(--easing-standard);
+}
+
+.master-card__body {
+  border-top: 1px solid var(--color-inverse-on-surface);
+}
+
+.master-card__name {
+  text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  .master-card:hover {
+    transform: translate(calc(var(--spacing-xs) / 2), calc(var(--spacing-xs) / 2));
+    box-shadow: var(--spacing-xs) var(--spacing-xs) 0 var(--color-inverse-on-surface);
+  }
+}
+
+/* ---- Плавающая кнопка: квадрат вместо круга ---- */
+.fab {
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+}
+
+.fab::before {
+  border-radius: var(--radius-md);
+}
+
+.fab__label {
+  width: 84%;
+  height: 84%;
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+}
+
+/* ---- Мобильная версия ---- */
+@media (max-width: 650px) {
+  .panel {
+    border-top-width: calc(var(--spacing-xs) / 2);
+  }
+
+  .master-card {
+    box-shadow: var(--spacing-xs) var(--spacing-xs) 0 var(--color-inverse-on-surface);
+  }
+
+  .service::after {
+    min-width: var(--spacing-sm);
+  }
+
+  .service__price {
+    font-size: var(--font-body-md-size);
+  }
+}

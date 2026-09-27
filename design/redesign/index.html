@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOX cut — редизайн, три направления</title>
+<meta name="description" content="Референс: три визуальных направления главной BOX cut. Черновик для выбора, на сайт не подключён.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;600;800&family=Onest:wght@400;600;800&family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Unbounded:wght@600;900&display=swap">
+<style>
+/* ============ Обвязка рефа (не часть сайта) ============ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,sans-serif;background:#0c0c0d;color:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+.ref-bar{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:10px 16px;background:#0c0c0d;border-bottom:1px solid #2a2a2c;font:600 13px/1 Manrope,sans-serif}
+.ref-bar__tabs,.ref-bar__view{display:flex;gap:6px}
+.ref-bar button{font:inherit;color:#bbb;background:#1a1a1c;border:1px solid #333;border-radius:8px;padding:9px 14px;cursor:pointer}
+.ref-bar button[aria-pressed="true"]{background:#fff;color:#000;border-color:#fff}
+.ref-note{padding:10px 16px;font:400 12px/1.5 Manrope,sans-serif;color:#8a8a8e;background:#0c0c0d}
+.stage{container-type:inline-size;margin:0 auto;transition:max-width .25s}
+.stage.is-mobile{max-width:390px;border-left:1px solid #333;border-right:1px solid #333}
+.variant{display:none}
+.variant.is-active{display:block}
+
+/* блок «брендбук» в каждом варианте */
+.bb{display:grid;grid-template-columns:1.1fr 1.4fr 1fr;gap:24px;padding:28px 40px;font:400 13px/1.55 Manrope,sans-serif;border-bottom:1px solid currentColor}
+.bb h4{font:800 11px/1 Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;opacity:.6}
+.bb__sw{display:flex;gap:8px;flex-wrap:wrap}
+.bb__sw i{display:block;width:52px;height:52px;border:1px solid rgba(128,128,128,.5);position:relative}
+.bb__sw i b{position:absolute;left:0;top:56px;font:400 9px/1 'JetBrains Mono',monospace;white-space:nowrap;font-style:normal}
+.bb__sw{padding-bottom:16px}
+.bb p+p{margin-top:6px}
+@container (max-width:800px){.bb{grid-template-columns:1fr;padding:20px 16px}}
+
+/* ============================================================
+   ВАРИАНТ А — «HEX / Лаборатория света»
+   Графит, тонкие линии, шестиугольник из светильников, электрик-синий
+   ============================================================ */
+.a{--bg:#13161a;--bg2:#1b1f25;--line:#2c323b;--fg:#e8ecf1;--mute:#8b95a3;--ac:#4d7cff;
+   background:var(--bg);color:var(--fg);font:400 16px/1.55 Onest,sans-serif}
+.a .bb{background:var(--bg2);border-color:var(--line)}
+.a .hex{clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0 50%)}
+.a__mono{font:400 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.a__top{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid var(--line)}
+.a__top img{height:44px;width:auto}
+.a__nav{display:flex;gap:28px}
+.a__nav a{font:400 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding:6px 0;border-bottom:1px solid transparent;transition:.2s}
+.a__nav a:hover{color:var(--fg);border-color:var(--ac)}
+.a__tel{font:700 13px/1 'JetBrains Mono',monospace;color:var(--fg)}
+.a__hero{display:grid;grid-template-columns:1.15fr 1fr;gap:0;align-items:center;padding:56px 40px 40px;position:relative;overflow:hidden}
+.a__hero::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(60deg,transparent 49.6%,var(--line) 49.6%,var(--line) 50.4%,transparent 50.4%) 0 0/120px 208px,
+  linear-gradient(-60deg,transparent 49.6%,var(--line) 49.6%,var(--line) 50.4%,transparent 50.4%) 0 0/120px 208px;
+  opacity:.35;-webkit-mask:linear-gradient(90deg,#000,transparent 70%);mask:linear-gradient(90deg,#000,transparent 70%)}
+.a__hero>*{position:relative}
+.a__tag{display:inline-flex;gap:10px;align-items:center;margin-bottom:24px}
+.a__tag::before{content:"";width:8px;height:8px;background:var(--ac);box-shadow:0 0 12px var(--ac)}
+.a__h1{font:700 clamp(64px,12cqw,168px)/.88 Oswald,sans-serif;text-transform:uppercase;letter-spacing:-.01em}
+.a__h1 span{display:block;font-size:.5em;line-height:1;margin-top:.12em;color:transparent;-webkit-text-stroke:1.5px var(--fg)}
+.a__lead{max-width:440px;color:var(--mute);margin:28px 0 32px}
+.a__btn{display:inline-flex;align-items:center;gap:14px;padding:18px 26px;background:var(--ac);color:#fff;font:700 13px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;transition:.2s;position:relative}
+.a__btn:hover{background:#fff;color:#000}
+.a__btn--ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+.a__btn--ghost:hover{border-color:var(--ac);background:transparent;color:var(--ac)}
+.a__photo{aspect-ratio:1/1.05;background:var(--ac);padding:2px;justify-self:end;width:min(100%,520px)}
+.a__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.a__strip{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}
+.a__strip div{padding:20px 40px;border-right:1px solid var(--line)}
+.a__strip div:last-child{border:0}
+.a__strip b{display:block;font:500 22px/1.2 Oswald,sans-serif;text-transform:uppercase;margin-top:6px}
+.a__book{margin:56px 40px;border:1px solid var(--line);background:var(--bg2);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:32px;position:relative}
+.a__book::before,.a__book::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--ac)}
+.a__book::before{left:-1px;top:-1px;border-right:0;border-bottom:0}
+.a__book::after{right:-1px;bottom:-1px;border-left:0;border-top:0}
+.a__book h2{font:700 clamp(30px,4.6cqw,52px)/1 Oswald,sans-serif;text-transform:uppercase;margin-top:10px}
+.a__book-btns{display:flex;gap:12px;flex-wrap:wrap}
+.a__sec{padding:24px 40px 64px}
+.a__sec-h{display:flex;align-items:baseline;gap:16px;margin-bottom:32px;border-bottom:1px solid var(--line);padding-bottom:16px}
+.a__sec-h h2{font:700 clamp(36px,5cqw,64px)/1 Oswald,sans-serif;text-transform:uppercase}
+.a__list{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.a__row{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:baseline;padding:16px 10px;border-bottom:1px solid var(--line);transition:.2s}
+.a__row:hover{background:var(--bg2);box-shadow:inset 2px 0 var(--ac)}
+.a__row i{font:400 11px/1 'JetBrains Mono',monospace;color:var(--ac);font-style:normal}
+.a__row span:last-child{font:700 14px/1 'JetBrains Mono',monospace;white-space:nowrap}
+.a__note{margin-top:20px;font-size:13px}
+.a__masters{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.a__m{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center;padding:24px;border:1px solid var(--line);background:var(--bg2);transition:.2s}
+.a__m:hover{border-color:var(--ac)}
+.a__m .hex{aspect-ratio:1/1.1;background:var(--ac);padding:2px}
+.a__m img{width:100%;height:100%;object-fit:cover}
+.a__m h3{font:700 34px/1 Oswald,sans-serif;text-transform:uppercase;margin:8px 0}
+.a__m p{color:var(--mute);font-size:14px}
+.a__m em{display:inline-block;margin-top:14px;font:700 12px/1 'JetBrains Mono',monospace;color:var(--ac);font-style:normal;letter-spacing:.08em;text-transform:uppercase}
+.a__dock{position:sticky;bottom:14px;z-index:5;display:flex;justify-content:center;pointer-events:none;height:0}
+.a__dock a{pointer-events:auto;transform:translateY(-100%);display:flex;gap:14px;align-items:center;padding:14px 22px;background:#fff;color:#000;font:700 12px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 0 0 1px var(--ac),0 10px 30px rgba(0,0,0,.5)}
+.a__dock a::before{content:"";width:8px;height:8px;background:var(--ac);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.2}}
+@container (max-width:800px){
+  .a__top{padding:14px 16px}.a__nav{display:none}
+  .a__hero{grid-template-columns:1fr;padding:32px 16px}
+  .a__photo{justify-self:center;width:88%;margin-top:28px}
+  .a__strip{grid-template-columns:1fr 1fr}.a__strip div{padding:14px 16px;border-bottom:1px solid var(--line)}
+  .a__book{margin:32px 16px;grid-template-columns:1fr;padding:22px 18px}
+  .a__sec{padding:16px 16px 48px}.a__list{grid-template-columns:1fr}
+  .a__masters{grid-template-columns:1fr}.a__m{grid-template-columns:110px 1fr;gap:16px;padding:16px}
+  .a__m h3{font-size:28px}
+}
+
+/* ============================================================
+   ВАРИАНТ Б — «Мастерская»
+   Бумага, чернила, терракота, засечки, штампы и талоны
+   ============================================================ */
+.b{--paper:#efe6d6;--card:#f9f3e7;--ink:#211b16;--ac:#b5532b;--wood:#8b5a35;--mute:#6d6255;
+   background:var(--paper);color:var(--ink);font:400 17px/1.6 Manrope,sans-serif}
+.b .bb{background:var(--card);border-color:var(--ink)}
+.b__top{background:var(--ink);color:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:14px 40px;font:600 13px/1 Manrope,sans-serif;letter-spacing:.04em}
+.b__top img{height:40px;width:auto}
+.b__nav{display:flex;gap:30px}
+.b__nav a{border-bottom:1px solid transparent;padding-bottom:3px;transition:.2s}
+.b__nav a:hover{border-color:var(--ac);color:#fff}
+.b__hero{padding:64px 40px 56px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;border-bottom:3px double var(--ink);margin:0 40px;padding-left:0;padding-right:0}
+.b__est{display:flex;gap:14px;align-items:center;font:600 12px/1 Manrope,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--wood);margin-bottom:22px}
+.b__est::before,.b__est::after{content:"";height:1px;width:40px;background:var(--wood)}
+.b__h1{font:800 clamp(64px,11cqw,150px)/.92 'Playfair Display',serif;letter-spacing:-.02em}
+.b__h1 em{display:block;font-size:.5em;line-height:1.05;margin-top:.14em;font-style:italic;font-weight:600;color:var(--ac)}
+.b__lead{max-width:460px;margin:26px 0 32px;color:var(--mute);font-size:18px}
+.b__btn{display:inline-block;padding:17px 30px;background:var(--ink);color:var(--paper);font:800 14px/1 Manrope,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-radius:2px;transition:.2s;box-shadow:4px 4px 0 var(--ac)}
+.b__btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ac)}
+.b__btn--alt{background:transparent;color:var(--ink);border:2px solid var(--ink);box-shadow:none;padding:15px 28px}
+.b__btn--alt:hover{background:var(--ink);color:var(--paper);transform:none;box-shadow:none}
+.b__arch{position:relative;justify-self:center;width:min(100%,440px)}
+.b__arch .ph{aspect-ratio:3/4;border-radius:999px 999px 6px 6px;overflow:hidden;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--wood)}
+.b__arch img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.b__stamp{position:absolute;left:-34px;bottom:34px;width:128px;height:128px;transform:rotate(-14deg);color:var(--ac);background:var(--paper);border-radius:50%}
+.b__stamp text{font:800 10.5px Manrope,sans-serif;letter-spacing:.18em;fill:currentColor;text-transform:uppercase}
+.b__stamp .c{font:800 30px 'Playfair Display',serif;letter-spacing:0}
+.b__ticket{margin:56px 40px;background:var(--card);border:2px dashed var(--ink);border-radius:6px;display:grid;grid-template-columns:1fr auto;gap:28px;padding:32px 40px;position:relative;align-items:center}
+.b__ticket::before,.b__ticket::after{content:"";position:absolute;top:50%;width:28px;height:28px;background:var(--paper);border:2px dashed var(--ink);border-radius:50%;margin-top:-14px}
+.b__ticket::before{left:-16px;clip-path:inset(0 0 0 50%)}
+.b__ticket::after{right:-16px;clip-path:inset(0 50% 0 0)}
+.b__ticket small{font:800 11px/1 Manrope,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ac)}
+.b__ticket h2{font:800 clamp(28px,4.2cqw,46px)/1.05 'Playfair Display',serif;margin-top:8px}
+.b__ticket p{color:var(--mute);margin-top:6px;font-size:15px}
+.b__ticket-btns{display:flex;gap:12px;flex-wrap:wrap}
+.b__sec{padding:16px 40px 64px}
+.b__sec-h{text-align:center;margin-bottom:36px}
+.b__sec-h small{font:800 11px/1 Manrope,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--wood)}
+.b__sec-h h2{font:800 clamp(38px,5.4cqw,68px)/1.05 'Playfair Display',serif;margin-top:10px}
+.b__sec-h h2 em{font-style:italic;font-weight:600;color:var(--ac)}
+.b__orn{display:block;margin:14px auto 0;width:120px;height:14px;background:
+  radial-gradient(circle at 50% 50%,var(--ac) 0 4px,transparent 5px),
+  linear-gradient(var(--ink),var(--ink)) 0 50%/44px 1px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) 100% 50%/44px 1px no-repeat}
+.b__menu{background:var(--card);border:2px solid var(--ink);padding:14px;box-shadow:8px 8px 0 var(--wood)}
+.b__menu-in{border:1px solid var(--ink);padding:34px 44px;display:grid;grid-template-columns:1fr 1fr;column-gap:64px}
+.b__item{display:flex;align-items:baseline;gap:8px;padding:11px 0}
+.b__item span:first-child{font:600 19px/1.25 'Playfair Display',serif}
+.b__item i{flex:1;border-bottom:2px dotted var(--wood);transform:translateY(-4px);min-width:16px;opacity:.6}
+.b__item b{font:800 16px/1 Manrope,sans-serif;white-space:nowrap;color:var(--ac)}
+.b__note{text-align:center;margin-top:22px;font-size:14px;color:var(--mute);font-style:italic}
+.b__masters{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:900px;margin:0 auto;padding-top:14px}
+.b__m{background:#fff;padding:14px 14px 22px;border:1px solid #d6cbb6;box-shadow:0 14px 26px -12px rgba(33,27,22,.4);transition:.25s;position:relative}
+.b__m:nth-child(1){transform:rotate(-2deg)}.b__m:nth-child(2){transform:rotate(1.6deg)}
+.b__m:hover{transform:rotate(0) translateY(-6px)}
+.b__m::before{content:"";position:absolute;top:-14px;left:50%;width:96px;height:28px;margin-left:-48px;background:rgba(181,83,43,.35);transform:rotate(-3deg)}
+.b__m .ph{aspect-ratio:3/4;overflow:hidden}
+.b__m img{width:100%;height:100%;object-fit:cover}
+.b__m h3{font:800 34px/1 'Playfair Display',serif;margin:18px 0 4px;text-align:center}
+.b__m p{text-align:center;font-style:italic;color:var(--mute)}
+.b__m em{display:block;text-align:center;margin-top:12px;font:800 12px/1 Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);font-style:normal}
+.b__dock{position:sticky;bottom:0;z-index:5;display:flex;justify-content:center;gap:16px;align-items:center;padding:12px 16px;background:var(--ink);color:var(--paper);font:600 14px/1 Manrope,sans-serif}
+.b__dock a.b__btn{background:var(--ac);color:#fff;box-shadow:none;padding:12px 20px;font-size:13px}
+@container (max-width:800px){
+  .b__top{padding:12px 16px}.b__nav{display:none}
+  .b__hero{grid-template-columns:1fr;margin:0 16px;padding:36px 0;gap:36px}
+  .b__stamp{left:-6px;width:100px;height:100px}
+  .b__ticket{margin:32px 16px;grid-template-columns:1fr;padding:26px 22px}
+  .b__sec{padding:8px 16px 48px}
+  .b__menu-in{grid-template-columns:1fr;padding:18px 16px}
+  .b__item span:first-child{font-size:16px}
+  .b__masters{grid-template-columns:1fr;gap:44px;padding:14px 12px 0}
+  .b__dock span{display:none}
+}
+
+/* ============================================================
+   ВАРИАНТ В — «Афиша», второй заход: чистая типографика
+   Светлый лист, тонкие линии, ровная сетка фото, один кобальт
+   ============================================================ */
+.c{--bg:#f3f3f0;--k:#0d0e12;--mute:#6b6e78;--line:#d9d9d3;--b:#1f3bff;--w:#fff;
+   background:var(--bg);color:var(--k);font:400 17px/1.55 Onest,sans-serif}
+.c .bb{background:var(--w);border-color:var(--line)}
+.c__top{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:var(--k);color:#fff}
+.c__top img{height:42px;width:auto}
+.c__nav{display:flex;gap:36px}
+.c__nav a{font:600 13px/1 Onest,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 0;border-bottom:1px solid transparent;transition:.2s}
+.c__nav a:hover{border-color:var(--b);color:#fff}
+.c__hero{padding:36px 40px 0}
+.c__meta{display:flex;justify-content:space-between;gap:12px;font:600 12px/1 Onest,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);padding-bottom:18px;border-bottom:1px solid var(--line)}
+.c__h1{font:800 clamp(56px,22.5cqw,440px)/.86 Onest,sans-serif;text-transform:uppercase;letter-spacing:-.055em;margin:32px 0 0 -.04em}
+.c__row{display:grid;grid-template-columns:.8fr 1.6fr;gap:48px;align-items:start;padding:36px 0 56px}
+.c__lead{font-size:22px;line-height:1.4;font-weight:600;max-width:400px}
+.c__btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.c__btn{display:inline-flex;align-items:center;gap:12px;padding:19px 30px;background:var(--b);color:#fff;font:700 14px/1 Onest,sans-serif;letter-spacing:.06em;text-transform:uppercase;transition:.2s;border:1px solid var(--b)}
+.c__btn:hover{background:var(--k);border-color:var(--k)}
+.c__btn--w{background:transparent;color:var(--k);border-color:var(--k)}
+.c__btn--w:hover{background:var(--k);color:#fff}
+.c__coll{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:12px;align-items:end}
+.c__coll figure{overflow:hidden;background:var(--line)}
+.c__coll figure:nth-child(2){transform:translateY(-32px)}
+.c__coll img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .5s}
+.c__coll figure:hover img{transform:scale(1.04)}
+.c__marq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;font:800 22px/1 Onest,sans-serif;text-transform:uppercase;letter-spacing:-.01em;background:var(--bg)}
+.c__marq div{display:inline-block;animation:marq 26s linear infinite}
+@keyframes marq{to{transform:translateX(-50%)}}
+.c__marq span{margin:0 30px;display:inline-flex;align-items:center;gap:60px}
+.c__marq span::after{content:"";width:8px;height:8px;background:var(--b)}
+.c__book{background:var(--b);color:#fff;padding:72px 40px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+.c__book h2{font:800 clamp(38px,6.6cqw,104px)/.92 Onest,sans-serif;text-transform:uppercase;letter-spacing:-.04em}
+.c__book-b{display:grid;gap:0;border-top:1px solid rgba(255,255,255,.4)}
+.c__book-b a{display:flex;justify-content:space-between;align-items:center;padding:24px 4px;border-bottom:1px solid rgba(255,255,255,.4);font:700 20px/1 Onest,sans-serif;text-transform:uppercase;letter-spacing:.02em;transition:.2s}
+.c__book-b a:hover{padding-inline:16px;background:#fff;color:var(--b)}
+.c__sec{padding:88px 40px 24px}
+.c__sec h2{font:800 clamp(44px,10cqw,160px)/.86 Onest,sans-serif;text-transform:uppercase;letter-spacing:-.055em;margin-bottom:44px;display:flex;align-items:flex-start;gap:14px}
+.c__sec h2 sup{font:600 13px/1 Onest,sans-serif;letter-spacing:.08em;color:var(--b);margin-top:.6em}
+.c__s{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:22px 0;border-top:1px solid var(--line);transition:.2s}
+.c__s:last-of-type{border-bottom:1px solid var(--line)}
+.c__s:hover{color:var(--b);padding-inline:12px}
+.c__s h3{font:600 clamp(18px,2.4cqw,28px)/1.2 Onest,sans-serif}
+.c__s b{font:700 clamp(16px,2cqw,24px)/1 Onest,sans-serif;white-space:nowrap;font-variant-numeric:tabular-nums}
+.c__note{margin-top:20px;font-size:14px;color:var(--mute)}
+.c__ms{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 40px}
+.c__m{display:block}
+.c__m .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--line)}
+.c__m img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:filter .4s,transform .6s}
+.c__m:hover img{filter:none;transform:scale(1.03)}
+.c__m div.cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:18px 0 4px;border-bottom:1px solid var(--line)}
+.c__m h3{font:800 clamp(34px,6.4cqw,96px)/.9 Onest,sans-serif;text-transform:uppercase;letter-spacing:-.05em}
+.c__m span{font:600 13px/1.2 Onest,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:right}
+.c__dock{position:sticky;bottom:16px;z-index:5;height:0;display:flex;justify-content:flex-end;padding-right:16px}
+.c__dock a{transform:translateY(-100%);padding:16px 24px;background:var(--k);color:#fff;font:700 13px/1 Onest,sans-serif;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 24px rgba(13,14,18,.25);transition:.2s;display:flex;gap:10px;align-items:center}
+.c__dock a::before{content:"";width:8px;height:8px;background:var(--b);border-radius:50%}
+.c__dock a:hover{background:var(--b)}
+@container (max-width:800px){
+  .c__top{padding:14px 16px}.c__nav{display:none}
+  .c__hero{padding:24px 16px 0}
+  .c__meta span:nth-child(2){display:none}
+  .c__h1{font-size:21cqw;margin-top:22px}
+  .c__row{grid-template-columns:1fr;gap:32px;padding:24px 0 40px}
+  .c__lead{font-size:19px}
+  .c__coll{gap:8px}.c__coll figure:nth-child(2){transform:none}
+  .c__marq{font-size:15px;padding:14px 0}.c__marq span{gap:36px;margin:0 18px}
+  .c__book{grid-template-columns:1fr;padding:48px 16px;gap:32px}
+  .c__book-b a{font-size:17px;padding:20px 2px}
+  .c__sec{padding:56px 16px 16px}
+  .c__s{padding:16px 0}
+  .c__ms{grid-template-columns:1fr;padding:0 16px}
+  .c__m .ph{aspect-ratio:1/1}
+  .c__dock a{padding:14px 18px}
+}
+</style>
+
+</head>
+<body>
+
+<div class="ref-bar">
+  <div class="ref-bar__tabs" role="tablist" aria-label="Направления">
+    <button role="tab" data-v="a" aria-pressed="true">А · HEX / лаборатория света</button>
+    <button role="tab" data-v="b" aria-pressed="false">Б · Мастерская</button>
+    <button role="tab" data-v="c" aria-pressed="false">В · Афиша</button>
+  </div>
+  <div class="ref-bar__view">
+    <button data-w="d" aria-pressed="true">Десктоп</button>
+    <button data-w="m" aria-pressed="false">Мобильный 390</button>
+  </div>
+</div>
+<p class="ref-note">Референс для выбора. Показаны: шапка и первый экран, запись, услуги, мастера. Контакты и футер — после выбора направления. Ссылки-заглушки, на сайт файл не подключён.</p>
+
+<div class="stage" id="stage">
+
+<!-- ======================= А ======================= -->
+<div class="variant a is-active" id="v-a">
+  <div class="bb">
+    <div><h4>Идея</h4><p><b>Свет как конструкция.</b> Шестиугольные светильники под потолком у вас настоящие: их линии стали графикой сайта. Холодный графит, тонкие линии, один электрик-синий.</p></div>
+    <div><h4>Палитра</h4><div class="bb__sw">
+      <i style="background:#13161a"><b>#13161A</b></i><i style="background:#1b1f25"><b>#1B1F25</b></i><i style="background:#2c323b"><b>#2C323B</b></i><i style="background:#e8ecf1"><b>#E8ECF1</b></i><i style="background:#4d7cff"><b>#4D7CFF</b></i></div></div>
+    <div><h4>Шрифты и форма</h4><p>Oswald — заголовки, контурный второй слой<br>JetBrains Mono — метки, цены, номера<br>Onest — текст</p><p>Углы прямые, шестиугольник вместо круга, угловые скобки у карточек.</p></div>
+  </div>
+
+  <header class="a__top">
+    <img src="../../assets/brand/logo-white.png" alt="BOX cut">
+    <nav class="a__nav" aria-label="Меню"><a href="#">Услуги</a><a href="#">Мастера</a><a href="#">Контакты</a></nav>
+    <a class="a__tel" href="tel:+79101625895">8 910 162-58-95</a>
+  </header>
+
+  <section class="a__hero">
+    <div>
+      <div class="a__tag a__mono">Вт–Вс · 11:00–20:00</div>
+      <h1 class="a__h1">BOX cut<span>мужские стрижки</span></h1>
+      <p class="a__lead">Стрижки, борода и тонировка по записи. Светлый зал, два мастера, никакой суеты.</p>
+      <a class="a__btn" href="#">Записаться онлайн <span>→</span></a>
+    </div>
+    <div class="a__photo hex"><img src="../../assets/interior/hall-lights.jpg" alt="Зал барбершопа BOX cut с шестиугольными светильниками"></div>
+  </section>
+
+  <div class="a__strip">
+    <div><span class="a__mono">Мастера</span><b>2</b></div>
+    <div><span class="a__mono">Услуг</span><b>15</b></div>
+    <div><span class="a__mono">Стрижка от</span><b>600 ₽</b></div>
+    <div><span class="a__mono">Выходной</span><b>Понедельник</b></div>
+  </div>
+
+  <section class="a__book">
+    <div><span class="a__mono">Запись · 3 шага</span><h2>Выбери мастера, время и приходи</h2></div>
+    <div class="a__book-btns"><a class="a__btn" href="#">Telegram</a><a class="a__btn a__btn--ghost" href="#">WhatsApp</a></div>
+  </section>
+
+  <section class="a__sec">
+    <div class="a__sec-h"><span class="a__mono">01</span><h2>Услуги и цены</h2></div>
+    <ul class="a__list">
+      <li class="a__row"><i>01</i><span>Модельная мужская стрижка</span><span>от 1 200 ₽</span></li>
+      <li class="a__row"><i>02</i><span>Удлинённая мужская стрижка</span><span>1 700 ₽</span></li>
+      <li class="a__row"><i>03</i><span>Детская стрижка (6–12 лет)</span><span>от 1 000 ₽</span></li>
+      <li class="a__row"><i>04</i><span>Стрижка машинкой (fade)</span><span>от 1 000 ₽</span></li>
+      <li class="a__row"><i>05</i><span>Стрижка машинкой (2 насадки)</span><span>600 ₽</span></li>
+      <li class="a__row"><i>06</i><span>Моделирование бороды</span><span>1 000 ₽</span></li>
+      <li class="a__row"><i>07</i><span>Коррекция бороды (щетины)</span><span>600 ₽</span></li>
+      <li class="a__row"><i>08</i><span>Окантовка триммером</span><span>300 ₽</span></li>
+      <li class="a__row"><i>09</i><span>Укладка</span><span>400 ₽</span></li>
+      <li class="a__row"><i>10</i><span>Удаление волос воском</span><span>200 ₽</span></li>
+      <li class="a__row"><i>11</i><span>Тонировка бороды (щетины)</span><span>1 000 ₽</span></li>
+      <li class="a__row"><i>12</i><span>Тонировка волос</span><span>1 000 ₽</span></li>
+      <li class="a__row"><i>13</i><span>Модельная стрижка + моделирование бороды</span><span>2 400 ₽</span></li>
+      <li class="a__row"><i>14</i><span>Удлинённая стрижка + моделирование бороды</span><span>2 600 ₽</span></li>
+      <li class="a__row"><i>15</i><span>Стрижка машинкой (fade) + моделирование бороды</span><span>2 200 ₽</span></li>
+    </ul>
+    <p class="a__note a__mono">Цены у мастеров могут отличаться — точный прайс на странице Антона или Никиты.</p>
+  </section>
+
+  <section class="a__sec">
+    <div class="a__sec-h"><span class="a__mono">02</span><h2>Мастера</h2></div>
+    <div class="a__masters">
+      <a class="a__m" href="#"><div class="hex"><img src="../../assets/anton/portrait.jpg" alt="Антон, владелец и барбер"></div><div><span class="a__mono">Владелец, барбер</span><h3>Антон</h3><p>Стрижки, борода, тонировка. Личный прайс на странице.</p><em>Подробнее →</em></div></a>
+      <a class="a__m" href="#"><div class="hex"><img src="../../assets/nikita/portrait.jpg" alt="Никита, барбер и партнёр"></div><div><span class="a__mono">Барбер, партнёр</span><h3>Никита</h3><p>Fade, аккуратные бороды. Личный прайс на странице.</p><em>Подробнее →</em></div></a>
+    </div>
+  </section>
+  <div class="a__dock"><a href="#">Записаться</a></div>
+</div>
+
+<!-- ======================= Б ======================= -->
+<div class="variant b" id="v-b">
+  <div class="bb">
+    <div><h4>Идея</h4><p><b>Цирюльня, но современная.</b> Тёплое дерево пола, бумага, чернила. Меню услуг как в хорошей кофейне, талон вместо кнопки, карточки мастеров как снимки на пробковой доске.</p></div>
+    <div><h4>Палитра</h4><div class="bb__sw">
+      <i style="background:#efe6d6"><b>#EFE6D6</b></i><i style="background:#f9f3e7"><b>#F9F3E7</b></i><i style="background:#211b16"><b>#211B16</b></i><i style="background:#8b5a35"><b>#8B5A35</b></i><i style="background:#b5532b"><b>#B5532B</b></i></div></div>
+    <div><h4>Шрифты и форма</h4><p>Playfair Display — заголовки, курсив для акцента<br>Manrope — текст и метки</p><p>Двойные линии, пунктирные «выкройки», арка для фото, жёсткие смещённые тени.</p></div>
+  </div>
+
+  <header class="b__top">
+    <img src="../../assets/brand/logo-white.png" alt="BOX cut">
+    <nav class="b__nav" aria-label="Меню"><a href="#">Услуги и цены</a><a href="#">Мастера</a><a href="#">Контакты</a></nav>
+    <a href="tel:+79101625895">8 910 162-58-95</a>
+  </header>
+
+  <section class="b__hero">
+    <div>
+      <div class="b__est">Вт–Вс · 11:00–20:00</div>
+      <h1 class="b__h1">BOX cut <em>мужские стрижки</em></h1>
+      <p class="b__lead">Стрижки, борода и тонировка по записи. Два мастера, светлый зал и кресло, в котором не хочется спешить.</p>
+      <a class="b__btn" href="#">Записаться онлайн</a>
+    </div>
+    <div class="b__arch">
+      <div class="ph"><img src="../../assets/interior/chair-front.jpg" alt="Синее барберское кресло у зеркала в BOX cut"></div>
+      <svg class="b__stamp" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="60" cy="60" r="30" fill="none" stroke="currentColor" stroke-width="1"/><text><textPath href="#circ">Барбершоп · по записи ·</textPath></text><text class="c" x="60" y="70" text-anchor="middle">B</text></svg>
+    </div>
+  </section>
+
+  <section class="b__ticket">
+    <div><small>Талон · №1</small><h2>Запишитесь на удобное время</h2><p>Выберите мастера и час в мессенджере, остальное мы возьмём на себя.</p></div>
+    <div class="b__ticket-btns"><a class="b__btn" href="#">Telegram</a><a class="b__btn b__btn--alt" href="#">WhatsApp</a></div>
+  </section>
+
+  <section class="b__sec">
+    <div class="b__sec-h"><small>Прейскурант</small><h2>Услуги <em>и цены</em></h2><span class="b__orn"></span></div>
+    <div class="b__menu"><div class="b__menu-in">
+      <div class="b__item"><span>Модельная мужская стрижка</span><i></i><b>от 1 200 ₽</b></div>
+      <div class="b__item"><span>Удлинённая мужская стрижка</span><i></i><b>1 700 ₽</b></div>
+      <div class="b__item"><span>Детская стрижка (6–12 лет)</span><i></i><b>от 1 000 ₽</b></div>
+      <div class="b__item"><span>Стрижка машинкой (fade)</span><i></i><b>от 1 000 ₽</b></div>
+      <div class="b__item"><span>Стрижка машинкой (2 насадки)</span><i></i><b>600 ₽</b></div>
+      <div class="b__item"><span>Моделирование бороды</span><i></i><b>1 000 ₽</b></div>
+      <div class="b__item"><span>Коррекция бороды (щетины)</span><i></i><b>600 ₽</b></div>
+      <div class="b__item"><span>Окантовка триммером</span><i></i><b>300 ₽</b></div>
+      <div class="b__item"><span>Укладка</span><i></i><b>400 ₽</b></div>
+      <div class="b__item"><span>Удаление волос воском</span><i></i><b>200 ₽</b></div>
+      <div class="b__item"><span>Тонировка бороды (щетины)</span><i></i><b>1 000 ₽</b></div>
+      <div class="b__item"><span>Тонировка волос</span><i></i><b>1 000 ₽</b></div>
+      <div class="b__item"><span>Модельная стрижка + моделирование бороды</span><i></i><b>2 400 ₽</b></div>
+      <div class="b__item"><span>Удлинённая стрижка + моделирование бороды</span><i></i><b>2 600 ₽</b></div>
+      <div class="b__item"><span>Стрижка машинкой (fade) + моделирование бороды</span><i></i><b>2 200 ₽</b></div>
+    </div></div>
+    <p class="b__note">Цены у мастеров могут отличаться — точный прайс на странице Антона или Никиты.</p>
+  </section>
+
+  <section class="b__sec">
+    <div class="b__sec-h"><small>Кто стрижёт</small><h2>Наши <em>мастера</em></h2><span class="b__orn"></span></div>
+    <div class="b__masters">
+      <a class="b__m" href="#"><div class="ph"><img src="../../assets/anton/portrait.jpg" alt="Антон, владелец и барбер"></div><h3>Антон</h3><p>Владелец, барбер</p><em>Подробнее</em></a>
+      <a class="b__m" href="#"><div class="ph"><img src="../../assets/nikita/portrait.jpg" alt="Никита, барбер и партнёр"></div><h3>Никита</h3><p>Барбер, партнёр</p><em>Подробнее</em></a>
+    </div>
+  </section>
+  <div class="b__dock"><span>Вт–Вс · 11:00–20:00</span><a class="b__btn" href="#">Записаться</a></div>
+</div>
+
+<!-- ======================= В ======================= -->
+<div class="variant c" id="v-c">
+  <div class="bb">
+    <div><h4>Идея</h4><p><b>Журнальная типографика.</b> Светлый лист, огромный плотный заголовок, тонкие линии-разделители и один кобальт из вашего кресла. Без рамок, теней и наклонов: работают только кегль, сетка и фото.</p></div>
+    <div><h4>Палитра</h4><div class="bb__sw">
+      <i style="background:#f3f3f0"><b>#F3F3F0</b></i><i style="background:#0d0e12"><b>#0D0E12</b></i><i style="background:#d9d9d3"><b>#D9D9D3</b></i><i style="background:#6b6e78"><b>#6B6E78</b></i><i style="background:#1f3bff"><b>#1F3BFF</b></i></div></div>
+    <div><h4>Шрифты и форма</h4><p>Onest 800 — заголовки, плотный трекинг<br>Onest 400–600 — текст и метки</p><p>Прямые углы, линии 1px, ровные фото одной сетки, цвет мастеров проявляется по наведению.</p></div>
+  </div>
+
+  <header class="c__top">
+    <img src="../../assets/brand/logo-white.png" alt="BOX cut">
+    <nav class="c__nav" aria-label="Меню"><a href="#">Услуги</a><a href="#">Мастера</a><a href="#">Контакты</a></nav>
+  </header>
+
+  <section class="c__hero">
+    <div class="c__meta"><span>Вт–Вс 11:00–20:00</span><span>Понедельник выходной</span><span>8 910 162-58-95</span></div>
+    <h1 class="c__h1">BOX cut</h1>
+    <div class="c__row">
+      <div><p class="c__lead">Мужские стрижки, борода и тонировка по записи.</p>
+        <div class="c__btns"><a class="c__btn" href="#">Записаться →</a><a class="c__btn c__btn--w" href="#">Цены</a></div></div>
+      <div class="c__coll">
+        <figure><img src="../../assets/interior/chair-front.jpg" alt="Кресло и зеркала"></figure>
+        <figure><img src="../../assets/interior/hall-lights.jpg" alt="Зал с шестиугольными светильниками"></figure>
+        <figure><img src="../../assets/interior/tools.jpg" alt="Инструмент мастера"></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="c__marq" aria-hidden="true"><div><span>Стрижки</span><span>Борода</span><span>Тонировка</span><span>Fade</span><span>Укладка</span><span>Стрижки</span><span>Борода</span><span>Тонировка</span><span>Fade</span><span>Укладка</span><span>Стрижки</span><span>Борода</span><span>Тонировка</span><span>Fade</span><span>Укладка</span><span>Стрижки</span><span>Борода</span><span>Тонировка</span><span>Fade</span><span>Укладка</span></div></div>
+
+  <section class="c__book">
+    <h2>Записаться на стрижку</h2>
+    <div class="c__book-b"><a href="#">Telegram <span>→</span></a><a href="#">WhatsApp <span>→</span></a></div>
+  </section>
+
+  <section class="c__sec">
+    <h2>Услуги<sup>15</sup></h2>
+    <div>
+      <div class="c__s"><h3>Модельная мужская стрижка</h3><b>от 1 200 ₽</b></div>
+      <div class="c__s"><h3>Удлинённая мужская стрижка</h3><b>1 700 ₽</b></div>
+      <div class="c__s"><h3>Детская стрижка (6–12 лет)</h3><b>от 1 000 ₽</b></div>
+      <div class="c__s"><h3>Стрижка машинкой (fade)</h3><b>от 1 000 ₽</b></div>
+      <div class="c__s"><h3>Стрижка машинкой (2 насадки)</h3><b>600 ₽</b></div>
+      <div class="c__s"><h3>Моделирование бороды</h3><b>1 000 ₽</b></div>
+      <div class="c__s"><h3>Коррекция бороды (щетины)</h3><b>600 ₽</b></div>
+      <div class="c__s"><h3>Окантовка триммером</h3><b>300 ₽</b></div>
+      <div class="c__s"><h3>Укладка</h3><b>400 ₽</b></div>
+      <div class="c__s"><h3>Удаление волос воском</h3><b>200 ₽</b></div>
+      <div class="c__s"><h3>Тонировка бороды (щетины)</h3><b>1 000 ₽</b></div>
+      <div class="c__s"><h3>Тонировка волос</h3><b>1 000 ₽</b></div>
+      <div class="c__s"><h3>Модельная стрижка + моделирование бороды</h3><b>2 400 ₽</b></div>
+      <div class="c__s"><h3>Удлинённая стрижка + моделирование бороды</h3><b>2 600 ₽</b></div>
+      <div class="c__s"><h3>Стрижка машинкой (fade) + моделирование бороды</h3><b>2 200 ₽</b></div>
+    </div>
+    <p class="c__note">Цены у мастеров могут отличаться — точный прайс на странице Антона или Никиты.</p>
+  </section>
+
+  <section class="c__sec" style="padding-bottom:0">
+    <h2>Мастера</h2>
+  </section>
+  <div class="c__ms">
+    <a class="c__m" href="#"><div class="ph"><img src="../../assets/anton/portrait.jpg" alt="Антон, владелец и барбер"></div><div class="cap"><h3>Антон</h3><span>Владелец, барбер</span></div></a>
+    <a class="c__m" href="#"><div class="ph"><img src="../../assets/nikita/portrait.jpg" alt="Никита, барбер и партнёр"></div><div class="cap"><h3>Никита</h3><span>Барбер, партнёр</span></div></a>
+  </div>
+  <div style="height:56px"></div>
+  <div class="c__dock"><a href="#">Записаться</a></div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var stage=document.getElementById('stage');
+  document.querySelectorAll('[data-v]').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('[data-v]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      document.querySelectorAll('.variant').forEach(function(v){v.classList.toggle('is-active',v.id==='v-'+b.dataset.v)});
+      window.scrollTo(0,0);
+    });
+  });
+  document.querySelectorAll('[data-w]').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('[data-w]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      stage.classList.toggle('is-mobile',b.dataset.w==='m');
+    });
+  });
+  document.querySelectorAll('a[href="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault()})});
+})();
+</script>
+</body>
+</html>
