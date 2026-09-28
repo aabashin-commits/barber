@@ -32,11 +32,13 @@ Barber/
 │   ├── contacts.css          тёмный блок: адрес, часы, запись (три карточки)
 │   ├── fab.css               плавающая кнопка записи
 │   ├── drawer.css            бургер и мобильное меню
+│   ├── booking-drawer.css    шторка онлайн-записи (форма YCLIENTS в iframe)
 │   └── footer.css            футер (подключается последним)
 ├── js/                       IIFE-файлы, каждый тихо выходит без своих элементов
 │   ├── main.js               window.barber: хелперы
 │   ├── config.js             контакты, часы, ссылки (единое место замены)
 │   ├── drawer.js             открытие и закрытие меню
+│   ├── booking-drawer.js     открытие шторки записи по [data-booking-open], ленивая загрузка iframe
 │   ├── links.js              подстановка ссылок записи из config.js по data-link
 │   ├── gallery.js            пауза ленты по наведению, лайтбокс на <dialog>
 │   └── hero-slider.js        колода фото hero: переключение data-state стрелками ‹ ›

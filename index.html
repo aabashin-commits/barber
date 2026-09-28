@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BOX cut — мужские стрижки: модельные, fade, борода, тонировка</title>
-  <meta name="description" content="BOX cut — мужские стрижки: модельные, fade, борода, тонировка. Два мастера, запись онлайн в Telegram или WhatsApp. Вт–Вс с 11:00 до 20:00.">
+  <meta name="description" content="BOX cut — мужские стрижки: модельные, fade, борода, тонировка. Два мастера, онлайн-запись. Вт–Вс с 11:00 до 20:00.">
   <meta name="theme-color" content="#131313">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/contacts.css">
   <link rel="stylesheet" href="css/fab.css">
   <link rel="stylesheet" href="css/drawer.css">
+  <link rel="stylesheet" href="css/booking-drawer.css">
   <link rel="stylesheet" href="css/skin.css">
   <link rel="stylesheet" href="css/footer.css">
 
@@ -30,6 +31,7 @@
   <script src="js/hero-slider.js" defer></script>
   <script src="js/links.js" defer></script>
   <script src="js/drawer.js" defer></script>
+  <script src="js/booking-drawer.js" defer></script>
   <script src="js/gallery.js" defer></script>
 </head>
 <body>
@@ -68,7 +70,7 @@
       <div class="hero__body">
         <h1 class="hero__title">BOX cut<br>мужские стрижки</h1>
         <p class="hero__subtitle">Стрижки, борода и тонировка по записи. Работаем со вторника по воскресенье, с 11:00 до 20:00.</p>
-        <a class="btn" href="#contacts">Записаться онлайн</a>
+        <a class="btn" href="https://n1597315.yclients.ru" target="_blank" rel="noopener" data-booking-open>Записаться онлайн</a>
       </div>
     </div>
   </header>
@@ -250,7 +252,7 @@
           <li><a href="#services">Услуги и цены</a></li>
           <li><a href="#masters">Мастера</a></li>
           <li><a href="#contacts">Контакты</a></li>
-          <li><a href="#contacts">Записаться онлайн</a></li>
+          <li><a href="https://n1597315.yclients.ru" target="_blank" rel="noopener" data-booking-open>Записаться онлайн</a></li>
         </ul>
         <ul class="footer__legal">
           <li><a href="#">политика конфиденциальности</a></li>
@@ -262,7 +264,7 @@
   </footer>
 
   <!-- Плавающая кнопка записи (шире 768px) -->
-  <a class="fab" href="#contacts" aria-label="Записаться онлайн">
+  <a class="fab" href="https://n1597315.yclients.ru" target="_blank" rel="noopener" data-booking-open aria-label="Записаться онлайн">
     <span class="fab__label">Записаться</span>
   </a>
 
@@ -279,6 +281,13 @@
       <a class="btn btn--small" href="https://t.me/boxcut_placeholder" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
       <a class="btn btn--small" href="https://wa.me/70000000000" data-link="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
     </div>
+  </aside>
+
+  <!-- Шторка онлайн-записи (форма YCLIENTS) -->
+  <div class="booking-drawer-backdrop" data-booking-backdrop></div>
+  <aside class="booking-drawer" aria-hidden="true" aria-label="Онлайн-запись" data-booking-drawer>
+    <button class="booking-drawer__close" type="button" aria-label="Закрыть форму записи" data-booking-close>&times;</button>
+    <iframe class="booking-drawer__frame" data-booking-frame data-src="https://n1597315.yclients.ru" title="Форма онлайн-записи BOX cut" loading="lazy"></iframe>
   </aside>
 
 </body>
